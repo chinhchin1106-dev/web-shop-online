@@ -9,7 +9,7 @@ BEGIN
 END
 GO
 
--- Giải thích code IDENTITY(1,1) : GEMINI  
+-- Giải thích code IDENTITY(1,1) :
 --là một thuộc tính  
 --dùng để tự động tạo số thứ tự tăng dần cho một cột (thường dùng làm Khóa chính - Primary Key).
 --Cấu trúc cú pháp IDENTITY(seed, increment) :
@@ -17,7 +17,7 @@ GO
 --Increment : Bước nhảy (n + k)
 --IDENTITY(1,1): hàng đầu tiên được tạo cột dùng IDENTITY có giá trị là 1 
 --               hàng thứ 2 đc tạo cột dùng IDENTITY có giá trị là 2 = 1 + 1(vì bước nhảy là 1) 
---Giải thích code CASCADE (Có trong CHAP2 CSDL gần slide cuối nhưng ko giải thích) : GEMINI 
+--Giải thích code CASCADE (Có trong CHAP2 CSDL gần slide cuối nhưng ko giải thích) :
 --là một tùy chọn đi kèm với ràng buộc Khóa ngoại (FOREIGN KEY).
 --Có 2 dạng CASCADE chính thường dùng:
 --ON DELETE CASCADE 
