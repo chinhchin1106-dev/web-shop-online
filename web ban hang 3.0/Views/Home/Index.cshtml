@@ -1,0 +1,652 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@{
+    Layout = null;
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sộp Pe - Thiên đường mua sắm</title>
+
+    <style>
+        
+        :root {
+            --primary-navy: #092c53;
+            --primary-dark: #0a3871;
+            --primary: #0b4f9c;
+            --accent: #0099ff;
+            --accent-hover: #0077e6;
+            --accent-cyan: #00b4d8;
+            --accent-light: #64b5f6;
+            --bg-page: #f4f8fb;
+            --bg-surface: #ffffff;
+            --bg-card: #f8fbfe;
+            --bg-tint: #eaf3fb;
+            --text-main: #2c3e50;
+            --text-heading: #1b3858;
+            --text-nav: #334e68;
+            --text-muted: #52667a;
+            --text-footer: #bed0e2;
+            --text-copyright: #8da6c0;
+            --border-light: #ddecfa;
+            --border-input: #cce4f7;
+            --border-hover: #8bc3fa;
+            --border-footer: #1c4470;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-pill: 50px;
+            --shadow-header: 0 4px 12px rgba(11, 79, 156, 0.08);
+            --shadow-card: 0 4px 12px rgba(11, 79, 156, 0.06);
+            --shadow-card-hover: 0 8px 20px rgba(0, 119, 230, 0.16);
+            --shadow-btn: 0 4px 15px rgba(0, 119, 230, 0.3);
+            --shadow-btn-hover: 0 6px 20px rgba(0, 119, 230, 0.45);
+            --shadow-hero-img: 0 10px 25px rgba(11, 79, 156, 0.12);
+            --transition-fast: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition-normal: all 0.25s ease;
+        }
+
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+       
+        .top-bar {
+            background-color: var(--primary);
+            color: #ffffff;
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .header {
+            background-color: var(--bg-surface);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 6%;
+            box-shadow: var(--shadow-header);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: var(--transition-fast);
+            user-select: none;
+        }
+
+            .logo-container:active {
+                transform: scale(0.96);
+            }
+
+            .logo-container img {
+                width: 44px;
+                height: 44px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 2px solid var(--accent);
+            }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+            .logo span {
+                color: var(--accent);
+            }
+
+   
+        .fm-mn {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+            .fm-mn a {
+                text-decoration: none;
+                color: var(--text-nav);
+                font-weight: 600;
+                font-size: 15px;
+                position: relative;
+                padding: 4px 0;
+                display: inline-block;
+                transition: var(--transition-fast);
+            }
+
+                .fm-mn a:hover {
+                    color: var(--accent);
+                }
+
+                .fm-mn a:active {
+                    transform: scale(0.92);
+                    color: var(--primary);
+                }
+
+      
+        .fm-icon {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+            .fm-icon button {
+                background-color: var(--bg-tint);
+                border: 1px solid var(--border-input);
+                color: var(--primary);
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                cursor: pointer;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition-fast);
+                outline: none;
+            }
+
+                .fm-icon button:hover {
+                    background-color: var(--accent);
+                    color: #ffffff;
+                    border-color: var(--accent);
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 10px rgba(0, 153, 255, 0.25);
+                }
+
+                .fm-icon button:active {
+                    transform: scale(0.88);
+                    background-color: var(--primary);
+                    border-color: var(--primary);
+                    color: #ffffff;
+                }
+
+      
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+            min-height: 460px;
+            gap: 40px;
+        }
+
+        .fm-content {
+            flex: 1;
+            max-width: 560px;
+        }
+
+        .fm-tieudenho {
+            color: var(--accent);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .hero-section h2 {
+            font-size: 38px;
+            color: var(--primary-dark);
+            line-height: 1.25;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .fm-mota {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 26px;
+            line-height: 1.65;
+        }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--accent-hover), var(--accent-cyan));
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 15px;
+            box-shadow: var(--shadow-btn);
+            transition: var(--transition-fast);
+            user-select: none;
+            border: none;
+            cursor: pointer;
+        }
+
+            .button:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-btn-hover);
+                color: #ffffff;
+            }
+
+            .button:active {
+                transform: scale(0.95) translateY(1px);
+                box-shadow: 0 2px 8px rgba(0, 119, 230, 0.25);
+                filter: brightness(0.92);
+            }
+
+        .hero-image-wrapper {
+            flex: 1;
+            position: relative;
+            max-width: 480px;
+            text-align: center;
+        }
+
+            .hero-image-wrapper img {
+                width: 100%;
+                height: 350px;
+                object-fit: cover;
+                border-radius: var(--radius-lg);
+                box-shadow: var(--shadow-hero-img);
+                border: 4px solid #ffffff;
+                margin: 0 auto;
+            }
+
+        .image-label {
+            position: absolute;
+            bottom: 16px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(4px);
+            padding: 8px 18px;
+            border-radius: var(--radius-pill);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 13px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+     
+        .fm-Phanloai {
+            padding: 70px 8%;
+            background-color: var(--bg-surface);
+        }
+
+        .Heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .fm-tieu-de-nho {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .text-link {
+            color: var(--accent-hover);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition-fast);
+            display: inline-block;
+        }
+
+            .text-link:hover {
+                color: var(--accent);
+                text-decoration: underline;
+            }
+
+            .text-link:active {
+                transform: scale(0.94);
+            }
+
+        .fm-DS-PhanLoai {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 22px;
+        }
+
+        .fm-maphanloai {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 24px 16px;
+            text-align: center;
+            text-decoration: none;
+            transition: var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: var(--shadow-card);
+        }
+
+            .fm-maphanloai:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-card-hover);
+                border-color: var(--border-hover);
+                background-color: var(--bg-surface);
+            }
+
+            .fm-maphanloai:active {
+                transform: scale(0.96);
+                background-color: var(--bg-tint);
+                border-color: var(--border-input);
+            }
+
+            .fm-maphanloai img {
+                width: 80px;
+                height: 80px;
+                object-fit: contain;
+                margin-bottom: 12px;
+                transition: transform 0.25s ease;
+            }
+
+            .fm-maphanloai:hover img {
+                transform: scale(1.08);
+            }
+
+            .fm-maphanloai h3 {
+                color: var(--text-heading);
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+        
+        .fm-quangcao {
+            margin: 50px 8%;
+            padding: 42px 50px;
+            background: linear-gradient(120deg, var(--primary), var(--accent));
+            border-radius: var(--radius-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 153, 255, 0.25);
+        }
+
+            .fm-quangcao h3 {
+                font-size: 28px;
+                margin: 6px 0;
+                font-weight: 800;
+                letter-spacing: -0.3px;
+            }
+
+            .fm-quangcao p {
+                color: #e0f2fe;
+                font-size: 15px;
+            }
+
+            .fm-quangcao .button {
+                background: #ffffff;
+                color: var(--primary);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+                white-space: nowrap;
+            }
+
+                .fm-quangcao .button:hover {
+                    background: #f0f7ff;
+                    color: var(--accent-hover);
+                }
+
+                .fm-quangcao .button:active {
+                    background: #e2effd;
+                    transform: scale(0.95) translateY(1px);
+                }
+
+        .footer {
+            background-color: var(--primary-navy);
+            color: var(--text-footer);
+            padding: 60px 8% 25px 8%;
+            margin-top: 70px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer h2 {
+            color: #ffffff;
+            margin-bottom: 12px;
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        .footer h5,
+        .footer h4 {
+            color: var(--accent-light);
+            margin: 0 0 14px 0;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            line-height: 1.9;
+            color: var(--text-footer);
+        }
+
+        .fm-copyright {
+            text-align: center;
+            margin-top: 45px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-footer);
+            font-size: 13px;
+            color: var(--text-copyright);
+        }
+
+        @@media (max-width: 992px) {
+            .header {
+                flex-direction: column;
+                gap: 14px;
+                padding: 14px 5%;
+            }
+
+            .hero-section {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 45px 5%;
+                gap: 30px;
+            }
+
+            .fm-content,
+            .hero-image-wrapper {
+                max-width: 100%;
+                width: 100%;
+            }
+
+                .hero-image-wrapper img {
+                    height: auto;
+                    max-height: 320px;
+                }
+
+            .fm-quangcao {
+                flex-direction: column;
+                text-align: center;
+                gap: 22px;
+                padding: 32px 24px;
+                margin: 40px 5%;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @@media (max-width: 600px) {
+            .fm-mn {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero-section h2 {
+                font-size: 28px;
+            }
+
+            .Heading {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .fm-DS-PhanLoai {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .fm-quangcao h3 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Thanh thông báo trên cùng -->
+    <div class="top-bar">
+        Chào mừng đến với Sộp Pe - Thiên đường của mua sắm
+    </div>
+
+    <!-- Thanh điều hướng chính (Header) -->
+    <header class="header">
+        <a href="#TrangChu" class="logo-container">
+            <img src="@Url.Content("~/Content/images/1790757885769_51234873273648295_2571621206420595105_83417434fddb16422ca6e9be8e3f59ad.jpg")" [cite: 6]
+                 alt="Logo Sộp Pe"
+                 onerror="this.src='https://via.placeholder.com/48/0b4f9c/ffffff?text=SP'" />
+            <span class="logo">Sộp Pe<span>.</span></span>
+        </a>
+
+        <nav class="fm-mn">
+            <a href="#TrangChu">Trang chủ</a>
+            <a href="#danh-muc">Danh mục</a>
+            <a href="#san-pham">Sản phẩm</a>
+            <a href="#chat">Chat</a>
+            <a href="#tai-khoan">Tài khoản</a>
+        </nav>
+
+        <div class="fm-icon">
+            <button type="button" title="Menu">&#9776;</button>
+            <button type="button" title="Tìm kiếm">&#128269;</button>
+            <button type="button" title="Giỏ hàng">&#128722;</button>
+            <button type="button" title="Thông báo">&#128276;</button>
+        </div>
+    </header>
+
+    <!-- Thân trang chính -->
+    <main>
+        <!-- Hero Banner chính -->
+        <section class="hero-section" id="TrangChu">
+            <div class="fm-content">
+                <p class="fm-tieudenho">Chào mừng đến với Sộp Pe</p>
+                <h2>Chỗ nào không có,<br />chúng tôi có</h2>
+                <p class="fm-mota">Khám phá những trải nghiệm mua sắm hoàn hảo với dịch vụ bảo hành và chăm sóc khách hàng chất lượng 5 sao.</p>
+                <a href="#san-pham" class="button">
+                    Xem Sản Phẩm &rarr;
+                </a>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <img src="@Url.Content("~/Content/images/1790757885708_51234873273648295_2571621206420595105_3c32a9663d6e99bfd42c1d13dc92ef61.jpg")" [cite: 6]
+                     alt="Banner chính"
+                     onerror="this.src='https://via.placeholder.com/500x350/0077e6/ffffff?text=Banner+Sộp+Pe'" />
+                <div class="image-label">
+                    <span>Bộ Sưu Tập Mới</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Danh mục phân loại -->
+        <section class="fm-Phanloai" id="danh-muc">
+            <div class="Heading">
+                <p class="fm-tieu-de-nho">Danh Mục Nổi Bật</p>
+                <a href="#san-pham" class="text-link">Xem tất cả &rarr;</a>
+            </div>
+            <div class="fm-DS-PhanLoai">
+                <a href="#san-pham" class="fm-maphanloai">
+                    <img src="~/Content/images/thoi trang.jpg"   alt="Thời trang" onerror="this.src='https://via.placeholder.com/80/eaf3fb/0b4f9c?text=Thời+Trang'" />
+                    <h3>Thời Trang</h3>
+                </a>
+                <a href="#san-pham" class="fm-maphanloai">
+                    <img src="~/Content/images/connghde.jpg"     alt="Công nghệ" onerror="this.src='https://via.placeholder.com/80/eaf3fb/0b4f9c?text=Công+Nghệ'" />
+                    <h3>Đồ Công Nghệ</h3>
+                </a>
+                <a href="#san-pham" class="fm-maphanloai">
+                    <img src="~/Content/images/mỹ phẩm.jpg"   alt="Mỹ phẩm" onerror="this.src='https://via.placeholder.com/80/eaf3fb/0b4f9c?text=Làm+Đẹp'" />
+                    <h3>Làm Đẹp</h3>
+                </a>
+                <a href="#san-pham" class="fm-maphanloai">
+                    <img src="~/Content/images/da dun jg.jpg"   alt="Gia dụng" onerror="this.src='https://via.placeholder.com/80/eaf3fb/0b4f9c?text=Gia+Dụng'" />
+                    <h3>Đồ Gia Dụng</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Banner khuyến mãi -->
+        <section class="fm-quangcao" id="san-pham">
+            <div>
+                <p class="fm-mota" style="color: #ddecfa; margin-bottom: 5px;">Khuyến mãi đặc biệt</p>
+                <h3>ƯU ĐÃI DÀNH RIÊNG CHO BẠN</h3>
+                <p>Giảm giá trực tiếp lên đến 20% cho đơn hàng đầu tiên</p>
+            </div>
+            <a href="#san-pham" class="button">Khám phá ngay</a>
+        </section>
+
+        <!-- Chân trang -->
+        <footer class="footer" id="footer">
+            <div class="footer-content">
+                <div>
+                    <h2>Sộp Pe</h2>
+                    <p>Nền tảng mua sắm thương mại điện tử hàng đầu với trải nghiệm nhanh chóng, bảo mật và tiện lợi.</p>
+                </div>
+                <div>
+                    <h5>Thông Tin Liên Lạc</h5>
+                    <p>Email: hotro@soppe.vn</p>
+                    <p>Số điện thoại: 1900 1234</p>
+                    <p>Địa chỉ: Tòa nhà Sộp Pe, Quận 1, TP. Hồ Chí Minh</p>
+                </div>
+                <div>
+                    <h4>Hỗ Trợ Khách Hàng</h4>
+                    <p>Chính Sách Đổi Trả</p>
+                    <p>Chính Sách Giao Hàng</p>
+                    <p>Hướng Dẫn Mua Hàng</p>
+                </div>
+            </div>
+            <div class="fm-copyright">
+                &copy; @DateTime.Now.Year Sộp Pe. Tất cả các quyền được bảo lưu.
+            </div>
+        </footer>
+    </main>
+
+</body>
+</html>
