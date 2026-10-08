@@ -78,6 +78,7 @@ NgayTao DATETIME DEFAULT GETDATE(),
 CONSTRAINT PK_GioHang PRIMARY KEY (MaGH),  -- Khoá chính
  CONSTRAINT FK_GioHang_MaKH_KH  FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH), -- khoá ngoại
 )
+    GO
 --- BẢNG CHI TIẾT GIỎ HÀNG
 CREATE TABLE ChiTietGioHang (
     MaGH INT NOT NULL,
@@ -89,7 +90,7 @@ CREATE TABLE ChiTietGioHang (
     CONSTRAINT FK_ChiTietGioHang_MaSP_SP FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP),
     CONSTRAINT CHK_SoLuongMua_GH CHECK (SoLuong > 0)
 );
-
+GO
 --- BẢNG ĐƠN HÀNG
 CREATE TABLE DonHang
 (
@@ -109,7 +110,7 @@ CREATE TABLE DonHang
                                                    )
                                      )
 )
-
+GO
 --- BẢNG CHI TIẾT ĐƠN HÀNG
 CREATE TABLE ChiTietDonHang (
     MaDH INT NOT NULL,
@@ -122,3 +123,9 @@ CREATE TABLE ChiTietDonHang (
     CONSTRAINT FK_ChiTietDonHang_MaSP_SP FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP), -- khoá ngoại
     CONSTRAINT CHK_SoLuong_DH CHECK (SoLuong > 0)
 );
+GO
+INSERT INTO DanhMuc (TenDM) VALUES
+ ( N'Thời trang'),
+ ( N'Công nghệ'),
+ ( N'Đồ gia dụng'),
+ ( N'Làm đẹp');
