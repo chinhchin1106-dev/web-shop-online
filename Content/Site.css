@@ -508,3 +508,142 @@ img {
         font-size: 22px;
     }
 }
+
+    .search-box {
+    display: none;
+    align-items: center;
+    gap: 6px;
+}
+
+    .search-box.active {
+        display: flex;
+    }
+
+    .search-box input {
+        width: 180px;
+        padding: 9px 12px;
+        border: 1px solid var(--border-input);
+        border-radius: 8px;
+        outline: none;
+    }
+
+        .search-box input:focus {
+            border-color: var(--accent);
+        }
+
+    .search-box button {
+        padding: 9px 12px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+#cartCount {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+    .fm-mn {
+        display: none;
+    }
+
+        .fm-mn.active {
+            display: flex;
+        }
+
+    .search-box input {
+        width: 140px;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+}
+
+.cart-panel,
+.popup-panel {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2000;
+    width: min(360px, calc(100% - 30px));
+    max-height: 75vh;
+    overflow-y: auto;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+    .cart-panel[hidden],
+    .popup-panel[hidden] {
+        display: none;
+    }
+
+.cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+    .cart-header button {
+        border: none;
+        background: transparent;
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+.cart-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+    .cart-item button {
+        margin: 4px;
+        padding: 4px 9px;
+        cursor: pointer;
+    }
+
+.cart-total {
+    margin: 18px 0;
+    font-size: 17px;
+}
+
+.popup-panel input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--border-input);
+    border-radius: 8px;
+}
+
+#chatMessages {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+    margin: 12px 0;
+}
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 3000;
+    background: var(--primary-navy);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: none;
+    max-width: calc(100% - 30px);
+}
+
+    .toast.show {
+        display: block;
+    }

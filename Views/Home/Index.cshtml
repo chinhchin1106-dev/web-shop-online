@@ -552,10 +552,18 @@
         </nav>
 
         <div class="fm-icon">
-            <button type="button" title="Menu">&#9776;</button>
-            <button type="button" title="Tìm kiếm">&#128269;</button>
-            <button type="button" title="Giỏ hàng">&#128722;</button>
-            <button type="button" title="Thông báo">&#128276;</button>
+            <button type="button" id="btnMenu" title="Menu" aria-label="Mở Menu">&#9776;</button>
+            <button type="button" id="btnSearch" title="Tìm kiếm" aria-label="Mở Tìm kiếm">&#128269;</button>
+            <button type="button" id="btnCart" title="Giỏ hàng" aria-label="Mở Giỏ Hàng">&#128722;</button>
+            <button type="button" id="btnNotifications" title="Thông báo" aria-label="Mở Thông Báo">&#128276;</button>
+            <button type="button" id="btnAccount" title="Tài khoản" aria-label="Tài Khoản">&#128100;</button>
+            <button type="button" id="btnChat" title="Chat" aria-label="Mở Chat">&#128172;</button>
+        </div>
+        <div class="search-box" id="searchBox">
+            <input type="text" id="searchInput"
+                   placeholder="Nhập tên sản phẩm..."
+                   aria-label="Tìm kiếm sản phẩm" />
+            <button type="button" id="btnSearchSubmit">Tìm</button>
         </div>
     </header>
 
@@ -567,9 +575,6 @@
                 <p class="fm-tieudenho">Chào mừng đến với Sộp Pe</p>
                 <h2>Chỗ nào không có,<br />chúng tôi có</h2>
                 <p class="fm-mota">Khám phá những trải nghiệm mua sắm hoàn hảo với dịch vụ bảo hành và chăm sóc khách hàng chất lượng 5 sao.</p>
-                <a href="#san-pham" class="button">
-                    Xem Sản Phẩm &rarr;
-                </a>
             </div>
 
             <div class="hero-image-wrapper">
@@ -586,7 +591,7 @@
         <section class="fm-Phanloai" id="danh-muc">
             <div class="Heading">
                 <p class="fm-tieu-de-nho">Danh Mục Nổi Bật</p>
-                <a href="#san-pham" class="text-link">Xem tất cả &rarr;</a>
+               
             </div>
             <div class="fm-DS-PhanLoai">
                 <a href="#san-pham" class="fm-maphanloai">
@@ -609,7 +614,7 @@
         </section>
 
        
-        <section class="fm-quangcao" id="san-pham">
+        <section class="fm-quangcao">
             <div>
                 <p class="fm-mota" style="color: #ddecfa; margin-bottom: 5px;">Khuyến mãi đặc biệt</p>
                 <h3>ƯU ĐÃI DÀNH RIÊNG CHO BẠN</h3>
