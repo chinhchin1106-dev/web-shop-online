@@ -390,4 +390,119 @@ GO
 
 --=========================================================================
 
+USE WebBanHangOnline_N6;
+GO
+-- Kiểm tra các dữ liệu nạp vào
+SELECT * FROM DanhMuc
+SELECT * FROM SanPham
+SELECT * FROM KhachHang
+SELECT * FROM ChiTietGioHang
+SELECT * FROM GioHang
+SELECT * FROM DonHang
+SELECT * FROM ChiTietGioHang
+-- ================================================================
+--   Chức năng 1: Xem danh sách, chi tiết và tìm kiếm/lọc sản phẩm 
+-- ================================================================
+-- 1.1. Xem danh sách tất cả sản phẩm
+SELECT MaSP, TenSP, GiaBan, HinhAnh, SLTonKho 
+FROM SanPham;
+GO
+-- 1.2. Xem chi tiết một sản phẩm cụ thể (Ví dụ MaSP = 1)
+SELECT sp.*, dm.TenDM   -- sp.* giúp hiểp thị tất cả cột trong bảng SanPham
+-- sp là bí danh / biệt danh giúp phân biệt các cột có tên trường giống nhau, giúp câu lệnh ngắn gọn và rõ ràng hơn khi tham chiếu đến các cột của bảng đó
+FROM SanPham sp
+INNER JOIN DanhMuc dm ON sp.MaDM = dm.MaDM   
+WHERE sp.MaSP = 1; 
+GO
+-- 1.3. Tìm kiếm sản phẩm theo tên (Từ khóa: 'Áo')
+SELECT * 
+FROM SanPham 
+WHERE TenSP LIKE N'%Áo%';
+GO
+-- 1.4. Lọc sản phẩm theo khoảng giá (Từ 50,000 đến 200,000) và sắp xếp tăng dần theo giá
+SELECT * 
+FROM SanPham 
+WHERE GiaBan BETWEEN 50000 AND 200000 
+ORDER BY GiaBan ASC;
+GO
+-- 1.5. Lọc sản phẩm theo Danh mục (Ví dụ danh mục MaDM = 1)
+SELECT * 
+FROM SanPham 
+WHERE MaDM = 1;
+GO
 
+-- THÊM DỮ LIỆU MẪU CHO KHÁCH HÀNG
+SELECT * FROM KhachHang
+
+INSERT INTO KhachHang (HoTen, ĐiaChi, SĐT, Email, MatKhauTK, PhanQuyen) 
+VALUES (N'Nguyễn Văn A', N'Quận 1, TP.HCM', '0901234567', 'vana@gmail.com', '123456', 'Customer');
+-- KHÔI PHỤC LẠI SAU KHI THỬ NGHIỆM
+-- XOÁ DỮ LIỆU + RESET THỨ TỰ MaKH - GIỮ LẠI BẢNG
+-- 1. Xóa sạch dữ liệu các bảng liên quan theo đúng thứ tự (Con trước, Cha sau)
+DELETE FROM ChiTietGioHang;
+DELETE FROM GioHang;
+DELETE FROM ChiTietDonHang;
+DELETE FROM DonHang;
+DELETE FROM KhachHang;
+-- 2. Ép bộ đếm IDENTITY của bảng KhachHang quay lại từ đầu (về 0, để lần thêm tiếp theo là 1)
+DBCC CHECKIDENT ('KhachHang', RESEED, 0);
+GO
+
+-- ================================================================
+--   Chức năng 2: Giỏ hàng (Thêm, Xóa, Thay đổi số lượng)
+-- ================================================================
+
+-- LƯU Ý :trong SQL Server, cứ có khai báo biến DECLARE @TenBien thì câu lệnh DECLARE 
+-- đó phải chạy chung một lượt với các dòng sử dụng biến @TenBien đó, không được bôi đen chạy tách rời từng dòng riêng lẻ nhé!
+-- Chú thích thêm biến được khai báo = DECLARE @TenBien sẽ tự xoá sau khi chạy xong lệnh.Nó chỉ tồn tại khi chạy khối lệnh (tính từ lúc khai báo đến GO là 1 khối lệnh)
+
+------------------------------------------------------------------------------------
+-- 2.1. Thêm sản phẩm vào giỏ hàng (Nếu đã có sản phẩm đó trong giỏ thì tăng số lượng, nếu chưa thì thêm mới)
+--LƯU Ý : phải nạp dữ liệu khách hàng mẫu ở trên vào
+-- (Giả sử khách có MaKH = 1, muốn mua sản phẩm MaSP = 2, số lượng = 3)
+GO
+DECLARE @MaGH INT;                        -- Khai báo biến @MaGH và tìm mã giỏ hàng tương ứng với khách hàng MaKH = 1.
+SELECT @MaGH = MaGH FROM GioHang WHERE MaKH = 1;
+
+-- Nếu khách chưa có giỏ hàng thì tạo giỏ hàng mới tự động
+IF @MaGH IS NULL
+BEGIN
+    INSERT INTO GioHang (MaKH) VALUES (1);  -- Tạo giỏ hàng cho khách hàng với MaKH=1
+    SET @MaGH = SCOPE_IDENTITY(); -- lấy ra mã giỏ hàng vừa tạo gán vào biến @MaGH bằng hàm SCOPE_IDENTITY().
+    --SCOPE_IDENTITY() : Lấy ID tự tăng của bảng GioHang vừa được tạo ra ở câu lệnh INSERT phía trên
+END
+
+-- Thêm vào ChiTietGioHang (Thêm hoặc cập nhật sản phẩm vào chi tiết giỏ hàng)
+IF EXISTS (SELECT 1 FROM ChiTietGioHang WHERE MaGH = @MaGH AND MaSP = 2) -- Kiểm tra xem sản phẩm MaSP = 2 đã có trong giỏ hàng này chưa
+    UPDATE ChiTietGioHang SET SoLuong = SoLuong + 3 WHERE MaGH = @MaGH AND MaSP = 2; -- Nếu đã có: tăng số lượng thêm 3 đơn vị 
+ELSE
+    INSERT INTO ChiTietGioHang (MaGH, MaSP, SoLuong) VALUES (@MaGH, 2, 3); -- Nếu chưa có: Thêm mới sản phẩm đó vào giỏ với số lượng là 3
+GO
+-- Kiểm tra dữ liệu sau khi chạy code trên:
+SELECT * FROM ChiTietGioHang
+SELECT * FROM GioHang
+-----------------------------------------------------------------------------------
+-- 2.2. Thay đổi số lượng sản phẩm trong giỏ hàng (Cập nhật số lượng thành 5 cho MaSP = 2)
+UPDATE ChiTietGioHang 
+SET SoLuong = 5 
+WHERE MaGH = 1 AND MaSP = 2;
+
+-- 2.3. Xóa một sản phẩm ra khỏi giỏ hàng
+DELETE FROM ChiTietGioHang 
+WHERE MaGH = 1 AND MaSP = 2;
+-- ================================================================
+--    Chức năng 3: Kiểm tra tồn kho trước khi đặt hàng
+-- ================================================================
+
+
+-- Kiểm tra xem các sản phẩm trong giỏ hàng của khách (MaKH = 1) có vượt quá số lượng tồn kho hay không?
+-- Nếu câu lệnh này trả về dòng dữ liệu nghĩa là kho KHÔNG ĐỦ HÀNG.
+SELECT sp.TenSP, ct.SoLuong AS SoLuongMua, sp.SLTonKho AS TonKhoCon
+FROM ChiTietGioHang ct
+JOIN GioHang gh ON ct.MaGH = gh.MaGH
+JOIN SanPham sp ON ct.MaSP = sp.MaSP
+WHERE gh.MaKH = 1 AND ct.SoLuong > sp.SLTonKho;
+
+-- Kiểm tra số lượng tồn kho đơn thuần của sản phẩm 
+SELECT MaSP,TenSP, SLTonKho
+FROM SanPham
