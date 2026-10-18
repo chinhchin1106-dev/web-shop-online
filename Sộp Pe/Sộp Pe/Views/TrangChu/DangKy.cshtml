@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Đăng Ký";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<div class="form-page">
+    <div class="form-card">
+        <h2>Đăng ký tài khoản Sộp Pe</h2>
+        <p>Tạo tài khoản để bắt đầu mua sắm</p>
+        @using (Html.BeginForm("DangKy", "Taikhoan", FormMethod.Post))
+        {
+                <label for="fullName">Họ và Tên</label>
+                <input type="text" id="fullName" name="fullName"
+                       placeholder="Nhập họ và tên "required />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Nhập email" required/>
+                       <label for="password">Mật khẩu</label>
+                       <input type="password" id="password" name="password"
+                              placeholder="Tạo mật khẩu" required />
+                <label for="confirmpassword">Xác nhận mật khẩu</label>
+                <input type="password" id="confirmpassword" name="confirmpassword"
+                       placeholder="Nhập lại mật khẩu"/>
+                <button type="submit" class="form-button">
+                    Đăng ký
+                </button>
+        }
+                <p class="form-note">
+                    Đã có tài khoản?
+                    <a href="@Url.Action("Dangnhap","TrangChu")">
+                        Đăng nhập ngay
+                    </a>
+                </p>
+    </div>
+</div>
+

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title-Sộp Pe</title>
+    <link rel="stylesheet"
+          href="~/Content/Site.css"/>
+</head>
+<body>
+
+    <div class="top-bar">
+        Chào mừng đến với Sộp Pe - Thiên đường của mua sắm
+    </div>
+    <header class="header">
+        <a href="#" class="logo-container">
+            <img src="~/images/logo.jpg"
+                 [cite: 6]
+                 alt="Logo Sộp Pe" />
+            <span class="logo">Sộp Pe<span>.</span></span>
+        </a>
+        <nav class="fm-mn">
+            <a href="~/Index">Trang chủ</a>
+            <a href="#">Danh mục</a>
+            <a href="#">Sản phẩm</a>
+            <a href="#">Chat</a>
+            <a href="~/TrangChu/Dangnhap">Tài khoản</a>
+        </nav>
+        <div class="fm-icon">
+            <button type="button" id="btnMenu" title="Menu" aria-label="Mở Menu">&#9776;</button>
+            <button type="button" id="btnSearch" title="Tìm kiếm" aria-label="Mở Tìm kiếm">&#128269;</button>
+
+            <a href="@Url.Action("Giohang", "TrangChu")"
+               class="icon-link"
+               id="btnCart"
+               title="Giỏ hàng"
+               aria-label="Mở Giỏ hàng">
+                &#128722;
+            </a>
+
+            <a href="@Url.Action("ThongBao", "TrangChu")"
+               class="icon-link"
+               id="btnNotifications"
+               title="Thông báo"
+               aria-label="Mở Thông Báo">
+                &#128276;
+            </a>
+
+            <a href="@Url.Action("Dangnhap", "TrangChu")" class="icon-link" id="btnAccount" title="Đăng nhập" aria-label="Đăng nhập">
+                &#128100;
+            </a>
+
+            <button type="button" id="btnChat" title="Chat" aria-label="Mở Chat">&#128172;</button>
+        </div>
+        <div class="search-box" id="searchBox">
+            <input type="text" id="searchInput"
+                   placeholder="Nhập tên sản phẩm..."
+                   aria-label="Tìm kiếm sản phẩm" />
+            <button type="button" id="btnSearchSubmit">Tìm</button>
+        </div>
+
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div>
+                <h2>Sộp Pe</h2>
+                <p>Nền tảng mua sắm thương mại điện tử hàng đầu với trải nghiệm nhanh chóng, bảo mật và tiện lợi.</p>
+            </div>
+            <div>
+                <h5>Thông Tin Liên Lạc</h5>
+                <p>Email: hotro@soppe.vn</p>
+                <p>Số điện thoại: 1900 1234</p>
+                <p>Địa chỉ: Tòa nhà Sộp Pe, Quận 1, TP. Hồ Chí Minh</p>
+            </div>
+            <div>
+                <h4>Hỗ Trợ Khách Hàng</h4>
+                <p>Chính Sách Đổi Trả</p>
+                <p>Chính Sách Giao Hàng</p>
+                <p>Hướng Dẫn Mua Hàng</p>
+            </div>
+        </div>
+        <div class="fm-copyright">
+            &copy; @DateTime.Now.Year Sộp Pe. Tất cả các quyền được bảo lưu.
+        </div>
+    </footer>
+
+
+</body>
+</html>
