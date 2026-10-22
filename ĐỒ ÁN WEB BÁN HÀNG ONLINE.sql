@@ -167,10 +167,11 @@ GO
 -- Nếu chưa tạo thì ko cần đổi vì t đã sửa lại phần tạo bảng cho đúng rồi
 -- Đổi lại tên thuộc tính = code sau:
 -- Đổi tên cột ĐiaChi thành DiaChi
-EXEC sp_rename 'KhachHang.ĐiaChi', 'DiaChi', 'COLUMN';
+EXEC sp_rename N'dbo.KhachHang.ĐiaChi', 'DiaChi', 'COLUMN';
 GO
+
 -- Đổi tên cột SĐT thành SDT
-EXEC sp_rename 'KhachHang.SĐT', 'SDT', 'COLUMN';
+EXEC sp_rename N'dbo.KhachHang* SĐT', 'SDT', 'COLUMN';
 GO
 
 
