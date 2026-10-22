@@ -62,8 +62,8 @@ CREATE TABLE KhachHang
 (
   MaKH INT IDENTITY(1,1) PRIMARY KEY,
   HoTen NVARCHAR(30) NOT NULL,        -- Thông tin cá nhân
-  ĐiaChi NVARCHAR(255),               -- Thông tin cá nhân
-  SĐT VARCHAR(15),                    -- Thông tin cá nhân
+  DiaChi NVARCHAR(255),               -- Thông tin cá nhân
+  SDT VARCHAR(15),                    -- Thông tin cá nhân
   Email VARCHAR(100) UNIQUE,                 -- Tài khoản
   MatKhauTK  CHAR(60) NOT NULL,              -- Tài khoản
   PhanQuyen VARCHAR(20) DEFAULT 'Customer'
@@ -163,6 +163,16 @@ ADD CONSTRAINT CHK_TrangThai CHECK ( TrangThai IN (
 ));
 GO
 ---------------- Kết thúc sửa chữa -------------
+-- Xin lỗi , đổi lại tên thuộc tính của bảng khách hàng giúp tui nếu mn đã tạo bảng r nha.
+-- Nếu chưa tạo thì ko cần đổi vì t đã sửa lại phần tạo bảng cho đúng rồi
+-- Đổi lại tên thuộc tính = code sau:
+-- Đổi tên cột ĐiaChi thành DiaChi
+EXEC sp_rename 'KhachHang.ĐiaChi', 'DiaChi', 'COLUMN';
+GO
+-- Đổi tên cột SĐT thành SDT
+EXEC sp_rename 'KhachHang.SĐT', 'SDT', 'COLUMN';
+GO
+
 
  -- ================THÊM DỮ LIỆU SẢN PHẨM ==================
  SELECT * FROM SanPham
