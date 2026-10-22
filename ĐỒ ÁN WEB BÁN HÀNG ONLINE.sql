@@ -44,7 +44,7 @@ GO
 CREATE TABLE SanPham (
     MaSP INT IDENTITY(1,1),
     TenSP NVARCHAR(200) NOT NULL,
-    HinhAnh VARCHAR(255),
+    HinhAnh VARCHAR(500),
     GiaBan DECIMAL(12,2) NOT NULL DEFAULT 0,
     MoTa NVARCHAR(Max),
     SLTonKho INT NOT NULL DEFAULT 0,
@@ -96,7 +96,7 @@ CREATE TABLE DonHang
 (
     MaDH INT IDENTITY(1,1),
     MaKH INT NOT NULL,
-    TrangThai NVARCHAR(10) DEFAULT N'Chờ xác nhận',
+    TrangThai NVARCHAR(30) DEFAULT N'Chờ xác nhận',
     NgayDat DATETIME DEFAULT GETDATE(),
     TongTienTT DECIMAL(12, 2) NOT NULL DEFAULT 0,
     CONSTRAINT PK_DonHang PRIMARY KEY (MaDH),  -- Khoá chính
@@ -138,7 +138,31 @@ INSERT INTO DanhMuc (TenDM) VALUES
 ALTER TABLE SanPham
 ALTER COLUMN HinhAnh VARCHAR(500);
  GO
+--- Xin lỗi, tui viết thiếu số lượng ký tự tối đa cho kiểu dữ liệu nên mn nhớ sài mấy code này để sửa lại nha.
+--- Nếu mn chưa tạo csdl thì khỏi cần chạy code này vì tôi cũng sửa lại ở phần tạo bảng ban đầu rồi.
+-------- ĐOẠN CODE SỬA LẠI KIỂU DỮ LIỆU --------- 
+-- Bước 1: Xóa ràng buộc CHECK cũ đi (vì ràng buộc cũ đang giới hạn giá trị theo kiểu dữ liệu cũ)
+ALTER TABLE DonHang
+DROP CONSTRAINT CHK_TrangThai;
+GO
 
+-- Bước 2: Thay đổi kiểu dữ liệu của cột TrangThai lên NVARCHAR(30)
+ALTER TABLE DonHang
+ALTER COLUMN TrangThai NVARCHAR(30) NOT NULL;
+GO
+
+-- Bước 3: Thêm lại ràng buộc CHECK với các giá trị đầy đủ
+ALTER TABLE DonHang
+ADD CONSTRAINT CHK_TrangThai CHECK ( TrangThai IN ( 
+    N'Chờ xác nhận', 
+    N'Đã xác nhận', 
+    N'Đang xử lý', 
+    N'Đã giao', 
+    N'Hoàn thành', 
+    N'Đã hủy'
+));
+GO
+---------------- Kết thúc sửa chữa -------------
 
  -- ================THÊM DỮ LIỆU SẢN PHẨM ==================
  SELECT * FROM SanPham
