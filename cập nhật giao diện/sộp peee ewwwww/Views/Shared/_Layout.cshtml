@@ -1,0 +1,113 @@
+﻿@{
+    var currentSearch = Request.QueryString["search"];
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title - Sộp Pe</title>
+    <link href="@Url.Content("~/Content/Site.css")?v=soppe-20261022-v3" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/Giohang.css")?v=20261022-1" rel="stylesheet" />
+</head>
+<body>
+    <header class="sp-header">
+        <div class="sp-container sp-header-main">
+            <a href="@Url.Action("Index", "TrangChu")" class="logo-container">
+                <img src="@Url.Content("~/Content/images/1792432802672_51234873273648295_6052778508993535726_29556a74d9d932425311588ec93c3ae6.jpg")"
+                     alt="Logo Sộp Pe"
+                     class="shop-logo" />
+
+                <div class="logo-text">
+                    <span class="logo-name">Sộp Pe</span> 
+                </div>
+            </a>
+            <form class="sp-search header-search" method="get" action="@Url.Action("Index", "SanPham")" role="search">
+                <label for="spSearchInput" class="sr-only">Tìm kiếm sản phẩm</label>
+                <span class="sp-search-icon" aria-hidden="true">⌕</span>
+                <input id="spSearchInput" type="search" name="search" value="@currentSearch"
+                       placeholder="Bạn muốn tìm sản phẩm gì?" autocomplete="off" />
+                <button type="submit">🔎 <span>Tìm kiếm</span></button>
+            </form>
+
+            <div class="sp-tools">
+                <a href="@Url.Action("Giohang", "TrangChu")" class="sp-tool" title="Giỏ hàng">
+                    <span class="sp-tool-symbol" aria-hidden="true">🛒<span id="headerCartCount" class="sp-count" hidden>0</span></span>
+                    <span>Giỏ hàng</span>
+                </a>
+                <a href="@Url.Action("Index", "TrangChu")#yeu-thich" class="sp-tool" title="Sản phẩm yêu thích">
+                    <span class="sp-tool-symbol sp-outline-heart" aria-hidden="true">♡<span id="headerFavoriteCount" class="sp-count" hidden>0</span></span>
+                    <span>Yêu thích</span>
+                </a>
+                <a href="@Url.Action("ThongBao", "TrangChu")" class="sp-tool sp-notice-tool" title="Thông báo">
+                    <span class="sp-tool-symbol" aria-hidden="true">🔔</span>
+                    <span>Thông báo</span>
+                </a>
+                <details class="sp-account site-dropdown" id="accountDetails">
+                    <summary class="sp-tool" aria-label="Mở menu tài khoản" title="Tài khoản">
+                        <span class="sp-tool-symbol" aria-hidden="true">👤</span>
+                        <span>Tài khoản</span>
+                    </summary>
+                    <div class="sp-account-menu">
+                        <strong>Tài khoản Sộp Pe</strong>
+                        <a href="@Url.Action("Dangnhap", "TrangChu")"> Đăng nhập</a>
+                        <a href="@Url.Action("Dangky", "TrangChu")"> Đăng ký</a>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <div class="sp-nav-wrap">
+            <div class="sp-container sp-nav-row">
+                <details class="sp-category site-dropdown" id="categoryDetails">
+                    <summary class="sp-category-trigger">☰ &nbsp; Danh mục sản phẩm <span>⌄</span></summary>
+                    <div class="sp-category-menu">
+                        <a href="@Url.Action("Index", "SanPham", new { danhMuc = "Thời trang" })">👕 Thời trang <span>›</span></a>
+                        <a href="@Url.Action("Index", "SanPham", new { danhMuc = "Điện tử" })">🎧 Công nghệ <span>›</span></a>
+                        <a href="@Url.Action("Index", "SanPham", new { danhMuc = "Mỹ phẩm" })">💄 Mỹ phẩm <span>›</span></a>
+                        <a href="@Url.Action("Index", "SanPham", new { danhMuc = "Gia dụng" })">🏠 Gia dụng <span>›</span></a>
+                    </div>
+                </details>
+                <nav class="sp-nav" aria-label="Điều hướng trang">
+                    <a href="@Url.Action("Index", "TrangChu")" class="sp-nav-home">Trang chủ</a>
+                    <a href="@Url.Action("Index", "SanPham")">Sản phẩm</a>
+                    <a href="@Url.Action("Index", "TrangChu")#uu-dai">Ưu đãi</a>
+                    <a href="@Url.Action("Index", "TrangChu")#lien-he">Liên hệ</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="sp-main">@RenderBody()</main>
+    <footer class="sp-footer" id="lien-he">
+        <div class="sp-container sp-footer-columns">
+            <div>
+                <h3>Sộp Pe</h3>
+                <p>Nền tảng mua sắm trực tuyến tiện lợi.</p>
+                <div class="sp-socials" aria-label="Liên kết mạng xã hội chờ cấu hình">
+                    <button type="button" data-pending-link="Facebook" aria-label="Facebook chưa cấu hình">f</button>
+                    <button type="button" data-pending-link="Instagram" aria-label="Instagram chưa cấu hình">◎</button>
+                    <button type="button" data-pending-link="YouTube" aria-label="YouTube chưa cấu hình">▶</button>
+                    <button type="button" data-pending-link="TikTok" aria-label="TikTok chưa cấu hình">♪</button>
+                </div>
+            </div>
+            <div>
+                <h4>Thông tin liên hệ</h4>
+                <p>✉ Email: hotro@soppe.vn <small>(demo)</small></p>
+                <p>☎ Hotline: 1900 1234 <small>(demo)</small></p>
+            </div>
+            <div>
+                <h4>Hỗ trợ khách hàng</h4>
+                <p>Hướng dẫn mua hàng</p>
+                <p>Chính sách đổi trả</p>
+                <p>Câu hỏi thường gặp</p>
+            </div>
+        </div>
+        <div class="sp-container sp-footer-bottom">© @DateTime.Now.Year Sộp Pe - Dự án học tập</div>
+    </footer>
+
+    <button type="button" id="spBackTop" class="sp-backtop" title="Lên đầu trang" aria-label="Lên đầu trang" hidden>↑</button>
+    <script src="@Url.Content("~/Scripts/Scripts.js")?v=soppe-20261022-v3"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

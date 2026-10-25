@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Giỏ hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="sp-cart-v2" aria-labelledby="spCartTitle">
+    <div class="sp-container sp-cart-v2-container">
+        <nav class="sp-cart-v2-breadcrumb" aria-label="Đường dẫn điều hướng">
+            <a href="@Url.Action("Index", "TrangChu")">Sộp Pe</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Giỏ hàng</span>
+        </nav>
+
+        <div class="sp-cart-v2-heading">
+            <h1 id="spCartTitle"><span aria-hidden="true">🛒</span> Giỏ hàng của bạn</h1>
+            <p>Kiểm tra sản phẩm trước khi đặt hàng.</p>
+        </div>
+
+        <div class="sp-cart-v2-grid">
+            <div class="sp-cart-v2-panel">
+                <div class="sp-cart-v2-table-scroll">
+                    <table class="sp-cart-v2-table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="sp-cart-v2-check-col">
+                                    <input id="cartPageSelectAll" type="checkbox" aria-label="Chọn tất cả sản phẩm" />
+                                </th>
+                                <th scope="col" class="sp-cart-v2-product-col">Sản phẩm</th>
+                                <th scope="col">Đơn giá</th>
+                                <th scope="col">Số lượng</th>
+                                <th scope="col">Thành tiền</th>
+                                <th scope="col">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody
+                               id="cartPageRows">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="cartPageEmpty" class="sp-cart-v2-empty" hidden>
+                    <div class="sp-cart-v2-empty-art" aria-hidden="true">
+                        <svg width="140" height="122" viewBox="0 0 140 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="70" cy="61" r="51" fill="#EAF5FF" />
+                            <circle cx="19" cy="29" r="4" fill="#C8E5FF" />
+                            <circle cx="127" cy="73" r="5" fill="#C8E5FF" />
+                            <circle cx="112" cy="21" r="3" fill="#9ECEFF" />
+                            <path d="M23 33H35L45 81H110L120 47H40" stroke="#2385EA" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M49 59H113L107 76H53L49 59Z" fill="#7EC5FF" />
+                            <circle cx="56" cy="94" r="8" fill="#2385EA" />
+                            <circle cx="100" cy="94" r="8" fill="#2385EA" />
+                            <circle cx="57" cy="94" r="3" fill="#EAF5FF" />
+                            <circle cx="101" cy="94" r="3" fill="#EAF5FF" />
+                            <circle cx="69" cy="61" r="2.5" fill="#176ABF" />
+                            <circle cx="83" cy="61" r="2.5" fill="#176ABF" />
+                            <path d="M70 69Q77 75 84 69" stroke="#176ABF" stroke-width="2.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h2>Giỏ hàng của bạn đang trống</h2>
+                    <p>Hãy khám phá các sản phẩm yêu thích và thêm vào giỏ hàng nhé!</p>
+                    <a class="sp-cart-v2-btn sp-cart-v2-btn-primary sp-cart-v2-explore"
+                       href="@Url.Action("Index", "SanPham")">🛒 Khám phá sản phẩm &nbsp;→</a>
+                </div>
+
+                <div class="sp-cart-v2-bottom" id="cartPageBottom" hidden>
+                    <span>Đã chọn <b id="cartPageSelectedCount">0</b> sản phẩm</span>
+                    <button type="button" id="cartPageRemoveSelected" class="sp-cart-v2-link-danger">Xóa sản phẩm đã chọn</button>
+                </div>
+            </div>
+
+            <aside class="sp-cart-v2-summary" aria-label="Tổng kết giỏ hàng">
+                <h2>Tổng tiền</h2>
+                <div class="sp-cart-v2-cost-row sp-cart-v2-muted">
+                    <span>Tạm tính (<span id="cartPageSummaryCount">0</span> sản phẩm)</span>
+                    <strong id="cartPageSubtotal">0đ</strong>
+                </div>
+                <div class="sp-cart-v2-cost-row sp-cart-v2-muted">
+                    <span>Giảm giá</span><span class="sp-cart-v2-positive">0đ</span>
+                </div>
+                <div class="sp-cart-v2-cost-row">
+                    <span>Phí vận chuyển</span><span class="sp-cart-v2-positive">0đ</span>
+                </div>
+                <div class="sp-cart-v2-grand">
+                    <strong>Tổng tiền</strong>
+                    <strong id="cartPageGrandTotal">0đ</strong>
+                </div>
+                <button type="button" class="sp-cart-v2-btn sp-cart-v2-btn-primary sp-cart-v2-btn-wide"
+                        id="cartPageCheckout">
+                    Đặt hàng ngay &nbsp;→
+                </button>
+                <a class="sp-cart-v2-btn sp-cart-v2-btn-outline sp-cart-v2-btn-wide"
+                   href="@Url.Action("Index", "TrangChu")">← &nbsp; Tiếp tục mua sắm</a>
+                <div class="sp-cart-v2-guarantees">
+                    <div><span aria-hidden="true">🛡️</span><p><strong>Thanh toán an toàn</strong><small>Bảo vệ thông tin của bạn</small></p></div>
+                    <div><span aria-hidden="true">🚚</span><p><strong>Giao hàng nhanh</strong><small>Thời gian giao dự kiến khi đặt hàng</small></p></div>
+                    <div><span aria-hidden="true">📦</span><p><strong>Hỗ trợ đổi trả</strong><small>Theo chính sách cửa hàng</small></p></div>
+                </div>
+                <p class="sp-cart-v2-demo-note">* Phí vận chuyển và ưu đãi hiển thị là số liệu minh họa. Chưa kết nối thanh toán thật.</p>
+            </aside>
+        </div>
+    </div>
+</section>
+
+@section scripts {
+    <script src="@Url.Content("~/Scripts/Giohang.js")?v=20261022-1"></script>
+}
