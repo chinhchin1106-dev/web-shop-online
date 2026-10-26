@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<main>
+    <section class="hero-section" id="TrangChu">
+        <div class="fm-content">
+            <p class="fm-tieudenho">Chào mừng đến với Sộp Pe</p>
+            <h2>Chỗ nào không có,<br />chúng tôi có</h2>
+            <p class="fm-mota">Khám phá những trải nghiệm mua sắm hoàn hảo với dịch vụ bảo hành và chăm sóc khách hàng chất lượng 5 sao.</p>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="~/images/banner.jpg"
+                 [cite: 6]
+                 alt="Banner chính" />
+            <div class="image-label">
+                <span>Bộ Sưu Tập Mới</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="fm-Phanloai" id="danh-muc">
+        <div class="Heading">
+            <p class="fm-tieu-de-nho">Danh Mục Nổi Bật</p>
+
+        </div>
+        <div class="fm-DS-PhanLoai">
+            <a href="#san-pham" class="fm-maphanloai">
+                <img src="~/images/thoitrang.jpg"
+                     alt="Thời trang" @*onerror="this.src='https://via.placeholder.com/80/eaf3fb/0b4f9c?text=Thời+Trang'" />*@
+                <h3>Thời Trang</h3>
+            </a>
+            <a href="#san-pham" class="fm-maphanloai">
+                <img src="~/images/công nghệ.jpg" alt="Công nghệ" @*onerror="this.src='https://via.placeholder.com/80/eaf3fb/0b4f9c?text=Công+Nghệ'" />*@
+                <h3> Công Nghệ</h3>
+            </a>
+            <a href="#san-pham" class="fm-maphanloai">
+                <img src="~/images/mỹ phẩm.jpg" alt="Mỹ phẩm" @*onerror="this.src='https://via.placeholder.com/80/eaf3fb/0b4f9c?text=Làm+Đẹp'" />*@
+                <h3>Mỹ Phẩm</h3>
+            </a>
+            <a href="#san-pham" class="fm-maphanloai">
+                <img src="~/images/gia dụng.jpg" alt="Gia dụng" @*onerror="this.src='https://via.placeholder.com/80/eaf3fb/0b4f9c?text=Gia+Dụng'" />*@
+                <h3> Gia Dụng</h3>
+            </a>
+        </div>
+    </section>
+    <section class="fm-quangcao">
+        <div>
+            <p class="fm-mota" style="color: #ddecfa; margin-bottom: 5px;">Khuyến mãi đặc biệt</p>
+            <h3>ƯU ĐÃI DÀNH RIÊNG CHO BẠN</h3>
+            <p>Giảm giá trực tiếp lên đến 20% cho đơn hàng đầu tiên</p>
+        </div>
+        <a href="#san-pham" class="button">Khám phá ngay</a>
+    </section>
+
+</main>
+

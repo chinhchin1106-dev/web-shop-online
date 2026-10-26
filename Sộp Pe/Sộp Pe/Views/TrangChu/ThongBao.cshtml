@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Thông Báo";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<section class="notification-page">
+    <div class="notificiation-card">
+        <h2>Thông báo của bạn</h2>
+        <p class="notification-decription">
+            Cập nhật những thông tin mới nhất từ Sộp Pe.
+        </p>
+        <div class="notification-item">
+            <div class="notification-icon">🎉</div>
+            <div class="notification-content">
+                <h3>Chào mừng bạn đến với Sộp Pe</h3>
+                <p>
+                    Cám ơn bạn đã ghé thăm cửa hàng.
+                    Chúc bạn có trải nghiệm mua sắm vui vẻ!
+                </p>
+                <span>Thông báo từ cửa hàng</span>
+            </div>
+        </div>
+        <div class="notification-item">
+            <div class="notification-icon">📦</div>
+            <div class="notification-content">
+                <h3>Cập nhật đơn hàng</h3>
+                <p>
+                    Theo dõi đơn hàng của bạn để cập nhật
+                    tình trạng giao hàng mới nhất.
+                </p>
+                <span>Thông tin mua sắm</span>
+            </div>
+        </div>
+        <a href="@Url.Action("Index","TrangChu")"
+           class="notification-home">
+            ← Quay về trang chủ
+        </a>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Giỏ Hàng";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<section class="cart-page">
+    <div class="cart-card">
+        <h2>Giỏ hàng của bạn</h2>
+        <p class="cart-description">
+            Kiểm tra các sản phẩm bạn mua tại Sộp Pe.
+        </p>
+        <div class="cart-empty">🛍️</div>
+        <h3>Giỏ hàng của bạn đang trống</h3>
+        <p>
+            Hãy khám phá các sản phẩm và chọn món đồ yêu thích nhé!
+        </p>
+        <a href="@Url.Action("Index","TrangChu")"
+           class="cart-button">Tiếp tục mua sắm</a>
+    </div>
+
+</section>

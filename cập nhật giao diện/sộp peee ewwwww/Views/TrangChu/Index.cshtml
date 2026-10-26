@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="sp-home sp-container" id="TrangChu">
+    <section class="sp-banner-carousel" id="promoCarousel" aria-label="Banner quảng cáo Sộp Pe" aria-roledescription="carousel">
+        <div class="sp-banner-track">
+            <div class="sp-banner-slide is-active" aria-hidden="false">
+                <img class="sp-banner-image" data-user-image
+                     src="@Url.Content("~/Content/images/banner1_gioi_thieu.png")"
+                     alt="Banner Sộp Pe - Thiên đường mua sắm" />
+                <div class="sp-banner-fallback">
+                    <span class="sp-banner-kicker">SỘP PE - THIÊN ĐƯỜNG MUA SẮM</span>
+                    <h2>Sản phẩm đa dạng<br />Giá tốt mỗi ngày</h2>
+                    <p>Thời trang · Công nghệ · Mỹ phẩm · Gia dụng</p>
+                    <a class="sp-banner-cta" href="@Url.Action("Index", "SanPham")">Mua ngay →</a>
+                    <div class="sp-banner-art" aria-hidden="true">🛍️ 🛒 🎁</div>
+                </div>
+            </div>
+            <div class="sp-banner-slide sp-banner-blue" aria-hidden="true" hidden>
+                <!-- ẢNH BANNER 2 -->
+                <img class="sp-banner-image" data-user-image
+                     src="@Url.Content("~/Content/images/banner2_khuyen_mai.png")" alt="Banner ưu đãi Sộp Pe" />
+                <div class="sp-banner-fallback">
+                    <span class="sp-banner-kicker">MUA SẮM THÔNG MINH</span>
+                    <h2>Ưu đãi mỗi ngày<br />Mua sắm thả ga!</h2>
+                    <p>Khám phá nhiều ngành hàng yêu thích</p>
+                    <a class="sp-banner-cta" href="@Url.Action("Index", "SanPham")">Khám phá →</a>
+                    <div class="sp-banner-art" aria-hidden="true">🎧 📱 🎮</div>
+                </div>
+            </div>
+            <div class="sp-banner-slide sp-banner-soft" aria-hidden="true" hidden>
+                <!-- ẢNH BANNER 3 -->
+                <img class="sp-banner-image" data-user-image
+                     src="@Url.Content("~/Content/images/banner3_thoi_trang.png")" alt="Banner thời trang và gia dụng" />
+                <div class="sp-banner-fallback">
+                    <span class="sp-banner-kicker">SỘP PE ONLINE SHOP</span>
+                    <h2>Chỗ nào không có,<br />chúng tôi có!</h2>
+                    <p>Hàng ngàn lựa chọn cho bạn và gia đình</p>
+                    <a class="sp-banner-cta" href="@Url.Action("Index", "SanPham")">Xem sản phẩm →</a>
+                    <div class="sp-banner-art" aria-hidden="true">👟 💄 🏠</div>
+                </div>
+            </div>
+            <div class="sp-banner-slide sp-banner-soft" aria-hidden="true" hidden>
+                <!-- ẢNH BANNER 4 -->
+                <img class="sp-banner-image" data-user-image
+                     src="@Url.Content("~/Content/images/banner4_cong_nghe.png")" alt="Banner thời trang và gia dụng" />
+                <div class="sp-banner-fallback">
+                    <span class="sp-banner-kicker">SỘP PE ONLINE SHOP</span>
+                    <h2>Chỗ nào không có,<br />chúng tôi có!</h2>
+                    <p>Hàng ngàn lựa chọn cho bạn và gia đình</p>
+                    <a class="sp-banner-cta" href="@Url.Action("Index", "SanPham")">Xem sản phẩm →</a>
+                    <div class="sp-banner-art" aria-hidden="true">👟 💄 🏠</div>
+                </div>
+            </div>
+            <div class="sp-banner-slide sp-banner-soft" aria-hidden="true" hidden>
+                <!-- ẢNH BANNER 5 -->
+                <img class="sp-banner-image" data-user-image
+                     src="@Url.Content("~/Content/images/banner5_gia_dung.png")" alt="Banner thời trang và gia dụng" />
+                <div class="sp-banner-fallback">
+                    <span class="sp-banner-kicker">SỘP PE ONLINE SHOP</span>
+                    <h2>Chỗ nào không có,<br />chúng tôi có!</h2>
+                    <p>Hàng ngàn lựa chọn cho bạn và gia đình</p>
+                    <a class="sp-banner-cta" href="@Url.Action("Index", "SanPham")">Xem sản phẩm →</a>
+                    <div class="sp-banner-art" aria-hidden="true">👟 💄 🏠</div>
+                </div>
+            </div>
+            <div class="sp-banner-slide sp-banner-soft" aria-hidden="true" hidden>
+                <!-- ẢNH BANNER 6 -->
+                <img class="sp-banner-image" data-user-image
+                     src="@Url.Content("~/Content/images/banner6_my_pham.png")" alt="Banner thời trang và gia dụng" />
+                <div class="sp-banner-fallback">
+                    <span class="sp-banner-kicker">SỘP PE ONLINE SHOP</span>
+                    <h2>Chỗ nào không có,<br />chúng tôi có!</h2>
+                    <p>Hàng ngàn lựa chọn cho bạn và gia đình</p>
+                    <a class="sp-banner-cta" href="@Url.Action("Index", "SanPham")">Xem sản phẩm →</a>
+                    <div class="sp-banner-art" aria-hidden="true">👟 💄 🏠</div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="sp-banner-arrow sp-arrow-left" data-slide-prev aria-label="Banner trước">‹</button>
+        <button type="button" class="sp-banner-arrow sp-arrow-right" data-slide-next aria-label="Banner sau">›</button>
+        <div class="sp-banner-dots" aria-label="Chọn banner">
+            <button type="button" class="sp-banner-dot is-active" data-slide-to="0" aria-label="Banner 1" aria-current="true"></button>
+            <button type="button" class="sp-banner-dot" data-slide-to="1" aria-label="Banner 2"></button>
+            <button type="button" class="sp-banner-dot" data-slide-to="2" aria-label="Banner 3"></button>
+        </div>
+    </section>
+
+    <section class="sp-categories" id="danh-muc" aria-label="Danh mục sản phẩm">
+        <a class="sp-category-tile" href="@Url.Action("Index", "SanPham", new { danhMuc = "Thời trang" })">
+            <div class="sp-tile-image sp-image-frame">
+                <span class="sp-image-fallback" aria-hidden="true">👕</span>
+               
+                <img data-user-image src="@Url.Content("~/Content/images/thoi trang.jpg")" alt="Thời trang" />
+            </div>
+            <div class="sp-category-copy"><strong>Thời trang</strong><small>Xu hướng mới</small></div>
+            <span class="sp-tile-go" aria-hidden="true">›</span>
+        </a>
+        <a class="sp-category-tile" href="@Url.Action("Index", "SanPham", new { danhMuc = "Điện tử" })">
+            <div class="sp-tile-image sp-image-frame">
+                <span class="sp-image-fallback" aria-hidden="true">🎧</span>
+              
+                <img data-user-image src="@Url.Content("~/Content/images/connghde.jpg")" alt="Công nghệ" />
+            </div>
+            <div class="sp-category-copy"><strong>Công nghệ</strong><small>Đa dạng sản phẩm</small></div>
+            <span class="sp-tile-go" aria-hidden="true">›</span>
+        </a>
+        <a class="sp-category-tile" href="@Url.Action("Index", "SanPham", new { danhMuc = "Mỹ phẩm" })">
+            <div class="sp-tile-image sp-image-frame">
+                <span class="sp-image-fallback" aria-hidden="true">💄</span>
+               
+                <img data-user-image src="@Url.Content("~/Content/images/mỹ phẩm.jpg")" alt="Mỹ phẩm" />
+            </div>
+            <div class="sp-category-copy"><strong>Mỹ phẩm</strong><small>Chăm sóc sắc đẹp</small></div>
+            <span class="sp-tile-go" aria-hidden="true">›</span>
+        </a>
+        <a class="sp-category-tile" href="@Url.Action("Index", "SanPham", new { danhMuc = "Gia dụng" })">
+            <div class="sp-tile-image sp-image-frame">
+                <span class="sp-image-fallback" aria-hidden="true">🏠</span>
+             
+                <img data-user-image src="@Url.Content("~/Content/images/da dun jg.jpg")" alt="Gia dụng" />
+            </div>
+            <div class="sp-category-copy"><strong>Gia dụng</strong><small>Tiện nghi cho gia đình</small></div>
+            <span class="sp-tile-go" aria-hidden="true">›</span>
+        </a>
+    </section>
+
+    <section class="sp-featured" id="san-pham-noi-bat">
+        <div class="sp-section-heading"><h2>Sản phẩm nổi bật</h2><p>Lựa chọn dành cho bạn</p></div>
+        <div class="sp-product-grid"> 
+    </section>
+  
+        <div class="sp-section-heading"><h2 id="spFavHeading">♡ Sản phẩm yêu thích</h2><p>Danh sách bạn đã lưu</p></div>
+       
+<section class="fm-quangcao">
+     <div>
+         <p class="fm-mota" style="color: #ddecfa; margin-bottom: 5px;">Khuyến mãi đặc biệt</p>
+         <h3>ƯU ĐÃI DÀNH RIÊNG CHO BẠN</h3>
+         <p>Giảm giá trực tiếp lên đến 20% cho đơn hàng đầu tiên</p>
+     </div>
+    
+ </section>
+           
+           
+    </section>
+</div>
