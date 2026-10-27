@@ -1,13 +1,16 @@
 USE master;
 GO
-
-IF EXISTS (SELECT name FROM sys.databases WHERE name = 'WebBanHangOnline_N6')
+---------------- CHỈ XOÁ NẾU CSDL BỊ LỖI--------------------------
+/*
+    IF EXISTS (SELECT name FROM sys.databases WHERE name = 'WebBanHangOnline_N6')
 BEGIN
     ALTER DATABASE WebBanHangOnline_N6 SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
     DROP DATABASE WebBanHangOnline_N6;
     PRINT 'Existing WebBanHangOnline_N6 database has been dropped.';
 END
 GO
+*/
+------------------------------------------------
 
 -- Giải thích code IDENTITY(1,1) : 
 --là một thuộc tính  
@@ -77,8 +80,8 @@ MaKH INT UNIQUE NOT NULL, -- Ràng buộc UNIQUE đảm bảo mỗi khách chỉ
 NgayTao DATETIME DEFAULT GETDATE(),
 CONSTRAINT PK_GioHang PRIMARY KEY (MaGH),  -- Khoá chính
  CONSTRAINT FK_GioHang_MaKH_KH  FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH), -- khoá ngoại
-)
-    GO
+);
+GO
 --- BẢNG CHI TIẾT GIỎ HÀNG
 CREATE TABLE ChiTietGioHang (
     MaGH INT NOT NULL,
@@ -116,7 +119,7 @@ CREATE TABLE ChiTietDonHang (
     MaDH INT NOT NULL,
     MaSP INT NOT NULL,
     SoLuong SMALLINT NOT NULL,
-    DonGia DECIMAL(18,2) NOT NULL, -- đơn giá tại thời điểm mua
+    DonGia DECIMAL(12,2) NOT NULL, -- đơn giá tại thời điểm mua
     
     CONSTRAINT PK_ChiTietDonHang_MaDH_MaSP PRIMARY KEY (MaDH, MaSP), -- Khoá chính
     CONSTRAINT FK_ChiTietDonHang_MaDH_DH  FOREIGN KEY (MaDH) REFERENCES DonHang(MaDH) ON DELETE CASCADE, -- khoá ngoại + tự xoá nếu bảng cha xoá
@@ -125,49 +128,6 @@ CREATE TABLE ChiTietDonHang (
 );
 GO
 
-
-
- -- tăng thêm để phòng link cloudinary dài hơn giới hạn 255
-ALTER TABLE SanPham
-ALTER COLUMN HinhAnh VARCHAR(500);
- GO
---- Xin lỗi, tui viết thiếu số lượng ký tự tối đa cho kiểu dữ liệu nên mn nhớ sài mấy code này để sửa lại nha.
---- Nếu mn chưa tạo csdl thì khỏi cần chạy code này vì tôi cũng sửa lại ở phần tạo bảng ban đầu rồi.
--------- ĐOẠN CODE SỬA LẠI KIỂU DỮ LIỆU --------- 
--- Bước 1: Xóa ràng buộc CHECK cũ đi (vì ràng buộc cũ đang giới hạn giá trị theo kiểu dữ liệu cũ)
-ALTER TABLE DonHang
-DROP CONSTRAINT CHK_TrangThai;
-GO
-
--- Bước 2: Thay đổi kiểu dữ liệu của cột TrangThai lên NVARCHAR(30)
-ALTER TABLE DonHang
-ALTER COLUMN TrangThai NVARCHAR(30) NOT NULL;
-GO
-
--- Bước 3: Thêm lại ràng buộc CHECK với các giá trị đầy đủ
-ALTER TABLE DonHang
-ADD CONSTRAINT CHK_TrangThai CHECK ( TrangThai IN ( 
-    N'Chờ xác nhận', 
-    N'Đã xác nhận', 
-    N'Đang xử lý', 
-    N'Đã giao', 
-    N'Hoàn thành', 
-    N'Đã hủy'
-));
-GO
----------------- Kết thúc sửa chữa -------------
--- Xin lỗi , đổi lại tên thuộc tính của bảng khách hàng giúp tui nếu mn đã tạo bảng r nha.
--- Nếu chưa tạo thì ko cần đổi vì t đã sửa lại phần tạo bảng cho đúng rồi
--- Đổi lại tên thuộc tính = code sau:
--- Đổi tên cột ĐiaChi thành DiaChi
-EXEC sp_rename N'dbo.KhachHang.ĐiaChi', 'DiaChi', 'COLUMN';
-GO
-
--- Đổi tên cột SĐT thành SDT
-EXEC sp_rename N'dbo.KhachHang* SĐT', 'SDT', 'COLUMN';
-GO
-
--- KHÔNG TẠO NẾU CHƯA DÙNG ĐẾN BẢNG SAU:
 --================ Thêm bảng mới phát sinh theo yêu cầu của nhóm ===================
 -- TẠO THÊM BẢNG THÔNG BÁO
 CREATE TABLE ThongBao(
@@ -186,7 +146,7 @@ CONSTRAINT PK_ThongBao PRIMARY KEY (MaTB),  -- Khoá chính
 CONSTRAINT FK_ThongBao_KhachHang  FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH), -- khoá ngoại 
 CONSTRAINT FK_ThongBao_DonHang  FOREIGN KEY (MaDH) REFERENCES DonHang(MaDH) -- khoá ngoại 
 )
-
+GO
 -- TẠO THÊM BẢNG LƯỢT XEM SẢN PHẨM 
  CREATE TABLE LuotXemSP (
  MaLX BIGINT IDENTITY(1,1) ,
@@ -198,7 +158,7 @@ CONSTRAINT FK_ThongBao_DonHang  FOREIGN KEY (MaDH) REFERENCES DonHang(MaDH) -- k
  CONSTRAINT FK_LuotXemSanPham_KhachHang FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH),
  CONSTRAINT PK_LuotXemSanPham PRIMARY KEY (MaLX)
 )
-
+GO
 
 -- =================THÊM DỮ LIỆU DANH MỤC=================
 INSERT INTO DanhMuc (TenDM) VALUES
@@ -210,7 +170,7 @@ INSERT INTO DanhMuc (TenDM) VALUES
 
     
  -- ====================THÊM DỮ LIỆU SẢN PHẨM =====================
- SELECT * FROM SanPham
+
  -- THÊM DỮ LIỆU SẢN PHẨM TRONG DANH MỤC THỜI TRANG MaDM 1
  INSERT INTO SanPham   (TenSP, HinhAnh, GiaBan, MoTa, SLTonKho, MaDM) VALUES
  -- SanPham 1
@@ -308,11 +268,8 @@ Hỗ trợ đổi trả nếu sản phẩm lỗi từ nhà sản xuất.
 
 ', 120, 1);
 
-
-
 GO
- SELECT * FROM  SanPham -- CHECK XEM CÓ THIẾU KO
-GO
+
 -- THÊM DỮ LIỆU SẢN PHẨM TRONG DANH MỤC ĐỒ GIA DỤNG  MaDM 3
  INSERT INTO SanPham   (TenSP, HinhAnh, GiaBan, MoTa, SLTonKho, MaDM) VALUES
  -- SanPham 1
@@ -412,10 +369,6 @@ Cọ rửa bồn rửa bát (lavabo).
 Vệ sinh mặt bếp ga, bếp từ và các góc khuất dễ dàng. '
 ,89,3);
 
-
-
-GO
-SELECT * FROM SanPham  -- CHECK XEM CÓ THIẾU KO
 GO
 -- THÊM DỮ LIỆU SẢN PHẨM TRONG DANH MỤC LÀM ĐẸP  MaDM 4
  INSERT INTO SanPham   (TenSP, HinhAnh, GiaBan, MoTa, SLTonKho, MaDM) VALUES
@@ -436,10 +389,6 @@ GO
  N'Nước hoa hồng chiết xuất từ rau má Madagascar giúp làm dịu da nhạy cảm, cân bằng độ pH và hỗ trợ phục hồi làn da tổn thương.'
  ,13,4);
  
-
-
-GO
-SELECT * FROM SanPham -- CHECK XEM CÓ THIẾU KO
 GO
  -- THÊM DỮ LIỆU SẢN PHẨM TRONG DANH MỤC CÔNG NGHỆ  MaDM 2
  INSERT INTO SanPham   (TenSP, HinhAnh, GiaBan, MoTa, SLTonKho, MaDM) VALUES
@@ -456,7 +405,1140 @@ GO
  (N'Tai nghe không dây JBL Wave Buds 2','https://res.cloudinary.com/jw935dos/image/upload/v1792169120/TaiNghe-KoDay.png',1550000,
  N'Tai nghe True Wireless chống ồn chủ động (ANC), chuẩn Bluetooth 5.3, thời lượng pin tổng lên đến 40 giờ (10 giờ tai nghe + 30 giờ hộp sạc).',768,2);
 
-
 --=========================================================================
+-------- TRUY VẤN BÌNH THƯỜNG KẾT HỢP KHAI BÁO BIẾN ---------
+
+-- Khai báo biến để nhận dữ liệu từ phía người dùng mà kiểm tra
+ -- Cú pháp khai báo ở SQL để test code trong sql
+ -- DECLARE @TenBien KieuDuLieu;
+ -- Cú pháp gán:
+ -- SET @TenBien = giá trị theo kiểu dữ liệu đã khai báo
+ -- Cú pháp gán giá trị từ 1 bảng vào biến
+ -- Ví dụ:
+-- DECLARE @MaSP INT
+-- SELECT @MaSP = MaSP 
+-- FROM SanPham
+-- WHERE GiaBan > 100000
+
+--- THÊM KHÁCH HÀNG ĐỂ TEST (Lưu ý test hết truy vấn r mới xoá):
+INSERT INTO KhachHang(HoTen,Email,MatKhauTK)
+VALUES(N'Nguyễn Văn A','NgVanA@gmail.com','123456')
+SELECT * FROM KhachHang
+--- XOÁ KHÁCH HÀNG ĐÃ THÊM Ở TRÊN
+DELETE KhachHang WHERE MaKH = 1
+
+--- RESET LẠI IDENTITY CỦA KHÁCH SAU KHI XOÁ KHÁCH MẪU
+ DBCC CHECKIDENT ('KhachHang', RESEED, 0);
+GO
+--======================
+-- CHỨC NĂNG ĐĂNG KÝ 
+--=======================
+--1 kiểm tra email có trùng ko 
+DECLARE @Email VARCHAR(100)
+        -- Khai báo biến 
+-----        
+SELECT MaKH
+FROM KhachHang
+WHERE Email = @Email;
+GO
+--2 Thêm tài khoản
+
+DECLARE  @HoTen NVARCHAR(30) = N'Nguyễn Văn B',       -- Khai báo biến 
+         @MatKhauHash  CHAR(60) = '7890ga',    -- Khai báo biến 
+         @Email VARCHAR(100)  = 'NgVanB@gmail.com'   -- Khai báo biến 
+------
+INSERT INTO KhachHang ( HoTen, Email, MatKhauTK)
+VALUES (@HoTen, @Email, @MatKhauHash);
+GO
+-- Xoá khác hàng đã thêm ở trên
+SELECT * FROM KhachHang -- kiểm tra MaKH để xoá 
+DELETE KhachHang WHERE MaKH = 2 -- Đổi mã khách hàng nếu khác
+
+--- RESET LẠI IDENTITY CỦA KHÁCH SAU KHI XOÁ KHÁCH vừa thêm vì TEST CODE
+ DBCC CHECKIDENT ('KhachHang', RESEED, 1);
+GO
 
 
+
+--===========================
+-- CHỨC NĂNG ĐĂNG NHẬP
+--===========================
+DECLARE  @MatKhau CHAR(60),    -- Khai báo biến 
+         @Email VARCHAR(100)    -- Khai báo biến
+SELECT  MaKH, HoTen, Email, SDT, DiaChi, MatKhauTK,PhanQuyen
+FROM KhachHang
+WHERE Email = @Email AND MatKhauTK = @MatKhau;
+GO
+
+--==========================================================
+-- CHỨC NĂNG: Kiểm tra tồn kho của một sản phẩm còn đủ với số lượng cần mua không
+--==========================================================
+DECLARE @SoLuong INT,     -- Khai báo biến 
+        @MaSP INT    -- Khai báo biến 
+-- Ví dụ cho giá trị như sau:
+SET @SoLuong  = 3
+SET @MaSP  = 4
+---
+SELECT
+    MaSP,
+    TenSP,
+    GiaBan,
+    SLTonKho
+FROM SanPham
+WHERE MaSP = @MaSP
+  AND SLTonKho >= @SoLuong;
+
+GO
+--********************************************
+-- GIỎ HÀNG
+--********************************************
+--====================================
+-- Lưu sản phẩm khách hàng đã thêm có 2 trường hợp
+--====================================
+-- Thêm Giỏ hàng trước cho khách để TEST Trường hợp 1
+INSERT INTO GioHang (MaKH)
+VALUES (1);
+
+----------------KHAI BÁO ĐỂ TEST Trường hợp 1--------
+DECLARE @SoLuong INT = 2,     -- Khai báo biến 
+        @MaSP INT = 3,    -- Khai báo biến 
+        @MaKH INT  = 1,  -- Khai báo biến 
+        @MaGH INT = 1
+---------------
+---- Tìm giỏ hàng để kiểm tra xem thuộc trường hợp 1 hay 2
+SELECT MaGH
+FROM GioHang
+WHERE MaKH = @MaKH     -- ko trả về gì => trường hợp 1
+ 
+-- 1 Nếu đã có sẵn giỏ hàng
+--  Thêm vào giỏ hàng sản phẩm 
+INSERT INTO ChiTietGioHang (MaGH, MaSP, SoLuong)
+VALUES (@MaGH, @MaSP, @SoLuong);
+GO
+--- Dừng test
+-- XOÁ GIỎ HÀNG & RESET IDENTITY SAU KHI TEST
+DELETE GioHang WHERE MaKH = 1 -- vì chitietGioHang có on delete cascade nên tự xoá theo
+GO
+DBCC CHECKIDENT ('GioHang', RESEED, 0);
+GO
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM GioHang
+SELECT * FROM ChiTietGioHang
+---------------------------------------------------------
+----------------KHAI BÁO ĐỂ TEST Trường hợp 2 --------
+DECLARE @SoLuong INT = 2,     -- Khai báo biến 
+        @MaSP INT = 3,    -- Khai báo biến 
+        @MaKH INT  = 1,  -- Khai báo biến 
+        @MaGH INT  
+---------------
+-- 2 Chưa có giỏ hàng
+-- Tạo giỏ hàng mới nếu khách chưa có giỏ
+INSERT INTO GioHang (MaKH)
+VALUES (@MaKH);
+
+-- Lấy mã giỏ hàng vừa tạo
+-- giải thích code:SCOPE_IDENTITY() lấy ra giá trị của cột tự tăng (IDENTITY) vừa mới được tạo ra gần nhất.
+-- giải thích code:CAST(... AS INT) CAST dùng để chuyển đổi kiểu dữ liệu của một giá trị sang một kiểu dữ liệu khác.
+SELECT SCOPE_IDENTITY()  AS MaGH;
+
+-- TEST: khởi tạo giá trị @MaGH = MaGH sau khi thêm giỏ hàng cho khách ở trên
+SET @MaGH = 
+(SELECT MaGH
+FROM GioHang
+WHERE MaKH = @MaKH) -- Tìm giỏ hàng vừa tạo cho khách
+------------------------------------------------
+-- Thêm vào giỏ hàng sản phẩm 
+INSERT INTO ChiTietGioHang (MaGH, MaSP, SoLuong)
+VALUES (@MaGH, @MaSP, @SoLuong);
+GO
+
+-- XOÁ GIỎ HÀNG & RESET IDENTITY SAU KHI TEST
+DELETE GioHang WHERE MaKH = 1 -- vì chitietGioHang có on delete cascade nên tự xoá theo
+GO
+DBCC CHECKIDENT ('GioHang', RESEED, 0);
+GO
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM GioHang
+SELECT * FROM ChiTietGioHang
+
+-- Phần 3 Ngoài lề Nếu sản phẩm đã có trong giỏ hàng
+-- Cập nhật số lượng sản phẩm
+-- KHOAN XOÁ GIỎ HÀNG Ở TRÊN NẾU MUỐN TEST 
+----------------KHAI BÁO ĐỂ TEST Phần 3 --------
+DECLARE @SoLuongThem INT = 2,     -- Khai báo biến 
+        @MaSP INT = 3,    -- Khai báo biến 
+        @MaKH INT  = 1,  -- Khai báo biến 
+        @MaGH INT = 1
+--------------- 
+UPDATE ChiTietGioHang
+SET SoLuong = SoLuong + @SoLuongThem
+WHERE MaGH = @MaGH
+  AND MaSP = @MaSP;
+-- Kiểm tra xem số lượng tăng chưa 
+SELECT * FROM ChiTietGioHang
+GO
+-- XOÁ GIỎ HÀNG & RESET IDENTITY SAU KHI TEST
+DELETE GioHang WHERE MaKH = 1 -- vì chitietGioHang có on delete cascade nên tự xoá theo
+GO
+DBCC CHECKIDENT ('GioHang', RESEED, 0);
+GO
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM GioHang
+SELECT * FROM ChiTietGioHang
+
+
+--===========================
+-- YÊU CẦU: Lưu số lượng và giá tại thời điểm đặt hàng
+--===========================
+-- Tình huống người dùng đặt hàng trong giỏ hàng chứa ko đặt hàng trực tiếp khi thấy sản phẩm
+-- Tạo giỏ hàng cho khách để test
+INSERT INTO GioHang (MaKH)
+VALUES (1);
+GO
+-- Thêm vào giỏ hàng sp để test
+INSERT INTO ChiTietGioHang (MaGH, MaSP, SoLuong)
+VALUES (1, 3, 2);
+GO
+-- Kiểm tra xem tạo dữ liệu mẫu chưa
+SELECT * FROM GioHang
+SELECT * FROM ChiTietGioHang
+----------------KHAI BÁO ĐỂ TEST Một lượt từ 1 đến 7 (quét từ 1 - 7)--------
+DECLARE @SoLuong INT = 2,     -- Khai báo biến 
+        @MaSP INT = 3,    -- Khai báo biến 
+        @MaKH INT  = 1,  -- Khai báo biến 
+        @MaGH INT = 1,
+        @MaDH INT,
+        @TongTien DECIMAL(12, 2)
+--------------- 
+-- 1.CHỨC NĂNG: Lấy thông tin 1 sản phẩm khách đã tích chọn
+SELECT
+    CT.MaSP,
+    SP.TenSP,
+    CT.SoLuong,
+    SP.GiaBan,
+    SP.SLTonKho,
+    CT.SoLuong * SP.GiaBan AS ThanhTien
+FROM ChiTietGioHang AS CT
+INNER JOIN SanPham AS SP
+    ON CT.MaSP = SP.MaSP
+WHERE CT.MaGH = @MaGH
+  AND CT.MaSP = @MaSP;
+
+-- 2  Kiểm tra 1 sản phẩm có đủ hàng để đặt mua không (Kiểm tra số lượng tồn kho để xem có cho khách đặt ko)
+-- LƯU Ý Phải kiểm tra hết tồn kho của tất cả sản phẩm (nếu chọn nhiều sp)
+
+SELECT MaSP, TenSP, SLTonKho
+FROM SanPham
+WHERE MaSP = @MaSP
+  AND SLTonKho >= @SoLuong;
+
+-- 3  Tạo đơn hàng
+INSERT INTO DonHang (MaKH, TongTienTT)
+VALUES (@MaKH, @TongTien);
+
+-- Lấy mã đơn hàng vừa sinh
+SET @MaDH = SCOPE_IDENTITY();
+
+-- 4.chuyển từ ChiTietGioHang sang  ChiTietDonHang 
+-- a> Truờng hơp nếu người dùng chọn mua 1 sản phẩm trong giỏ hàng (có thể lặp nhiều lần nếu chọn mua nhiều sp khác nhau)
+
+INSERT INTO ChiTietDonHang (MaDH, MaSP, SoLuong, DonGia)
+SELECT 
+    @MaDH,
+    ghct.MaSP,
+    ghct.SoLuong,    -- Lấy đúng số lượng người dùng đã chỉnh/lưu trong giỏ hàng
+    sp.GiaBan      -- Lấy giá bán hiện tại từ bảng SanPham
+FROM ChiTietGioHang ghct
+JOIN GioHang gh ON ghct.MaGH = gh.MaGH
+JOIN SanPham sp ON sp.MaSP = ghct.MaSP
+WHERE gh.MaKH = @MaKH 
+  AND ghct.MaSP = @MaSP; -- Lấy Mã sản phẩm người dùng tích chọn trong giỏ hàng để mua
+
+
+-- 5 Chức năng cập nhật số lượng tồn kho khi thêm đc mỗi 1 chi tiết đơn hàng thành công ở trên
+UPDATE SanPham
+SET SLTonKho = SLTonKho - @SoLuong
+WHERE MaSP = @MaSP
+  AND SLTonKho >= @SoLuong;
+
+-- 6 Xoá sản phẩm đã chuyển thành đơn đặt hàng trên khỏi giỏ hàng
+DELETE ct
+FROM ChiTietGioHang ct
+JOIN GioHang gh ON ct.MaGH = gh.MaGH
+WHERE gh.MaKH = @MaKH 
+  AND ct.MaSP = @MaSP; -- 1 sản phẩm đã chọn
+
+--  7 TÍNH + LƯU TỔNG TIỀN THANH TOÁN VÀO ĐƠN HÀNG
+--CHỨC NĂNG: Tính tổng tiền của đơn hàng (chi tiêt các đơn hàng)
+SELECT
+    SUM(SoLuong * DonGia) AS TongTien
+FROM ChiTietDonHang
+WHERE MaDH = @MaDH;
+-- CHỨC NĂNG: Lưu tổng tiền vừa tính vào đơn hàng (bảng đơn hàng)
+UPDATE DonHang
+SET TongTienTT = @TongTien
+WHERE MaDH = @MaDH;
+
+GO
+-- DỪNG TEST
+-- KHÔI PHỤC SAU KHI TEST
+  -- XOÁ GIỎ HÀNG & RESET IDENTITY SAU KHI TEST
+DELETE GioHang WHERE MaKH = 1 -- vì chitietGioHang có on delete cascade nên tự xoá theo
+GO
+DBCC CHECKIDENT ('GioHang', RESEED, 0);
+GO
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM GioHang
+SELECT * FROM ChiTietGioHang
+-- XOÁ ĐƠN HÀNG & RESET IDENTITY SAU KHI TEST
+DELETE FROM ChiTietDonHang WHERE MaDH = 1
+DELETE DonHang WHERE MaKH = 1
+GO
+DBCC CHECKIDENT ('DonHang', RESEED, 0);
+GO
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM DonHang
+SELECT * FROM ChiTietDonHang
+-- KHÔI PHỤC LẠI SỐ LƯỢNG TỒN KHO
+UPDATE SanPham
+SET SLTonKho = SLTonKho + 2
+WHERE MaSP = 3
+-- Kiểm tra 
+SELECT * FROM SanPham WHERE MaSP=3
+
+
+
+---------------------------------------------------------------------------------------
+-- Với trường hợp " b> người dùng tích chọn nhiều sản phẩm nhưng ko phải tất cả:" khuyên nên truyền lần lượt (chạy truy vấn lặp lại nhiều lần) bằng cách chạy chức năng chuyển ChitietGioHang sang ChiTietDH ở a dễ hơn
+-- Ví dụ : giỏ khách : có sp MaSP: 1 , 8 , 4 ,5 khách chọn 1, 8 
+-- 1.chạy truy vấn trên lần lượt với maSP là 1 rồi tới 8 mỗi lần phải kiểm tra tồn kho có đủ ko 
+-- 2. Nếu sl tồn kho của tất cả sản phẩm đủ hết tiến hành tạo đơn hàng và lần lượt chuyển sp từ giỏ hàng sang đơn hàng mỗi lượt Giảm số lượng tồn kho và xoá sp khỏi giỏ hàng  
+-- 3.Tính tổng tiền đơn hàng và lưu lại
+-- -----------------------------------------------------------------------------------
+
+--===========================================
+--Cho phép cập nhật số lượng và xóa sản phẩm
+--============================================
+-- Tạo giỏ hàng cho khách để test
+INSERT INTO GioHang (MaKH)
+VALUES (1);
+GO
+-- Thêm vào giỏ hàng sp để test
+INSERT INTO ChiTietGioHang (MaGH, MaSP, SoLuong)
+VALUES (1, 3, 2);
+GO
+-- Kiểm tra dữ liệu thêm vào
+SELECT * FROM GioHang
+SELECT * FROM ChiTietGioHang
+----------------KHAI BÁO ĐỂ TEST --------
+ DECLARE @MaSP INT = 3,    -- Khai báo biến 
+         @MaGH INT = 1
+--------------- 
+-- Tăng số lượng sản phẩm trong giỏ lên 1 đơn vị 
+UPDATE ChiTietGioHang
+SET SoLuong = SoLuong + 1
+WHERE MaGH = @MaGH
+  AND MaSP = @MaSP;
+GO
+
+----------------KHAI BÁO ĐỂ TEST a--------
+ DECLARE @MaSP INT = 3,    -- Khai báo biến 
+         @MaGH INT = 1
+--------------- 
+--Giảm số lượng sản phẩm trong giỏ đi 1 đơn vị
+-- a nếu số lượng sản phẩm vẫn còn dư lại 1
+UPDATE ChiTietGioHang
+SET SoLuong = SoLuong - 1
+WHERE MaGH = @MaGH
+  AND MaSP = @MaSP
+  AND SoLuong > 1;
+GO 
+----------------KHAI BÁO ĐỂ TEST b --------
+ DECLARE @MaSP INT = 3,    -- Khai báo biến 
+         @MaGH INT = 1
+--------------- 
+-- b nếu chỉ còn 1 mà giảm về 0 thì xoá luôn sản phẩm đó khỏi bảng
+DELETE FROM ChiTietGioHang
+WHERE MaGH = @MaGH
+  AND MaSP = @MaSP;
+GO
+
+----------------KHAI BÁO ĐỂ TEST  --------
+ DECLARE @MaSP INT = 3,    -- Khai báo biến 
+         @MaGH INT = 1
+--------------- 
+-- Ngoài lề : Làm trống giỏ hàng / xoá hết sản phẩm trong giỏ hàng
+DELETE FROM ChiTietGioHang
+WHERE MaGH = @MaGH;
+GO
+-- Xóa giỏ hàng cũ của khách ko còn tài khoản
+----------------KHAI BÁO ĐỂ TEST  (Nếu chưa xoá ở trên xoá rổi lật lên thêm dữ liệu mẫu đã cấp để test) --------
+ DECLARE @MaSP INT = 3,    -- Khai báo biến 
+         @MaGH INT = 1,
+         @MaKH INT  = 1
+--------------- 
+-- Xóa chi tiết giỏ hàng 
+DELETE ct 
+FROM ChiTietGioHang ct 
+JOIN GioHang gh ON ct.MaGH = gh.MaGH 
+WHERE gh.MaKH = @MaKH;
+-- Xóa giỏ hàng
+DELETE FROM GioHang 
+WHERE MaKH = @MaKH;
+GO  
+
+-- XOÁ GIỎ HÀNG & RESET IDENTITY SAU KHI TEST
+DELETE GioHang WHERE MaKH = 1 -- vì chitietGioHang có on delete cascade nên tự xoá theo
+GO
+DBCC CHECKIDENT ('GioHang', RESEED, 0);
+GO
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM GioHang
+SELECT * FROM ChiTietGioHang
+
+
+--===========================================
+--Gắn giỏ hàng với tài khoản người dùng
+--============================================
+
+----------------KHAI BÁO ĐỂ TEST --------
+ DECLARE     @MaKH INT  = 1,  -- Khai báo biến 
+             @MaGH INT = 1 -- Khai báo biến 
+--------------- 
+
+--------------- 
+-- Lấy toàn bộ giỏ hàng của một khách hàng (Khách xem giỏ hàng)
+
+SELECT
+    gh.MaGH,
+    gh.MaKH,
+    ct.MaSP,
+    sp.TenSP,
+    sp.HinhAnh,
+    sp.GiaBan,
+    ct.SoLuong,
+    sp.GiaBan * ct.SoLuong AS ThanhTien
+FROM GioHang AS gh
+INNER JOIN ChiTietGioHang AS ct
+    ON gh.MaGH = ct.MaGH
+INNER JOIN SanPham AS sp
+    ON ct.MaSP = sp.MaSP
+WHERE gh.MaKH = @MaKH
+ORDER BY gh.NgayTao DESC;
+
+GO
+-- — Xem giỏ hàng và tính tổng tiền 
+
+----------------KHAI BÁO ĐỂ TEST --------
+DECLARE   @MaGH INT = 1 -- Khai báo biến 
+--------------- 
+-- CHỨC NĂNG: Hiển thị chi tiết giỏ hàng
+SELECT
+    SP.MaSP,
+    SP.TenSP,
+    SP.HinhAnh,
+    SP.GiaBan,
+    CT.SoLuong,
+    SP.GiaBan * CT.SoLuong AS ThanhTien
+FROM ChiTietGioHang AS CT
+INNER JOIN SanPham AS SP
+    ON CT.MaSP = SP.MaSP
+WHERE CT.MaGH = @MaGH 
+ORDER BY SP.TenSP;
+
+GO
+
+
+
+--***********************************
+-- THÔNG BÁO
+--***********************************
+
+
+
+--================================
+-- Lưu thông báo khuyến mãi cho khách hàng
+--================================
+----------------KHAI BÁO ĐỂ TEST --------
+DECLARE @TieuDe NVARCHAR(200)= N'Thông báo kuyến mãi ngày 20/10',     -- Khai báo biến 
+        @NoiDung NVARCHAR(1000) =N'Các sản phẩm thuộc loại mỹ phẩm hôm nay giảm giá sốc đến 10%' ,      -- Khai báo biến 
+        @MaKH INT  = 1,  -- Khai báo biến
+        @MaGH INT = 1       -- Khai báo biến
+--------------- 
+INSERT INTO ThongBao
+    (MaKH, TieuDe, NoiDung, LoaiTB)
+VALUES
+    (@MaKH, @TieuDe, @NoiDung, N'Khuyến Mãi');
+
+
+--  XOÁ THÔNG BÁO VỪA THÊM  & RESET IDENTITY SAU KHI TEST
+DELETE ThongBao WHERE MaKH = 1 -- vì chitietGioHang có on delete cascade nên tự xoá theo
+GO
+DBCC CHECKIDENT ('ThongBao', RESEED, 0);
+GO
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM ThongBao
+
+--==========================================================
+-- Lưu thông báo xác nhận đơn hàng hoặc cập nhật giao hàng
+--==========================================================
+-- Thêm đơn hàng để test
+INSERT INTO DonHang
+    (MaKH)
+VALUES
+    (1);
+----------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE @NoiDung NVARCHAR(1000) =N'Đơn hàng của bạn đang được xử lý' ,      -- Khai báo biến 
+        @MaKH INT  = 1,  -- Khai báo biến
+         @MaDH INT = 1       -- Khai báo biến
+--------------- 
+
+-- Khi đơn hàng được xác nhận:
+INSERT INTO ThongBao
+    (MaKH, TieuDe, NoiDung, LoaiTB, MaDH)
+VALUES
+    ( @MaKH, N'Xác nhận đơn hàng',@NoiDung, N'Đơn Hàng', @MaDH);
+GO
+--  XOÁ THÔNG BÁO VỪA THÊM  & RESET IDENTITY SAU KHI TEST
+DELETE ThongBao WHERE MaKH = 1 -- vì chitietGioHang có on delete cascade nên tự xoá theo
+GO
+DBCC CHECKIDENT ('ThongBao', RESEED, 0);
+GO
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM ThongBao
+
+
+
+----------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE @NoiDung NVARCHAR(1000) =N'Đơn hàng của bạn đang được giao tới' ,      -- Khai báo biến 
+        @MaKH INT  = 1,  -- Khai báo biến
+         @MaDH INT = 1       -- Khai báo biến
+--------------- 
+-- Khi trạng thái giao hàng thay đổi:
+INSERT INTO ThongBao
+    (MaKH, TieuDe, NoiDung, LoaiTB, MaDH)
+VALUES
+    (  @MaKH,N'Cập nhật giao hàng', @NoiDung, N'Giao Hàng', @MaDH );
+GO
+--  XOÁ THÔNG BÁO VỪA THÊM  & RESET IDENTITY SAU KHI TEST
+DELETE ThongBao WHERE MaKH = 1 
+GO
+DBCC CHECKIDENT ('ThongBao', RESEED, 0);
+GO
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM ThongBao
+
+-- XOÁ ĐƠN HÀNG & RESET IDENTITY SAU KHI TEST
+DELETE FROM ChiTietDonHang WHERE MaDH = 1
+DELETE DonHang WHERE MaKH = 1
+GO
+DBCC CHECKIDENT ('DonHang', RESEED, 0);
+GO
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM DonHang
+SELECT * FROM ChiTietDonHang
+
+--================================
+-- Theo dõi thông báo đã đọc/chưa đọc
+--================================
+----------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE    @MaKH INT  = 1  -- Khai báo biến
+--------------- 
+-- Lấy tất cả thông báo của khách hàng:
+SELECT
+    MaTB,
+    TieuDe,
+    NoiDung,
+    LoaiTB,
+    MaDh,
+    NgayTao,
+    DaDoc
+FROM ThongBao
+WHERE MaKH = @MaKH
+ORDER BY NgayTao DESC;
+
+GO
+
+
+
+---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE    @MaKH INT  = 1  -- Khai báo biến
+--------------- 
+-- Chỉ lấy thông báo chưa đọc:
+SELECT MaTB, TieuDe, NoiDung, NgayTao
+FROM ThongBao
+WHERE MaKH = @MaKH
+  AND DaDoc = 0
+ORDER BY NgayTao DESC;
+
+GO
+
+---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE    @MaKH INT  = 1  -- Khai báo biến
+--------------- 
+-- Chỉ lấy thông báo đã đọc:
+SELECT MaTB, TieuDe, NoiDung, NgayTao
+FROM ThongBao
+WHERE MaKH = @MaKH
+  AND DaDoc = 1
+ORDER BY NgayTao DESC;
+
+GO
+--------------------------
+-- Thêm thông báo để test
+INSERT INTO ThongBao
+    (MaKH, TieuDe, NoiDung, LoaiTB)
+VALUES
+    ( 1, N'Xác nhận đơn hàng',N'Đơn hàng đang được xử lý', N'Đơn Hàng'),
+    (1,  N'Huỷ đơn hàng',N'Đơn hàng bị huỷ vì số lượng tồn kho ko đủ', N'Đơn Hàng')
+GO
+-- kiểm tra thay đổi trong bảng Thông báo
+SELECT * FROM ThongBao
+
+---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE    @MaKH INT  = 1,  -- Khai báo biến
+           @MaTB INT = 1  -- Khai báo biến
+--------------- 
+
+-- Đánh dấu một thông báo đã đọc rồi:
+UPDATE ThongBao
+SET DaDoc = 1
+WHERE MaTB = @MaTB
+  AND MaKH = @MaKH;
+GO
+-- Đánh dấu tất cả thông báo là đã đọc:
+---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE    @MaKH INT  = 1  -- Khai báo biến
+--------------- 
+UPDATE ThongBao
+SET DaDoc = 1
+WHERE MaKH = @MaKH
+  AND DaDoc = 0;
+GO
+
+---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE    @MaKH INT  = 1  -- Khai báo biến
+--------------- 
+-- Đếm số thông báo chưa đọc
+SELECT COUNT(*) AS SoThongBaoChuaDoc
+FROM ThongBao
+WHERE MaKH = @MaKH
+  AND DaDoc = 0;
+
+
+--  XOÁ THÔNG BÁO VỪA THÊM  & RESET IDENTITY SAU KHI TEST
+DELETE ThongBao WHERE MaKH = 1 
+GO
+DBCC CHECKIDENT ('ThongBao', RESEED, 0);
+GO
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM ThongBao
+
+ --*******************************************
+ --  ĐƠN HÀNG
+ --******************************************
+ --==========================
+ --Lưu đơn hàng của khách
+ --==========================
+
+ ---------------KHAI BÁO ĐỂ TEST (quét từ 1 - 4)-------- 
+DECLARE    @SoLuong INT = 2,     -- Khai báo biến 
+           @MaSP INT = 3,    -- Khai báo biến
+           @MaKH INT  = 1,  -- Khai báo biến
+           @MaDH INT,        -- Khai báo biến
+           @TongTien DECIMAL(12, 2) -- Khai báo biến
+--------------- 
+ -- 1.Tạo đơn hàng mới cho khách
+INSERT INTO DonHang
+    (MaKH)
+VALUES
+    (@MaKH);
+
+-- Lấy về mã đơn hàng vừa tạo // gán giá trị cho biến @MaDH = mã đơn hàng vừa tạo ở trên
+SET @MaDH = SCOPE_IDENTITY();
+
+-- 2. Lưu chi tiết của 1 sản phẩm đã đặt hàng
+INSERT INTO ChiTietDonHang (MaDH, MaSP, SoLuong, DonGia)
+SELECT 
+    @MaDH, 
+    @MaSP, 
+    @SoLuong, 
+    sp.GiaBan -- Lấy giá bán hiện tại từ bảng SanPham
+FROM SanPham sp
+WHERE sp.MaSP = @MaSP;
+
+
+-- 3 CHỨC NĂNG: Tính tổng tiền của đơn hàng (chi tiêt các đơn hàng)
+SELECT
+    SUM(SoLuong * DonGia) AS TongTien
+FROM ChiTietDonHang
+WHERE MaDH = @MaDH;
+-- 4 CHỨC NĂNG: Lưu tổng tiền vừa tính vào đơn hàng (bảng đơn hàng)
+UPDATE DonHang
+SET TongTienTT = @TongTien
+WHERE MaDH = @MaDH;
+--- Dừng TEST
+
+-- XOÁ ĐƠN HÀNG & RESET IDENTITY SAU KHI TEST
+DELETE FROM ChiTietDonHang WHERE MaDH = 1
+DELETE DonHang WHERE MaKH = 1
+GO
+DBCC CHECKIDENT ('DonHang', RESEED, 0);
+GO
+
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM DonHang
+SELECT * FROM ChiTietDonHang
+
+
+
+--==========================
+-- Theo dõi trạng thái đơn hàng
+--==============================
+-- Thêm đơn hàng để TEST
+INSERT INTO DonHang
+    (MaKH)
+VALUES
+    (1);
+
+ ---------------KHAI BÁO ĐỂ TEST (quét từ 1 - 4)-------- 
+DECLARE    @SoLuong INT = 2,     -- Khai báo biến 
+           @MaSP INT = 3,    -- Khai báo biến
+           @MaKH INT  = 1,  -- Khai báo biến
+           @MaDH INT,        -- Khai báo biến
+           @TongTien DECIMAL(12, 2) -- Khai báo biến
+--------------- 
+
+-- Khách hàng Xem trạng thái đơn hàng hiện tại
+SELECT
+    MaDH,
+    NgayDat,
+    TrangThai
+FROM DonHang
+WHERE MaKH = @MaKH
+ORDER BY NgayDat DESC;
+GO
+
+----------------------------
+-- Cập nhật trạng thái đơn hàng linh hoạt trên java với các trạng thái sau:
+---------------------------- 
+--   Chờ xác nhận (khi mới tạo đơn hàng mới luôn ở trạng thái này)
+--   Đã xác nhận 
+--   Đang xử lý
+--   Đã giao
+--   Hoàn thành
+--   Đã hủy
+---------------------------
+ ---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE    @TrangThaiMoi NVARCHAR(30) =N'Đang xử lý', 
+           @MaDH INT = 1      -- Khai báo biến
+
+--------------- 
+UPDATE DonHang
+SET TrangThai = @TrangThaiMoi
+WHERE MaDH = @MaDH;
+GO
+
+
+-- Cập nhật trạng thái đơn hàng cố định
+ ---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE  @MaDH INT = 1      -- Khai báo biến
+--------------- 
+-- Trạng thái Đã xác nhận
+UPDATE DonHang
+SET TrangThai = N'Đã xác nhận'
+WHERE MaDH = @MaDH;
+GO 
+-- Kiểm tra sau khi cập nhật trạng thái
+SELECT * FROM DonHang
+
+ ---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE  @MaDH INT = 1      -- Khai báo biến
+--------------- 
+-- Trạng thái Đang xử lý
+UPDATE DonHang
+SET TrangThai = N'Đang xử lý'
+WHERE MaDH = @MaDH;
+GO 
+-- Kiểm tra sau khi cập nhật trạng thái
+SELECT * FROM DonHang
+
+
+ ---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE  @MaDH INT = 1      -- Khai báo biến
+--------------- 
+-- Trạng thái Đã giao
+UPDATE DonHang
+SET TrangThai = N'Đã giao'
+WHERE MaDH = @MaDH;
+GO 
+-- Kiểm tra sau khi cập nhật trạng thái
+SELECT * FROM DonHang
+
+ ---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE  @MaDH INT = 1      -- Khai báo biến
+--------------- 
+-- Trạng thái Hoàn thành
+UPDATE DonHang
+SET TrangThai = N'Hoàn thành'
+WHERE MaDH = @MaDH;
+GO 
+-- Kiểm tra sau khi cập nhật trạng thái
+SELECT * FROM DonHang
+
+ ---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE  @MaDH INT = 1      -- Khai báo biến
+--------------- 
+-- Trạng thái Đã hủy
+UPDATE DonHang
+SET TrangThai = N'Đã hủy'
+WHERE MaDH = @MaDH;
+GO 
+-- Kiểm tra sau khi cập nhật trạng thái
+SELECT * FROM DonHang
+
+
+-- XOÁ ĐƠN HÀNG & RESET IDENTITY SAU KHI TEST
+DELETE FROM ChiTietDonHang WHERE MaDH = 1
+DELETE DonHang WHERE MaKH = 1
+GO
+DBCC CHECKIDENT ('DonHang', RESEED, 0);
+GO
+
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM DonHang
+SELECT * FROM ChiTietDonHang
+
+
+
+ --==========================================================
+-- CHỨC NĂNG: Hiển thị các đơn hàng của một khách hàng (lịch sử mua hàng)
+--==========================================================
+-- Thêm đơn hàng để test
+INSERT INTO DonHang
+    (MaKH)
+VALUES
+    (1),(1) -- Thêm 2 đơn cho 1 khách để xem
+  ---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE  @MaKH INT = 1      -- Khai báo biến
+--------------- 
+SELECT
+    MaDH,
+    NgayDat,
+    TrangThai,
+    TongTienTT
+FROM DonHang
+WHERE MaKH = @MaKH
+ORDER BY NgayDat DESC, MaDH DESC;
+GO
+--==========================================================
+-- CHỨC NĂNG: Hiển thị các sản phẩm trong một đơn hàng (xem chi tiết 1 đơn hàng)
+--==========================================================
+-- Thêm đơn hàng để test
+INSERT INTO DonHang (MaKH)
+VALUES (1);
+GO
+INSERT INTO ChiTietDonHang (MaDH, MaSP, SoLuong, DonGia)
+SELECT 1, MaSP, 2, sp.GiaBan -- Lấy giá bán hiện tại từ bảng SanPham
+FROM SanPham sp
+WHERE sp.MaSP = 3
+----------
+  ---------------KHAI BÁO ĐỂ TEST -------- 
+DECLARE  @MaKH INT = 1 ,     -- Khai báo biến
+         @MaDH INT = 1      -- Khai báo biến
+--------------- 
+
+SELECT
+    DH.MaDH,
+    DH.NgayDat,
+    DH.TrangThai,
+    DH.TongTienTT,
+    SP.MaSP,
+    SP.TenSP,
+    SP.HinhAnh,
+    CT.SoLuong,
+    CT.DonGia,
+    CT.SoLuong * CT.DonGia AS ThanhTien
+FROM DonHang AS DH
+INNER JOIN ChiTietDonHang AS CT
+    ON DH.MaDH = CT.MaDH
+INNER JOIN SanPham AS SP
+    ON CT.MaSP = SP.MaSP
+WHERE DH.MaDH = @MaDH
+  AND DH.MaKH = @MaKH
+ORDER BY SP.TenSP;
+
+GO
+
+
+-- XOÁ ĐƠN HÀNG & RESET IDENTITY SAU KHI TEST
+DELETE FROM ChiTietDonHang WHERE MaDH = 1
+DELETE DonHang WHERE MaKH = 1
+GO
+DBCC CHECKIDENT ('DonHang', RESEED, 0);
+GO
+
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM DonHang
+SELECT * FROM ChiTietDonHang
+
+
+--=========================================
+-- Ngoài lề nếu huỷ đơn và hoàn kho (thực hiện từ 1  - 4)
+--=========================================
+
+  ---------------KHAI BÁO ĐỂ TEST cùng lúc chức năng 1 & 2 -------- 
+DECLARE   @MaDH INT = 1      -- Khai báo biến
+--------------- 
+
+-- CHỨC NĂNG 1: Kiểm tra đơn hàng trước khi hủy
+SELECT MaDH, MaKH, TrangThai
+FROM DonHang
+WHERE MaDH = @MaDH;
+
+-- CHỨC NĂNG 2: Lấy số lượng từng sản phẩm của đơn cần hủy
+SELECT MaSP, SoLuong
+FROM ChiTietDonHang
+WHERE MaDH = @MaDH;
+Go
+
+  ---------------KHAI BÁO ĐỂ TEST  chức năng 3 -------- 
+DECLARE   @MaDH INT = 1 , -- Khai báo biến
+          @MaSP INT = 3 ,
+          @SoLuong INT = 2
+--------------- 
+-- CHỨC NĂNG 3: Hoàn số lượng về kho khi hủy đơn (hoàn lại cho từng sp)
+
+UPDATE SanPham
+SET SLTonKho = SLTonKho + @SoLuong
+WHERE MaSP = @MaSP;
+
+GO
+-- KHÔI PHỤC SL TonKho ban đầu
+UPDATE SanPham
+SET SLTonKho = SLTonKho - 2
+WHERE MaSP = 3;
+
+-- Cập nhật lại trạng thái đơn hàng đã huỷ
+-- Thêm đơn hàng để test
+INSERT INTO DonHang (MaKH)
+VALUES (1);
+GO
+  ---------------KHAI BÁO ĐỂ TEST chức năng 4 -------- 
+DECLARE   @MaDH INT = 1  -- Khai báo biến
+--------------- 
+-- CHỨC NĂNG 4: Đánh dấu đơn hàng đã hủy
+UPDATE DonHang
+SET TrangThai = N'Đã hủy'
+WHERE MaDH = @MaDH;
+
+GO
+
+-- XOÁ ĐƠN HÀNG & RESET IDENTITY SAU KHI TEST
+DELETE FROM ChiTietDonHang WHERE MaDH = 1
+DELETE DonHang WHERE MaKH = 1
+GO
+DBCC CHECKIDENT ('DonHang', RESEED, 0);
+GO
+
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM DonHang
+SELECT * FROM ChiTietDonHang
+
+
+
+
+ --==========================================
+ --         CODE TRUY VẤN ĐẠT CẦN
+ --==========================================
+-- TRANG CHỦ
+--======================================
+-- CHỨC NĂNG: Lấy ra tối đa 4 (có thể tự điều chỉnh lại số lượng lấy ra) sản phẩm nổi bật
+-- Tiêu chí: Số khách hàng khác nhau đã xem sản phẩm
+-- Mỗi khách (đã đăng ký tài khoản) chỉ được tính một lần cho mỗi sản phẩm
+--==================================
+
+SELECT TOP (4) -- hiển thị tối đa 4 sp, có thể tự đổi lại số lượng hiển thị tối đa nếu muốn
+    SP.MaSP,
+    SP.TenSP,
+    SP.GiaBan,
+    SP.HinhAnh,
+    COUNT(DISTINCT LX.MaKH) AS SoKhachHangDaXem -- đếm số lượng khách hàng khác nhau đã xem sp
+FROM SanPham AS SP
+INNER JOIN LuotXemSP AS LX
+    ON LX.MaSP = SP.MaSP
+WHERE LX.MaKH IS NOT NULL     -- Chỉ tính khách có tài khoản
+GROUP BY             -- Nhóm sp lại để ko hiển thị 1 sp 2lần 
+    SP.MaSP,
+    SP.TenSP,
+    SP.GiaBan,
+    SP.HinhAnh
+ORDER BY
+    SoKhachHangDaXem DESC; -- sắp xếp giảm dần => các giá trị cao nhất luôn ở hàng đầu
+GO
+
+--=====================================
+-- Chức năng kèm theo 
+-- Ghi nhận một lần xem sp của khách (đã đăng nhập hoặc chưa đều đc) 
+  ---------------KHAI BÁO ĐỂ TEST chức năng KÈM THEO -------- 
+DECLARE   @MaKH INT = 1,  -- Khai báo biến
+          @MaSP INT = 3
+--------------- 
+INSERT INTO LuotXemSP  (MaSP, MaKH)
+VALUES (@MaSP, @MaKH);
+    GO
+-- 
+-- XOÁ LƯỢT XEM & RESET IDENTITY SAU KHI TEST
+DELETE LuotXemSP WHERE MaKH = 1
+GO
+DBCC CHECKIDENT ('LuotXemSP', RESEED, 0);
+GO
+
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM LuotXemSP
+
+--======================================
+
+--===================================
+-- CHỨC NĂNG: lấy ra tối đa 4 sản phẩm để đề xuất cho 1 khách hàng cụ thể
+-- Tiêu chí: Số lần chính khách hàng đó xem từng sản phẩm (đã đăng ký tài khoản và đăng nhập r mới xem đc)
+--====================================
+ -- Thêm lượt xem để Test
+INSERT INTO LuotXemSP (MaSP, MaKH)
+VALUES (3, 1), (3,1),(3,1),(2,1), (4,1)
+GO
+ ---------------KHAI BÁO ĐỂ TEST  -------- 
+DECLARE   @MaKH INT = 1  -- Khai báo biến
+--------------- 
+
+SELECT TOP (4)    -- lấy tối đa 4 sp 
+    SP.MaSP,
+    SP.TenSP,
+    SP.Giaban,
+    SP.HinhAnh,
+    COUNT(*) AS SoLanKhachXem,
+    MAX(LX.ThoiGianXem) AS LanXemGanNhat
+FROM LuotXemSP AS LX
+INNER JOIN SanPham AS SP
+    ON SP.MaSP = LX.MaSP
+WHERE LX.MaKH = @MaKH       -- Truyền MaKH từ java vào với khách có tài khoản mới hiện đề xuất
+GROUP BY
+    SP.MaSP,
+    SP.TenSP,
+    SP.GiaBan,
+    SP.HinhAnh
+ORDER BY
+    SoLanKhachXem DESC, -- sắp xếp theo số lượt xem
+    LanXemGanNhat DESC; -- sắp xếp theo thời gian xem gần đây nhất 
+                        -- tránh thời gian xem sp đó đã quá lâu về trước mà vẫn đc hiển thị dù hiện tại ko hề xem nữa
+GO
+-- XOÁ LƯỢT XEM & RESET IDENTITY SAU KHI TEST
+DELETE LuotXemSP WHERE MaKH = 1
+GO
+DBCC CHECKIDENT ('LuotXemSP', RESEED, 0);
+GO
+
+-- Kiểm tra xem xoá đc chưa
+SELECT * FROM LuotXemSP
+
+-- Chức năng ngoài lề để giúp check xem sql có ghi lại đúng lịch sử xem của khách ko
+-- CHỨC NĂNG: Kiểm tra lịch sử xem của khách hàng
+SELECT
+    MaSP,
+    MaKH,
+    COUNT(*) AS SoLanXem,
+    MAX(ThoiGianXem) AS LanXemGanNhat
+FROM LuotXemSP
+GROUP BY
+    MaSP,
+    MaKH
+ORDER BY
+    SoLanXem DESC;
+GO
+--=======================
+-- TANG BÁN HÀNG
+--==========================
+-- CHỨC NĂNG:  hiển thị hết tất cả sản phẩm kèm danh mục
+-- Lấy thông tin sản phẩm và tên danh mục tương ứng
+SELECT
+    SP.MaSP,
+    SP.TenSP,
+    SP.HinhAnh,
+    SP.GiaBan,
+    SP.MoTa,
+    SP.SLTonKho,
+    DM.MaDM,    -- Bỏ nếu ko muốn hiển thị về danh mục
+    DM.TenDM    -- Bỏ nếu ko muốn hiển thị về danh mục
+FROM SanPham AS SP
+INNER JOIN DanhMuc AS DM  -- Bỏ nếu ko muốn hiển thị về danh mục
+    ON SP.MaDM = DM.MaDM  -- Bỏ nếu ko muốn hiển thị về danh mục
+ORDER BY SP.MaSP DESC;
+GO
+--===============================
+--- CHỨC NĂNG KHÁC 
+-- ====================
+-- CHỨC NĂNG: Tìm sản phẩm theo tên
+ ---------------KHAI BÁO ĐỂ TEST  -------- 
+DECLARE   @TuKhoa NVARCHAR(50) =N'Áo'  -- Khai báo biến
+--------------- 
+SELECT
+    MaSP,
+    TenSP,
+    HinhAnh,
+    GiaBan,
+    MoTa,
+    SLTonKho,
+    MaDM
+FROM SanPham
+WHERE TenSP LIKE N'%' + @TuKhoa + N'%'   -- truyền từ khoá khách nhập vào
+ORDER BY TenSP;
+GO
+--===========================
+-- CHỨC NĂNG: Lọc sản phẩm theo danh mục
+ ---------------KHAI BÁO ĐỂ TEST  -------- 
+DECLARE   @MaDM SMALLINT = 1  -- Khai báo biến
+--------------- 
+SELECT
+    SP.MaSP,
+    SP.TenSP,
+    SP.HinhAnh,
+    SP.GiaBan,
+    SP.MoTa,
+    SP.SLTonKho,
+    DM.TenDM
+FROM SanPham AS SP
+INNER JOIN DanhMuc AS DM
+    ON SP.MaDM = DM.MaDM
+WHERE SP.MaDM = @MaDM -- Truyền MaDM tương ứng mà khách tíc chọn
+ORDER BY SP.TenSP;
+GO
+-- ===========================
+-- CHỨC NĂNG: Lấy chi tiết một sản phẩm ra khi khách bấm xem 1 sản phẩm
+ ---------------KHAI BÁO ĐỂ TEST  -------- 
+DECLARE   @MaSP INT = 1  -- Khai báo biến
+--------------- 
+SELECT
+    SP.MaSP,
+    SP.TenSP,
+    SP.HinhAnh,
+    SP.GiaBan,
+    SP.MoTa,
+    SP.SLTonKho,
+    SP.MaDM,
+    DM.TenDM
+FROM SanPham AS SP
+INNER JOIN DanhMuc AS DM
+    ON SP.MaDM = DM.MaDM
+WHERE SP.MaSP = @MaSP ;
+GO
+
+
+--========================================================
+-- XOÁ HẾT KHÁCH HÀNG ĐÃ TẠO KHI TEST & RESET IDENTITY
+DELETE KhachHang WHERE MaKH IN(SELECT MaKH FROM KhachHang) 
+GO
+--- RESET LẠI IDENTITY CỦA KHÁCH SAU KHI XOÁ KHÁCH vừa thêm vì TEST CODE
+ DBCC CHECKIDENT ('KhachHang', RESEED, 0);
+GO
+SELECT * FROM KhachHang
+--=========================================================
