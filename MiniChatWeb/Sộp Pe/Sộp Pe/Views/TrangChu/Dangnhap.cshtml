@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Đăng Nhập";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<section class="form-page">
+    <div class="form-card">
+        <h2>Đăng nhập Sộp Pe</h2>
+        <p>Chào mừng bạn đến với Sộp Pe</p>
+        @using (Html.BeginForm("Dangnhap", "Trangchu", FormMethod.Post))
+        {
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Nhập email của bạn" required />
+
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Nhập mật khẩu" required />
+
+            <button type="submit" class="form-button">
+                Đăng nhập
+            </button>
+        }
+        <p class="form-note">
+            Chưa có tài khoản? 
+            <a href="@Url.Action("Dangky","TrangChu")">
+                Đăng ký ngay
+            </a>
+        </p>
+
+    </div>
+
+</section>
+

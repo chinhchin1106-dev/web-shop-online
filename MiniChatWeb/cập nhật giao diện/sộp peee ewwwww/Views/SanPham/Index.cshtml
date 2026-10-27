@@ -1,0 +1,89 @@
+﻿
+
+@model IEnumerable<SopPe.Models.SanPham>
+@using System.Linq
+
+@{
+    ViewBag.Title = "Sản phẩm";
+}
+
+<section class="products-section">
+    <div class="Heading">
+        <h2>Danh sách sản phẩm</h2>
+    </div>
+
+    <form class="filter-form" method="get"
+          action="@Url.Action("Index","SanPham")">
+
+        <label>
+            Tìm kiếm
+            <input type="search" name="search"
+                   value="@ViewBag.Search"
+                   placeholder="Nhập tên sản phẩm..." />
+        </label>
+
+        <label>
+            Danh mục
+            <select name="danhMuc">
+                <option value="">Tất cả</option>
+                <option value="Thời trang" @(ViewBag.DanhMuc == "Thời trang" ? "selected" : "")>Thời trang</option>
+                <option value="Điện tử" @(ViewBag.DanhMuc == "Điện tử" ? "selected" : "")>Điện tử</option>
+                <option value="Mỹ Phẩm" @(ViewBag.DanhMuc == "Mỹ Phẩm" ? "selected" : "")>Mỹ Phẩm</option>
+                <option value="Gia dụng" @(ViewBag.DanhMuc == "Gia dụng" ? "selected" : "")>Gia dụng</option>
+            </select>
+        </label>
+
+        <label>
+            Giá từ
+            <input type="number" name="giaMin" min="0"
+                   value="@ViewBag.GiaMin" />
+        </label>
+
+        <label>
+            Giá đến
+            <input type="number" name="giaMax" min="0"
+                   value="@ViewBag.GiaMax" />
+        </label>
+
+        <label>
+            Sắp xếp
+            <select name="sapXep">
+                <option value="">Mặc định</option>
+                <option value="giaTang" @(ViewBag.SapXep == "giaTang" ? "selected" : "")>Giá tăng dần</option>
+                <option value="giaGiam" @(ViewBag.SapXep == "giaGiam" ? "selected" : "")>Giá giảm dần</option>
+                <option value="ten" @(ViewBag.SapXep == "ten" ? "selected" : "")>Theo tên</option>
+            </select>
+        </label>
+
+        <button class="button" type="submit">Lọc sản phẩm</button>
+    </form>
+
+    <p>Tìm thấy <b>@Model.Count()</b> sản phẩm</p>
+
+    @if (!Model.Any())
+    {
+        <p>Không tìm thấy sản phẩm phù hợp.</p>
+        <a href="@Url.Action("Index","SanPham")">Xóa bộ lọc</a>
+    }
+
+    <div class="product-grid">
+        @foreach (var item in Model)
+        {
+            <article class="product-card">
+                <div class="product-photo">@item.Hinh</div>
+                <span class="category-label">@item.DanhMuc</span>
+                <h3>@item.Ten</h3>
+                <p class="price">@String.Format("{0:N0}", item.Gia) ₫</p>
+
+                @using (Html.BeginForm("ThemVaoGio", "TrangChu", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="ma" value="@item.Ma" />
+                    <button class="button" type="submit">
+                        + Thêm vào giỏ
+                    </button>
+                }
+            </article>
+        }
+    </div>
+</section>
