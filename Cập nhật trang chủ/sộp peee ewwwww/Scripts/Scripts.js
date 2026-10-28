@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showToast.timeout = setTimeout(function () { toast.hidden = true; }, 2800);
     }
 
-   
+
     document.querySelectorAll('img[data-user-image]').forEach(function (img) {
         const holder = img.closest('.sp-image-frame, .sp-banner-slide, .sp-offer-strip');
         function loaded() { if (holder) holder.classList.add('has-image'); img.hidden = false; }
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    
+
     const dropdowns = Array.from(document.querySelectorAll('details.site-dropdown'));
     dropdowns.forEach(function (dropdown) {
         dropdown.addEventListener('toggle', function () {
@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event.key === FAVORITE_KEY) { favorites = normalizeFavorites(readStore(FAVORITE_KEY, [])); renderFavorites(); }
     });
 
-  
+
     const carousel = $('promoCarousel');
     if (carousel) {
         const slides = Array.from(carousel.querySelectorAll('.sp-banner-slide'));
@@ -339,7 +339,7 @@ document.addEventListener("DOMContentLoaded", function () {
         startAuto();
     }
 
-    
+
     const backtop = $('spBackTop');
     if (backtop) {
         const update = function () { backtop.hidden = window.scrollY < 220; };
@@ -376,8 +376,26 @@ document.addEventListener("DOMContentLoaded", function () {
                 notificationPanel.appendChild(button);
             });
         }
+
         renderNotices();
     }
+    // Đánh dấu đã đọc cho các nút trong thong bao.htm
+    ['btnDoc1', 'btnDoc2'].forEach(function (id) {
+        const button = $(id);
 
+        if (button) {
+            button.addEventListener('click', function () {
+                button.textContent = '✓ Đã đọc';
+                button.disabled = true;
+                button.style.background = '#e8f7ee';
+                button.style.color = '#16834a';
+                button.style.border = '1px solid #b7e4c7';
+                button.style.boxShadow = 'none';
+            });
+        }
+    });
+    
+        
+    
     console.log('Sộp Pe: menu, banner, giỏ hàng và yêu thích đã khởi tạo.');
 });

@@ -14,7 +14,9 @@
             <p class="error-alert">@ViewBag.Error</p>
         }
 
-        <form id="loginDemoForm">
+        @using (Html.BeginForm("Dangnhap", "TrangChu", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
             <label for="email">Email</label>
             <input id="email"
                    name="email"
@@ -38,21 +40,20 @@
 
             <p id="loginMessage"
                aria-live="polite"></p>
-        </form>
+         }
+              
+            <div class="register-link">
+                <p>Chưa có tài khoản?</p>
 
-        <div class="register-link">
-            <p>Chưa có tài khoản?</p>
+                <a class="register-button"
+                   href="@Url.Action("Dangky", "TrangChu")">
+                    Đăng ký tài khoản
+                </a>
+            </div>
 
-            <a class="register-button"
-               href="@Url.Action("Dangky", "TrangChu")">
-                Đăng ký tài khoản
-            </a>
+            <p class="login-note">
+                Đăng nhập để trải nghiệm mua sắm tại Sộp Pe nhe
+            </p>
+
         </div>
-
-        <p class="login-note">
-            Giao diện đăng nhập demo,
-            chưa kết nối xác thực tài khoản.
-        </p>
-
-    </div>
 </section>

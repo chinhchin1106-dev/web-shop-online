@@ -1,23 +1,28 @@
-﻿
+﻿@model IEnumerable<sộp_peee_ewwwww.Models.ThongBao>
 @{
     ViewBag.Title = "Thông báo";
 }
+<link href="~/Content/Thongbao.css" rel="stylesheet" />
 
 <section class="page-section">
     <div class="page-card">
         <h2>🔔 Thông báo của bạn</h2>
         <p>Cập nhật thông tin mới nhất từ Sộp Pe.</p>
-
         <div class="notification-item">
             <h3>🎉 Chào mừng đến với Sộp Pe</h3>
             <p>Cảm ơn bạn đã ghé thăm cửa hàng!</p>
+            <button type="button" id="btnDoc1">
+                Đánh dấu đã đọc
+            </button>
         </div>
 
         <div class="notification-item">
             <h3>📦 Thông tin đơn hàng</h3>
             <p>Theo dõi đơn hàng để cập nhật tình trạng giao hàng.</p>
+            <button type="button" id="btnDoc2">
+                Đánh dấu đã đọc
+            </button>
         </div>
-
         <a class="button" href="@Url.Action("Index","TrangChu")">
             ← Quay về trang chủ
         </a>

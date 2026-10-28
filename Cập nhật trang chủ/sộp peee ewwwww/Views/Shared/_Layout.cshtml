@@ -9,6 +9,8 @@
     <title>@ViewBag.Title - Sộp Pe</title>
     <link href="@Url.Content("~/Content/Site.css")?v=soppe-20261022-v3" rel="stylesheet" />
     <link href="@Url.Content("~/Content/Giohang.css")?v=20261022-1" rel="stylesheet" />
+
+    <link href="~/Content/Thongbao.css" rel="stylesheet" />
 </head>
 <body>
     <header class="sp-header">
@@ -19,7 +21,7 @@
                      class="shop-logo" />
 
                 <div class="logo-text">
-                    <span class="logo-name">Sộp Pe</span> 
+                    <span class="logo-name">Sộp Pe</span>
                 </div>
             </a>
             <form class="sp-search header-search" method="get" action="@Url.Action("Index", "SanPham")" role="search">
