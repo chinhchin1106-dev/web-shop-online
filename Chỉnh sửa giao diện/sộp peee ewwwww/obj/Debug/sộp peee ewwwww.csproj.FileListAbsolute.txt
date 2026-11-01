@@ -1,0 +1,140 @@
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\sộp peee ewwwww.dll.config
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\sộp peee ewwwww.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\sộp peee ewwwww.pdb
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\Antlr3.Runtime.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\Microsoft.Web.Infrastructure.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\Newtonsoft.Json.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.Helpers.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.Mvc.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.Optimization.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.Razor.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.WebPages.Deployment.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.WebPages.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.WebPages.Razor.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\WebGrease.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.Helpers.xml
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.Mvc.xml
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.Optimization.xml
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.Razor.xml
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.WebPages.xml
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.WebPages.Deployment.xml
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Web.WebPages.Razor.xml
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\Newtonsoft.Json.xml
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\Antlr3.Runtime.pdb
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\obj\Debug\sộp peee ewwwww.csproj.AssemblyReference.cache
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\obj\Debug\sộp peee ewwwww.csproj.CoreCompileInputs.cache
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\obj\Debug\s_p peee.DB62B0A0.Up2Date
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\obj\Debug\sộp peee ewwwww.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\obj\Debug\sộp peee ewwwww.pdb
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\csc.exe
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\csc.exe.config
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\csc.rsp
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\csi.exe
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\csi.exe.config
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\csi.rsp
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\System.Buffers.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\System.Collections.Immutable.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\System.Memory.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\System.Numerics.Vectors.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\System.Reflection.Metadata.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\vbc.exe
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\vbc.exe.config
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\vbc.rsp
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\VBCSCompiler.exe
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\roslyn\VBCSCompiler.exe.config
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\BCrypt-Net-Next.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Buffers.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Memory.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Numerics.Vectors.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Buffers.xml
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Memory.xml
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Numerics.Vectors.xml
+D:\Nhom6-Website shopping online\web-shop-online\cập nhật giao diện\sộp peee ewwwww\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\sộp peee ewwwww.dll.config
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\sộp peee ewwwww.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\sộp peee ewwwww.pdb
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\csc.exe
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\csc.exe.config
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\csc.rsp
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\csi.exe
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\csi.exe.config
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\csi.rsp
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\System.Buffers.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\System.Collections.Immutable.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\System.Memory.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\System.Numerics.Vectors.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\System.Reflection.Metadata.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\vbc.exe
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\vbc.exe.config
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\vbc.rsp
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\VBCSCompiler.exe
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\roslyn\VBCSCompiler.exe.config
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\Antlr3.Runtime.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\BCrypt-Net-Next.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\Microsoft.Web.Infrastructure.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\Newtonsoft.Json.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Buffers.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Memory.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Numerics.Vectors.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.Helpers.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.Mvc.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.Optimization.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.Razor.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.WebPages.Deployment.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.WebPages.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.WebPages.Razor.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\WebGrease.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Buffers.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Memory.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Numerics.Vectors.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.Helpers.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.Mvc.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.Optimization.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.Razor.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.WebPages.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.WebPages.Deployment.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\System.Web.WebPages.Razor.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\Newtonsoft.Json.xml
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\bin\Antlr3.Runtime.pdb
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\obj\Debug\sộp peee ewwwww.csproj.AssemblyReference.cache
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\obj\Debug\sộp peee ewwwww.csproj.CoreCompileInputs.cache
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\obj\Debug\s_p peee.DB62B0A0.Up2Date
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\obj\Debug\sộp peee ewwwww.dll
+D:\Nhom6-Website shopping online\web-shop-online\Cập nhật trang chủ\sộp peee ewwwww\obj\Debug\sộp peee ewwwww.pdb

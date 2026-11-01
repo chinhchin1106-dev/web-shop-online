@@ -1,0 +1,279 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|d:\\nhom6-website shopping online\\web-shop-online\\c\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\controllers\\trangchucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\controllers\\trangchucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\content\\giohang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\content\\giohang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\models\\thongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\models\\thongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\views\\trangchu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\views\\trangchu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\scripts\\scripts.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\scripts\\scripts.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\content\\thongbao.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\content\\thongbao.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\views\\trangchu\\thongbao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\views\\trangchu\\thongbao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\models\\giohangdongcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\models\\giohangdongcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\views\\trangchu\\giohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\views\\trangchu\\giohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\models\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\models\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\views\\trangchu\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\views\\trangchu\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\views\\trangchu\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|s\u1ED9p peee ewwwww\\s\u1ED9p peee ewwwww.csproj|solutionrelative:s\u1ED9p peee ewwwww\\views\\trangchu\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TrangChuController.cs",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Controllers\\TrangChuController.cs",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Controllers\\TrangChuController.cs",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Controllers\\TrangChuController.cs",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Controllers\\TrangChuController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T03:35:19.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T14:53:47.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Web.config",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Web.config",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Web.config",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-26T14:46:49.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Site.css",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Content\\Site.css",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Content\\Site.css",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Content\\Site.css",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Content\\Site.css",
+              "ViewState": "AgIAAL0FAAAAAAAAAAAAANALAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-27T15:11:41.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Views\\TrangChu\\Index.cshtml",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Views\\TrangChu\\Index.cshtml",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Views\\TrangChu\\Index.cshtml",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Views\\TrangChu\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-25T09:32:32.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Giohang.css",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Content\\Giohang.css",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Content\\Giohang.css",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Content\\Giohang.css",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Content\\Giohang.css",
+              "ViewState": "AgIAAOsBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-28T04:50:45.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-27T14:56:49.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThongBao.cs",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Models\\ThongBao.cs",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Models\\ThongBao.cs",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Models\\ThongBao.cs",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Models\\ThongBao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T14:58:04.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ThongBao.cshtml",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Views\\TrangChu\\ThongBao.cshtml",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Views\\TrangChu\\ThongBao.cshtml",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Views\\TrangChu\\ThongBao.cshtml",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Views\\TrangChu\\ThongBao.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAwwBUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-28T06:46:30.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Scripts.js",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Scripts\\Scripts.js",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Scripts\\Scripts.js",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Scripts\\Scripts.js",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Scripts\\Scripts.js",
+              "ViewState": "AgIAAHkBAAAAAAAAAAAIwIsBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-10-27T10:31:53.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Thongbao.css",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Content\\Thongbao.css",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Content\\Thongbao.css",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Content\\Thongbao.css",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Content\\Thongbao.css",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwCkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-28T04:51:49.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GioHangDongController.cs",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Models\\GioHangDongController.cs",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Models\\GioHangDongController.cs",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Models\\GioHangDongController.cs",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Models\\GioHangDongController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T09:49:07.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Giohang.cshtml",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Views\\TrangChu\\Giohang.cshtml",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Views\\TrangChu\\Giohang.cshtml",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Views\\TrangChu\\Giohang.cshtml",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Views\\TrangChu\\Giohang.cshtml",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAwwGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-27T10:30:43.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SanPhamController.cs",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Models\\SanPhamController.cs",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Models\\SanPhamController.cs",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Models\\SanPhamController.cs",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Models\\SanPhamController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T09:50:39.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Dangnhap.cshtml",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Views\\TrangChu\\Dangnhap.cshtml",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Views\\TrangChu\\Dangnhap.cshtml",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Views\\TrangChu\\Dangnhap.cshtml",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Views\\TrangChu\\Dangnhap.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvxIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-26T15:25:57.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Dangky.cshtml",
+              "DocumentMoniker": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Views\\TrangChu\\Dangky.cshtml",
+              "RelativeDocumentMoniker": "s\u1ED9p peee ewwwww\\Views\\TrangChu\\Dangky.cshtml",
+              "ToolTip": "D:\\Nhom6-Website shopping online\\web-shop-online\\C\u1EADp nh\u1EADt trang ch\u1EE7\\s\u1ED9p peee ewwwww\\Views\\TrangChu\\Dangky.cshtml",
+              "RelativeToolTip": "s\u1ED9p peee ewwwww\\Views\\TrangChu\\Dangky.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-26T15:26:02.777Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
