@@ -159,6 +159,21 @@ GO
  CONSTRAINT PK_LuotXemSanPham PRIMARY KEY (MaLX)
 )
 GO
+-- TẠO THÊM BẢNG TIN NHẮN ĐỂ LƯU LỊCH SỬ NHẮN TIN
+    
+CREATE TABLE TinNhan (
+    MaTN INT PRIMARY KEY IDENTITY(1,1),
+    MaNGui INT NOT NULL,              -- Mã người gửi 
+    MaNNhan INT NOT NULL,            -- Mã người nhận 
+    NoiDungTinNhan NVARCHAR(MAX) NOT NULL, -- Nội dung tin nhắn
+    ThoiGianGui DATETIME2(0) DEFAULT GETDATE(), -- Thời gian gửi tin nhắn chính xác đến giây code :DATETIME2(0)nghĩa là lấy chính xác đến mức độ giây (bỏ qua phần mili-giây lẻ)
+    DaDoc BIT DEFAULT 0 ,                -- Trạng thái xem chỉ nhận giá trị 0 hoặc 1: 0 là Chưa đọc, 1 là Đã đọc
+   
+    CONSTRAINT FK_TinNhan_IDGui_KhachHang  FOREIGN KEY (MaNGui) REFERENCES KhachHang(MaKH), -- khoá ngoại
+    CONSTRAINT FK_TinNhan_IDNhan_KhachHang  FOREIGN KEY (MaNNhan) REFERENCES KhachHang(MaKH) -- khoá ngoại
+);
+
+
 
 -- =================THÊM DỮ LIỆU DANH MỤC=================
 INSERT INTO DanhMuc (TenDM) VALUES
@@ -1542,3 +1557,115 @@ GO
 GO
 SELECT * FROM KhachHang
 --=========================================================
+
+--========================================================
+--- CODE TRUY VẤN CHO PHẦN TIN NHẮN
+--======================================================
+--===================================================
+-- CHỨC NĂNG XEM LỊCH SỬ CHAT CỦA 1 KHÁCH HÀNG VỚI ADMIN
+--======================================================
+-- Thêm tài khoản để test 
+INSERT INTO KhachHang(HoTen,Email,MatKhauTK)
+VALUES(N'Nguyễn Văn A','NgVanA@gmail.com','12345678')
+GO
+INSERT INTO KhachHang(HoTen,Email,MatKhauTK,PhanQuyen)
+VALUES(N'ADMIN','Admin@gmail.com','9876543','Admin')
+GO
+SELECT * FROM KhachHang
+-- Thêm tin nhắn để test
+INSERT INTO TinNhan(MaNGui,MaNNhan,NoiDungTinNhan)
+VALUES
+(1,2,N'Shop ơi tư vấn giúp mình size áo với.'),
+(2,1,N'Dạ bạn cao nặng bao nhiêu để shop tư vấn size chuẩn cho mình ạ?');
+GO
+SELECT * FROM TinNhan
+GO
+-- Khai báo Mã người gửi và nhận để test thử:
+DECLARE @IDGui INT = 1 , -- Lấy mã Khách hàng
+        @IDNhan INT = 2  -- Lấy mã admin
+SELECT 
+    MaTN,
+    MaNGui,
+    Kh.HoTen, -- có thể xoá nếu lúc code trên giao diện ko cần xem họ tên người gửi
+    MaNNhan,
+    Ad.HoTen, -- có thể xoá nếu lúc code trên giao diện ko cần xem họ tên người nhận
+    NoiDungTinNhan,
+    ThoiGianGui,
+    DaDoc
+FROM TinNhan
+JOIN KhachHang Kh ON Kh.MaKH = MaNGui -- có thể xoá nếu ko hiển thị Kh.HoTen và Ad.HoTen
+JOIN KhachHang Ad ON Ad.MaKH = MaNNhan -- có thể xoá nếu ko hiển thị Kh.HoTen và Ad.HoTen
+WHERE (MaNGui = 1 AND MaNNhan = 2) -- khách gửi , admin nhận
+   OR (MaNGui = 2 AND MaNNhan = 1) -- admin gửi, khách nhận
+ORDER BY ThoiGianGui ASC;
+
+GO
+--=======================================================
+-- Thêm/lưu lại tin nhắn khi khách nhắn tin
+-- Khai báo để test
+DECLARE @IDGui INT = 1 ,   -- Mã khách hàng gửi
+        @IDNhan INT = 2,     -- Mã admin nhận 
+        @NoiDung NVARCHAR(MAX) = N'Shop ơi,sản phẩm này còn hàng không ạ?'  -- Nội dung khách nhập và gửi trên giao diện
+INSERT INTO TinNhan(MaNGui,MaNNhan,NoiDungTinNhan)
+VALUES
+(@IDGui,@IDNhan,@NoiDung)
+GO
+
+
+--=====================================================
+-- Thêm/lưu lại tin nhắn khi admin trả lời khách
+-- Khai báo để test
+DECLARE @IDGui INT = 2 ,   -- Mã admin gửi
+        @IDNhan INT = 1,     -- Mã khách hàng nhận
+        @NoiDung NVARCHAR(MAX) = N'Chào bạn, sản phẩm này bên mình vẫn còn hàng nhé!'  -- Nội dung khách nhập và gửi trên giao diện
+INSERT INTO TinNhan(MaNGui,MaNNhan,NoiDungTinNhan)
+VALUES
+(@IDGui,@IDNhan,@NoiDung)
+GO
+
+
+--=============================
+-- Cập nhật trạng thái DaDoc khi khách đã đọc tin từ admin
+DECLARE @IDGui INT = 2 ,   -- Mã admin gửi
+        @IDNhan INT = 1    -- Mã khách hàng nhận
+UPDATE TinNhan
+SET DaDoc = 1 
+WHERE MaNGui = @IDGui AND MaNNhan = @IDNhan AND DaDoc = 0;
+GO
+
+
+SELECT * FROM TinNhan
+GO
+
+
+-- Cập nhật trạng thái DaDoc khi admin đã đọc tin nhắn của khách
+DECLARE @IDGui INT = 1 ,   -- Mã khách hàng gửi
+        @IDNhan INT = 2    --  Mã admin nhận
+UPDATE TinNhan
+SET DaDoc = 1 
+WHERE MaNGui = @IDGui AND MaNNhan =  @IDNhan  AND DaDoc = 0;
+GO
+--==========================PHÍA DƯỚI LÀ PHẦN XOÁ DỮ LIỆU MẪU (BỎ DẤU /* */ để code hiện bình thường hoặc tự bôi đen rồi execute)=================================
+--========================================================
+-- XOÁ HẾT KHÁCH HÀNG ĐÃ TẠO & RESET IDENTITY
+/* 
+DELETE KhachHang WHERE MaKH IN(SELECT MaKH FROM KhachHang) 
+GO
+--- RESET LẠI IDENTITY CỦA KHÁCH SAU KHI XOÁ KHÁCH vừa thêm vì TEST CODE
+ DBCC CHECKIDENT ('KhachHang', RESEED, 0);
+GO
+--=========================================================
+
+
+--========================================================
+-- XOÁ HẾT TIN NHẮN ĐÃ TẠO & RESET IDENTITY
+DELETE TinNhan WHERE MaTN IN(SELECT MaTN FROM TinNhan) 
+GO
+--- RESET LẠI IDENTITY CỦA KHÁCH SAU KHI XOÁ KHÁCH vừa thêm vì TEST CODE
+ DBCC CHECKIDENT ('TinNhan', RESEED, 0);
+GO
+*/
+--========
+
+
+
