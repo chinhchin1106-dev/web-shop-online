@@ -67,7 +67,7 @@ CREATE TABLE KhachHang
   HoTen NVARCHAR(30) NOT NULL,        -- Thông tin cá nhân
   DiaChi NVARCHAR(255),               -- Thông tin cá nhân
   SDT VARCHAR(15),                    -- Thông tin cá nhân
-  Email VARCHAR(100) UNIQUE,                 -- Tài khoản
+  Email VARCHAR(100) UNIQUE NOT NULL,                 -- Tài khoản
   MatKhauTK  CHAR(60) NOT NULL,              -- Tài khoản
   PhanQuyen VARCHAR(20) DEFAULT 'Customer'
 );
