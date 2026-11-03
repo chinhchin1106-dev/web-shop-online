@@ -165,7 +165,7 @@ CREATE TABLE TinNhan (
     MaTN BIGINT PRIMARY KEY IDENTITY(1,1),
     MaNGui INT NOT NULL,              -- Mã người gửi 
     MaNNhan INT NOT NULL,            -- Mã người nhận 
-    NoiDungTinNhan NVARCHAR(MAX) NOT NULL, -- Nội dung tin nhắn
+    NoiDungTN NVARCHAR(MAX) NOT NULL, -- Nội dung tin nhắn
     ThoiGianGui DATETIME2(0) DEFAULT GETDATE(), -- Thời gian gửi tin nhắn chính xác đến giây code :DATETIME2(0)nghĩa là lấy chính xác đến mức độ giây (bỏ qua phần mili-giây lẻ)
     DaDoc BIT DEFAULT 0 ,                -- Trạng thái xem chỉ nhận giá trị 0 hoặc 1: 0 là Chưa đọc, 1 là Đã đọc
    
