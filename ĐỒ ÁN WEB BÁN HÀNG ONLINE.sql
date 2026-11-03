@@ -162,7 +162,7 @@ GO
 -- TẠO THÊM BẢNG TIN NHẮN ĐỂ LƯU LỊCH SỬ NHẮN TIN
     
 CREATE TABLE TinNhan (
-    MaTN INT PRIMARY KEY IDENTITY(1,1),
+    MaTN BIGINT PRIMARY KEY IDENTITY(1,1),
     MaNGui INT NOT NULL,              -- Mã người gửi 
     MaNNhan INT NOT NULL,            -- Mã người nhận 
     NoiDungTinNhan NVARCHAR(MAX) NOT NULL, -- Nội dung tin nhắn
