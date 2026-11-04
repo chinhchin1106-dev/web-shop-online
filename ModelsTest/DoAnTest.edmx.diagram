@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5d752b812fce4de9834e65ed48ece832" Name="Diagram1">
+        <EntityTypeShape EntityType="WebBanHangOnline_N6Model.ChiTietDonHang" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanHangOnline_N6Model.ChiTietGioHang" Width="1.5" PointX="8.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanHangOnline_N6Model.DanhMuc" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanHangOnline_N6Model.DonHang" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanHangOnline_N6Model.GioHang" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanHangOnline_N6Model.KhachHang" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanHangOnline_N6Model.LuotXemSP" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanHangOnline_N6Model.SanPham" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanHangOnline_N6Model.sysdiagram" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanHangOnline_N6Model.TinNhan" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanHangOnline_N6Model.ThongBao" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_ChiTietDonHang_MaDH_DH" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_ChiTietDonHang_MaSP_SP" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_ChiTietGioHang_MaGH_GH" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_ChiTietGioHang_MaSP_SP" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_SanPham_MaDM_DM" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_DonHang_MaKH_KH" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_ThongBao_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_GioHang_MaKH_KH" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_LuotXemSanPham_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_TinNhan_IDGui_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_TinNhan_IDNhan_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_ThongBao_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanHangOnline_N6Model.FK_LuotXemSanPham_SanPham" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
