@@ -45,7 +45,9 @@ CREATE TABLE KhachHang
   SDT VARCHAR(15),                    -- Thông tin cá nhân
   Email VARCHAR(100) UNIQUE NOT NULL,                 -- Tài khoản
   MatKhauTK  CHAR(60) NOT NULL,              -- Tài khoản
-  PhanQuyen VARCHAR(20) DEFAULT 'Customer'
+  PhanQuyen VARCHAR(20) DEFAULT 'Customer',
+  TrangThai BIT DEFAULT 1, --Lưu trạng thái tài khoản có đang hoạt động không hay bị khoá.
+                           -- 0 là tài khoản bị khoá, Mặc định là 1 đang hoạt động nếu khách vừa mới tạo tài khoản
 );
 GO
 
