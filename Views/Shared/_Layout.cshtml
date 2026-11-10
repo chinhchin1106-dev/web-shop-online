@@ -1,39 +1,184 @@
-﻿<!DOCTYPE html>
-<html>
+﻿
+@using System.Linq
+@using System.Collections.Generic
+@using SopPe.Models
+
+<!DOCTYPE html>
+<html lang="vi">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title - Sộp Pe</title>
+    <link rel="stylesheet"
+          href="@Url.Content("~/Content/Site.css")" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-        <div class="container">
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+    <div class="top-bar">
+        Chào mừng đến với Sộp Pe - Thiên đường mua sắm
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    <header class="header">
+
+       
+        <div class="header-top">
+
+            <a href="@Url.Action("Index", "TrangChu")"
+               class="logo-container">
+
+                <img src="~/Content/images/1792432802672_51234873273648295_6052778508993535726_29556a74d9d932425311588ec93c3ae6.jpg"
+                     alt="Logo Sộp Pe"
+                     class="shop-logo" />
+
+                <span class="logo">
+                    Sộp Pe<span>.</span>
+                </span>
+            </a>
+
+            <div class="header-tools">
+
+                <a href="@Url.Action("Giohang", "TrangChu")"
+                   class="tool-btn" title="Giỏ hàng">🛒</a>
+
+                <a href="@Url.Action("ThongBao", "TrangChu")"
+                   class="tool-btn" title="Thông báo">🔔</a>
+
+                <a href="@Url.Action("Dangnhap", "TrangChu")"
+                   class="tool-btn" title="Tài khoản">👤</a>
+
+                <button type="button"
+                        class="tool-btn"
+                        id="btnChat" title="Chat">
+                    💬
+                </button>
+
+            </div>
+        </div>
+
+       
+        <div class="header-search-row">
+
+            <div class="category-wrapper">
+
+                <button type="button"
+                        id="btnMenu"
+                        class="menu-btn"
+                        aria-controls="categoryDropdown"
+                        aria-expanded="false">
+                    ☰ Danh mục
+                </button>
+
+                <div id="categoryDropdown"
+                     class="category-dropdown"
+                     hidden>
+
+                    <a href="@Url.Action("Index", "SanPham", new { danhMuc = "Thời trang" })">
+                        👗 Thời Trang
+                    </a>
+
+                    <a href="@Url.Action("Index", "SanPham", new { danhMuc = "Điện tử" })">
+                        📱 Công Nghệ
+                    </a>
+
+                    <a href="@Url.Action("Index", "SanPham", new { danhMuc = "Mỹ phẩm" })">
+                        💄 Mỹ Phẩm
+                    </a>
+
+                    <a href="@Url.Action("Index", "SanPham", new { danhMuc = "Gia dụng" })">
+                        🏠 Gia Dụng
+                    </a>
+
+                </div>
+
+            </div>
+
+            <form action="@Url.Action("Index", "SanPham")"
+                  method="get"
+                  class="header-search">
+
+                <input type="search"
+                       name="search"
+                       placeholder="Bạn muốn tìm sản phẩm gì?"
+                       value="@Request.QueryString["search"]" />
+
+                <button type="submit">
+                    🔍 Tìm kiếm
+                </button>
+
+            </form>
+
+        </div>
+       
+      
+        <nav class="fm-mn">
+
+            <a href="@Url.Action("Index", "TrangChu")">
+                Trang chủ
+            </a>
+
+            <a href="@Url.Action("Index", "TrangChu")#danh-muc">
+                Danh mục
+            </a>
+
+            <a href="@Url.Action("Index", "SanPham")">
+                Sản phẩm
+            </a>
+
+            <a href="@Url.Action("ThongBao", "TrangChu")">
+                Thông báo
+            </a>
+
+            <a href="@Url.Action("Dangnhap", "TrangChu")">
+                Tài khoản
+            </a>
+
+        </nav>
+
+ 
+    </header>
+
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <aside id="chatPanel" class="chat-panel" hidden>
+        <div class="chat-header">
+            <strong>💬 Hỗ trợ Sộp Pe (demo)</strong>
+            <button id="closeChat" type="button">×</button>
+        </div>
+        <div id="chatMessages" class="chat-messages">
+            <p><b>Sộp Pe:</b> Xin chào! Bạn cần hỗ trợ gì?</p>
+        </div>
+        <form id="chatForm" class="chat-form">
+            <input id="chatInput" placeholder="Nhập tin nhắn..." required />
+            <button type="submit">Gửi</button>
+        </form>
+        <small>Hộp chat tự động minh họa.</small>
+    </aside>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h2>Sộp Pe</h2>
+                <p>Nền tảng mua sắm trực tuyến tiện lợi.</p>
+            </div>
+            <div>
+                <h4>Thông tin liên hệ</h4>
+                <p>Email: hotro@soppe.vn (demo)</p>
+                <p>Hotline: 1900 1234 (demo)</p>
+            </div>
+            <div>
+                <h4>Hỗ trợ khách hàng</h4>
+                <p>Hướng dẫn mua hàng</p>
+                <p>Chính sách đổi trả</p>
+            </div>
+        </div>
+        <div class="fm-copyright">
+            © @DateTime.Now.Year Sộp Pe - Dự án học tập
+        </div>
+    </footer>
+
+    <script src="@Url.Content("~/Scripts/Scripts.js")"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
