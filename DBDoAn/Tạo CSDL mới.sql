@@ -130,7 +130,7 @@ CREATE TABLE DonHang
     TongTienTT DECIMAL(12, 2) NOT NULL DEFAULT 0 CHECK(TongTienTT>=0),   -- Tổng tiền mà khách sẽ phải thanh toán (sau khi đc giảm giá nếu có)
     CONSTRAINT PK_DonHang PRIMARY KEY (MaDH),  -- Khoá chính
     CONSTRAINT FK_DonHang_MaKH_KH  FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH), -- khoá ngoại
-    CONSTRAINT FK_DonHang_IDMaGG_MGG  FOREIGN KEY (MaKH) REFERENCES MaGiamGia(IDMaGG), -- khoá ngoại
+    CONSTRAINT FK_DonHang_IDMaGG_MGG  FOREIGN KEY (MaGG) REFERENCES MaGiamGia(IDMaGG), -- khoá ngoại
     CONSTRAINT CHK_TrangThai CHECK ( TrangThai IN ( N'Chờ xác nhận', 
                                                     N'Đã xác nhận', 
                                                     N'Đang xử lý', 
