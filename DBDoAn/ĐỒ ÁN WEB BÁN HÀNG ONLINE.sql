@@ -30,9 +30,17 @@ GO
 -- Tác dụng :Khi  UPDATE giá trị Khóa chính ở Bảng Cha, 
 -- SQL Server sẽ tự động cập nhật giá trị Khóa ngoại ở các dòng tương ứng thuộc Bảng Con để giữ đúng mối liên kết.
 
-CREATE DATABASE WebBanHangOnline_N6;
-GO
+use master
+go
 
+------------ TẠO CSDL----------------------
+IF DB_ID(N'WebBanHangOnline_N6') IS NULL
+BEGIN
+    CREATE DATABASE WebBanHangOnline_N6;
+END
+
+---
+GO
 USE WebBanHangOnline_N6;
 GO 
 --- BẢNG DANH MỤC (LOẠI SẢN PHẨM)
@@ -47,7 +55,7 @@ GO
 CREATE TABLE SanPham (
     MaSP INT IDENTITY(1,1),
     TenSP NVARCHAR(200) NOT NULL,
-    HinhAnh VARCHAR(500),
+    HinhAnh VARCHAR(500) ,
     GiaBan DECIMAL(12,2) NOT NULL DEFAULT 0,
     MoTa NVARCHAR(Max),
     SLTonKho INT NOT NULL DEFAULT 0,
@@ -57,7 +65,7 @@ CREATE TABLE SanPham (
     CONSTRAINT CHK_GiaBan CHECK (GiaBan >= 0), -- kiểm tra giá bán ko âm
     CONSTRAINT CHK_SoLuongTonKho CHECK (SLTonKho >= 0), -- kiểm tra số lượng tồn kho ko âm
     CONSTRAINT PK_SanPham PRIMARY KEY (MaSP),  -- Khoá chính
-    CONSTRAINT FK_SanPham_MaDM_DM  FOREIGN KEY (MaDM) REFERENCES DanhMuc(MaDM), -- khoá ngoại
+    CONSTRAINT FK_SanPham_MaDM_DM  FOREIGN KEY (MaDM) REFERENCES DanhMuc(MaDM) -- khoá ngoại
 );
 GO
 --- BẢNG KHÁCH HÀNG
@@ -69,9 +77,12 @@ CREATE TABLE KhachHang
   SDT VARCHAR(15),                    -- Thông tin cá nhân
   Email VARCHAR(100) UNIQUE NOT NULL,                 -- Tài khoản
   MatKhauTK  CHAR(60) NOT NULL,              -- Tài khoản
-  PhanQuyen VARCHAR(20) DEFAULT 'Customer'
+  PhanQuyen VARCHAR(20) DEFAULT 'Customer',
+  TrangThai BIT DEFAULT 1, --Lưu trạng thái tài khoản có đang hoạt động không hay bị khoá.
+                           -- 0 là tài khoản bị khoá, Mặc định là 1 đang hoạt động nếu khách vừa mới tạo tài khoản
 );
 GO
+
 --- BẢNG GIỎ HÀNG
 CREATE TABLE GioHang
 (
@@ -79,9 +90,9 @@ MaGH INT IDENTITY(1,1),
 MaKH INT UNIQUE NOT NULL, -- Ràng buộc UNIQUE đảm bảo mỗi khách chỉ có 1 giỏ
 NgayTao DATETIME2(0) DEFAULT GETDATE(),
 CONSTRAINT PK_GioHang PRIMARY KEY (MaGH),  -- Khoá chính
- CONSTRAINT FK_GioHang_MaKH_KH  FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH), -- khoá ngoại
-);
-GO
+CONSTRAINT FK_GioHang_MaKH_KH  FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH) -- khoá ngoại
+)
+    GO
 --- BẢNG CHI TIẾT GIỎ HÀNG
 CREATE TABLE ChiTietGioHang (
     MaGH INT NOT NULL,
@@ -89,12 +100,14 @@ CREATE TABLE ChiTietGioHang (
     SoLuong SMALLINT NOT NULL ,
     
     CONSTRAINT PK_ChiTietGioHang_MaGH_MaSP PRIMARY KEY (MaGH, MaSP),
-    CONSTRAINT FK_ChiTietGioHang_MaGH_GH FOREIGN KEY (MaGH) REFERENCES GioHang(MaGH) ON DELETE CASCADE, -- khoá ngoại + tự xoá nếu bảng cha xoá
+    CONSTRAINT FK_ChiTietGioHang_MaGH_GH FOREIGN KEY (MaGH) REFERENCES GioHang(MaGH) ON DELETE CASCADE, -- khoá ngoại + tự xoá nếu bảng cha xoá Thực tế nên dùng
     CONSTRAINT FK_ChiTietGioHang_MaSP_SP FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP),
     CONSTRAINT CHK_SoLuongMua_GH CHECK (SoLuong > 0)
 );
 GO
---- BẢNG ĐƠN HÀNG
+    
+--- BẢNG ĐƠN HÀNG CŨ
+/*
 CREATE TABLE DonHang
 (
     MaDH INT IDENTITY(1,1),
@@ -113,7 +126,55 @@ CREATE TABLE DonHang
                                                    )
                                      )
 )
+GO 
+*/
+-- TẠO THÊM BẢNG MÃ GIẢM GIÁ = bảng mới phát sinh theo yêu cầu của nhóm =
+CREATE TABLE MaGiamGia (
+    IDMaGG INT  IDENTITY(1,1) PRIMARY KEY,         -- Mã định danh tự tăng của Mã giảm giá
+    MaCode VARCHAR(50) UNIQUE NOT NULL,            -- Chuỗi mã để khách nhập (VD: GIAM50K, TET2026)
+    LoaiGiam VARCHAR(20) NOT NULL  CHECK (LoaiGiam IN ('Phan tram','Tien mat')),         -- Kiểu giảm: theo phần trăm hay số tiền cố định
+    GiaTriGiam DECIMAL(10, 2) NOT NULL,    -- Giá trị giảm (VD: 10 cho 10%, hoặc 50000 cho 50k)
+    DKGiam DECIMAL(10, 2) DEFAULT 0 NOT NULL CHECK(DKGiam >= 0),    -- Điều kiện đơn hàng tối thiểu. Giá trị tối thiểu của đơn khách đặt (VD: tối thiểu 0 đồng thì đc áp dụng mã này)
+    GiamToiDa DECIMAL(10, 2) NULL CHECK(GiamToiDa > 0),         -- Mức giảm tối đa (chỉ dùng cho loại phần trăm)
+    GioiHanSD SMALLINT DEFAULT 3 NOT NULL,           -- Tổng số lần mã này được phép sử dụng
+    DaDung SMALLINT DEFAULT 0 NOT NULL,              -- Số lần thực tế khách đã dùng
+    NgayBD DATETIME2(0) NOT NULL,              -- Thời điểm mã bắt đầu có hiệu lực
+    NgayKT DATETIME2(0) NOT NULL,              -- Thời điểm mã hết hạn
+    TrangThai BIT DEFAULT 0 NOT NULL,          -- Trạng thái mã: 1 (Đang bật), 0 (Đã tắt)
+    NgayTao DATETIME2(0) DEFAULT GETDATE() NOT NULL,
+
+     CONSTRAINT CHK_MaGiamGia_Ngay CHECK (NgayKT >= NgayBD)
+);
+
+
+--- BẢNG ĐƠN HÀNG MỚI CẬP NHẬT 
+CREATE TABLE DonHang
+(
+    MaDH INT IDENTITY(1,1),
+    MaKH INT NOT NULL,
+    MaGG INT NULL,                    -- Mã giảm giá đã áp dụng (nếu có)
+    TrangThai NVARCHAR(30) DEFAULT N'Chờ xác nhận',
+    NgayDat DATETIME2(0) DEFAULT GETDATE(),
+    DiaChiGiao NVARCHAR(255) NOT NULL,
+    PhuongThucTT VARCHAR(50) DEFAULT 'Thanh Toan khi nhan hang',         -- Phương thức thanh toán 
+    TongTienDH DECIMAL(10, 2) NOT NULL  CHECK(TongTienDH>=0),            -- Tổng tiền gốc của sản phẩm trước khi giảm
+    SoTienGiam DECIMAL(10, 2) DEFAULT 0 CHECK(SoTienGiam>=0),            -- Số tiền được giảm nhờ mã giảm giá
+    TongTienTT DECIMAL(12, 2) NOT NULL DEFAULT 0 CHECK(TongTienTT>=0),   -- Tổng tiền mà khách sẽ phải thanh toán (sau khi đc giảm giá nếu có)
+    CONSTRAINT PK_DonHang PRIMARY KEY (MaDH),  -- Khoá chính
+    CONSTRAINT FK_DonHang_MaKH_KH  FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH), -- khoá ngoại
+    CONSTRAINT FK_DonHang_IDMaGG_MGG  FOREIGN KEY (MaGG) REFERENCES MaGiamGia(IDMaGG), -- khoá ngoại
+    CONSTRAINT CHK_TrangThai CHECK ( TrangThai IN ( N'Chờ xác nhận', 
+                                                    N'Đã xác nhận', 
+                                                    N'Đang xử lý', 
+                                                    N'Đã giao', 
+                                                    N'Hoàn thành', 
+                                                    N'Đã hủy'
+                                                   )
+                                     )
+)
 GO
+  
+
 --- BẢNG CHI TIẾT ĐƠN HÀNG
 CREATE TABLE ChiTietDonHang (
     MaDH INT NOT NULL,
@@ -122,13 +183,13 @@ CREATE TABLE ChiTietDonHang (
     DonGia DECIMAL(12,2) NOT NULL, -- đơn giá tại thời điểm mua
     
     CONSTRAINT PK_ChiTietDonHang_MaDH_MaSP PRIMARY KEY (MaDH, MaSP), -- Khoá chính
-    CONSTRAINT FK_ChiTietDonHang_MaDH_DH  FOREIGN KEY (MaDH) REFERENCES DonHang(MaDH) ON DELETE CASCADE, -- khoá ngoại + tự xoá nếu bảng cha xoá
-    CONSTRAINT FK_ChiTietDonHang_MaSP_SP FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP), -- khoá ngoại
+    CONSTRAINT FK_ChiTietDonHang_MaDH_DH  FOREIGN KEY (MaDH) REFERENCES DonHang(MaDH) ON DELETE CASCADE, -- khoá ngoại + tự xoá nếu bảng cha xoá Lưu ý trong thực tế ko nên dùng 
+    CONSTRAINT FK_ChiTietDonHang_MaSP_SP FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP), -- khoá ngoại      -- trong này dùng để có gì dễ xoá sửa thôi
     CONSTRAINT CHK_SoLuong_DH CHECK (SoLuong > 0)
 );
 GO
 
---================ Thêm bảng mới phát sinh theo yêu cầu của nhóm ===================
+--================Thêm bảng mới phát sinh theo yêu cầu của nhóm ===================
 -- TẠO THÊM BẢNG THÔNG BÁO
 CREATE TABLE ThongBao(
 MaTB INT IDENTITY(1,1),
@@ -137,32 +198,31 @@ TieuDe NVARCHAR(200) NOT NULL,
 NoiDung NVARCHAR(1000) NOT NULL,
 LoaiTB NVARCHAR(30) NOT NULL,
 MaDH INT NULL,
-NgayTao DATETIME2(0) NOT NULL
-    CONSTRAINT DF_ThongBao_NgayTao DEFAULT GETDATE(),
-DaDoc BIT NOT NULL   -- 0 là chưa đọc 1 là đọc rồi
-    CONSTRAINT DF_ThongBao_DaDoc DEFAULT 0
-    CONSTRAINT CK_ThongBao_DaDoc CHECK(DaDoc IN(0,1)),
+NgayTao DATETIME2(0) NOT NULL CONSTRAINT DF_ThongBao_NgayTao DEFAULT GETDATE(),
+DaDoc BIT NOT NULL CONSTRAINT DF_ThongBao_DaDoc DEFAULT 0, 
+ -- 0 là chưa đọc 1 là đọc rồi
+
+CONSTRAINT CK_ThongBao_DaDoc CHECK (DaDoc IN(0,1)),
 CONSTRAINT PK_ThongBao PRIMARY KEY (MaTB),  -- Khoá chính
 CONSTRAINT FK_ThongBao_KhachHang  FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH), -- khoá ngoại 
 CONSTRAINT FK_ThongBao_DonHang  FOREIGN KEY (MaDH) REFERENCES DonHang(MaDH) -- khoá ngoại 
-)
+);
 GO
 -- TẠO THÊM BẢNG LƯỢT XEM SẢN PHẨM 
  CREATE TABLE LuotXemSP (
  MaLX BIGINT IDENTITY(1,1) ,
  MaSP INT NOT NULL,
  MaKH INT NULL,
- ThoiGianXem DATETIME2(0) NOT NULL 
- CONSTRAINT DF_LuotXemSanPham DEFAULT  GETDATE(),
+ ThoiGianXem DATETIME2(0) NOT NULL CONSTRAINT DF_LuotXemSanPham DEFAULT  GETDATE(),
  CONSTRAINT FK_LuotXemSanPham_SanPham FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP),
  CONSTRAINT FK_LuotXemSanPham_KhachHang FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH),
  CONSTRAINT PK_LuotXemSanPham PRIMARY KEY (MaLX)
-)
+);
 GO
 -- TẠO THÊM BẢNG TIN NHẮN ĐỂ LƯU LỊCH SỬ NHẮN TIN
     
 CREATE TABLE TinNhan (
-    MaTN BIGINT PRIMARY KEY IDENTITY(1,1),
+    MaTN INT PRIMARY KEY IDENTITY(1,1),
     MaNGui INT NOT NULL,              -- Mã người gửi 
     MaNNhan INT NOT NULL,            -- Mã người nhận 
     NoiDungTN NVARCHAR(MAX) NOT NULL, -- Nội dung tin nhắn
@@ -172,15 +232,13 @@ CREATE TABLE TinNhan (
     CONSTRAINT FK_TinNhan_IDGui_KhachHang  FOREIGN KEY (MaNGui) REFERENCES KhachHang(MaKH), -- khoá ngoại
     CONSTRAINT FK_TinNhan_IDNhan_KhachHang  FOREIGN KEY (MaNNhan) REFERENCES KhachHang(MaKH) -- khoá ngoại
 );
-
-
-
+GO
 -- =================THÊM DỮ LIỆU DANH MỤC=================
 INSERT INTO DanhMuc (TenDM) VALUES
  ( N'Thời trang'),
  ( N'Công nghệ'),
  ( N'Đồ gia dụng'),
- ( N'Làm đẹp');
+ ( N'Mỹ phẩm');
  GO
 
     
