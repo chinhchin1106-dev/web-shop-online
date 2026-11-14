@@ -111,6 +111,7 @@ CREATE TABLE MaGiamGia (
     TrangThai BIT DEFAULT 0 NOT NULL,          -- Trạng thái mã: 1 (Đang bật), 0 (Đã tắt)
     NgayTao DATETIME2(0) DEFAULT GETDATE() NOT NULL,
 
+     CONSTRAINT CHK_MaGiamGia_Ngay CHECK (NgayKT >= NgayBD)
 );
 
 
