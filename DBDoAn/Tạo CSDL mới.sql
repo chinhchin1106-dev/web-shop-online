@@ -40,7 +40,7 @@ GO
 CREATE TABLE KhachHang
 (
   MaKH INT IDENTITY(1,1) PRIMARY KEY,
-  HoTen NVARCHAR(30) NOT NULL,        -- Thông tin cá nhân
+  HoTen NVARCHAR(40) NOT NULL,        -- Thông tin cá nhân
   DiaChi NVARCHAR(255),               -- Thông tin cá nhân
   SDT VARCHAR(15),                    -- Thông tin cá nhân
   Email VARCHAR(100) UNIQUE NOT NULL,                 -- Tài khoản
@@ -101,19 +101,21 @@ CREATE TABLE MaGiamGia (
     IDMaGG INT  IDENTITY(1,1) PRIMARY KEY,         -- Mã định danh tự tăng của Mã giảm giá
     MaCode VARCHAR(50) UNIQUE NOT NULL,            -- Chuỗi mã để khách nhập (VD: GIAM50K, TET2026)
     LoaiGiam VARCHAR(20) NOT NULL  CHECK (LoaiGiam IN ('Phan tram','Tien mat')),         -- Kiểu giảm: theo phần trăm hay số tiền cố định
-    GiaTriGiam DECIMAL(10, 2) NOT NULL,    -- Giá trị giảm (VD: 10 cho 10%, hoặc 50000 cho 50k)
-    DKGiam DECIMAL(10, 2) DEFAULT 0 NOT NULL CHECK(DKGiam >= 0),    -- Điều kiện đơn hàng tối thiểu. Giá trị tối thiểu của đơn khách đặt (VD: tối thiểu 0 đồng thì đc áp dụng mã này)
+    GiaTriGiam DECIMAL(10, 2) NOT NULL CHECK(GiaTriGiam > 0),    -- Giá trị giảm (VD: 10 cho 10%, hoặc 50000 cho 50k)
+    DKGiam DECIMAL(10, 2) DEFAULT 0 NOT NULL  CHECK(DKGiam >= 0),    -- Điều kiện đơn hàng tối thiểu. Giá trị tối thiểu của đơn khách đặt (VD: tối thiểu 0 đồng thì đc áp dụng mã này)
     GiamToiDa DECIMAL(10, 2) NULL CHECK(GiamToiDa > 0),         -- Mức giảm tối đa (chỉ dùng cho loại phần trăm)
-    GioiHanSD SMALLINT DEFAULT 3 NOT NULL,           -- Tổng số lần mã này được phép sử dụng
-    DaDung SMALLINT DEFAULT 0 NOT NULL,              -- Số lần thực tế khách đã dùng
-    NgayBD DATETIME2(0) NOT NULL,              -- Thời điểm mã bắt đầu có hiệu lực
-    NgayKT DATETIME2(0) NOT NULL,              -- Thời điểm mã hết hạn
+    MoTa NVARCHAR(500) NOT NULL,                       -- Mô tả về điều kiện mã giảm giá đc áp dụng và thời hạn, giới hạn sử dụng của mã cho khách xem
+    GioiHanSD SMALLINT DEFAULT 100 NOT NULL,           -- Tổng số lần mã này được phép sử dụng (tổng số khách có thể dùng mã này)
+    DaDung SMALLINT DEFAULT 0 NOT NULL,              -- Tổng số lần thực tế các khách hàng đã dùng
+    NgayBD DATETIME2 (0) NOT NULL,              -- Thời điểm mã bắt đầu có hiệu lực
+    NgayKT DATETIME2 (0) NOT NULL,              -- Thời điểm mã hết hạn
     TrangThai BIT DEFAULT 0 NOT NULL,          -- Trạng thái mã: 1 (Đang bật), 0 (Đã tắt)
     NgayTao DATETIME2(0) DEFAULT GETDATE() NOT NULL,
 
-     CONSTRAINT CHK_MaGiamGia_Ngay CHECK (NgayKT >= NgayBD)
-);
+    CONSTRAINT CHK_MaGiamGia_Ngay CHECK (NgayKT >= NgayBD) -- Đảm bảo ngày kết thúc luôn bằng hoặc lâu hơn ngày bắt đầu
 
+);
+GO
 
 --- BẢNG ĐƠN HÀNG MỚI CẬP NHẬT 
 CREATE TABLE DonHang
@@ -123,11 +125,17 @@ CREATE TABLE DonHang
     MaGG INT NULL,                    -- Mã giảm giá đã áp dụng (nếu có)
     TrangThai NVARCHAR(30) DEFAULT N'Chờ xác nhận',
     NgayDat DATETIME2(0) DEFAULT GETDATE(),
+    ----- Thông tin của khách đặt đơn này -----
+    HoTenKH NVARCHAR(40) NOT NULL,
+    SDT VARCHAR(15) NOT NULL,
     DiaChiGiao NVARCHAR(255) NOT NULL,
-    PhuongThucTT VARCHAR(50) DEFAULT 'Thanh Toan khi nhan hang',         -- Phương thức thanh toán 
+    GhiChu NVARCHAR(500) NULL,
+    -------------------------------------------
+    PhuongThucTT NVARCHAR(50) DEFAULT N'Thanh toán khi nhận hàng',       -- Phương thức thanh toán 
+    PhiVanChuyen DECIMAL(10, 2) DEFAULT 0 NOT NULL CHECK(PhiVanChuyen >= 0),
     TongTienDH DECIMAL(10, 2) NOT NULL  CHECK(TongTienDH>=0),            -- Tổng tiền gốc của sản phẩm trước khi giảm
     SoTienGiam DECIMAL(10, 2) DEFAULT 0 CHECK(SoTienGiam>=0),            -- Số tiền được giảm nhờ mã giảm giá
-    TongTienTT DECIMAL(12, 2) NOT NULL DEFAULT 0 CHECK(TongTienTT>=0),   -- Tổng tiền mà khách sẽ phải thanh toán (sau khi đc giảm giá nếu có)
+    TongTienTT DECIMAL(12, 2) NOT NULL DEFAULT 0 CHECK(TongTienTT>=0),   -- Tổng tiền thanh toán cuối cùng (= Tạm tính + Phí ship - Giảm giá)
     CONSTRAINT PK_DonHang PRIMARY KEY (MaDH),  -- Khoá chính
     CONSTRAINT FK_DonHang_MaKH_KH  FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH), -- khoá ngoại
     CONSTRAINT FK_DonHang_IDMaGG_MGG  FOREIGN KEY (MaGG) REFERENCES MaGiamGia(IDMaGG), -- khoá ngoại
@@ -141,6 +149,8 @@ CREATE TABLE DonHang
                                      )
 )
 GO
+
+
   
 
 --- BẢNG CHI TIẾT ĐƠN HÀNG
