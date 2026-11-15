@@ -109,7 +109,7 @@ CREATE TABLE MaGiamGia (
     DaDung SMALLINT DEFAULT 0 NOT NULL,              -- Tổng số lần thực tế các khách hàng đã dùng
     NgayBD DATETIME2 (0) NOT NULL,              -- Thời điểm mã bắt đầu có hiệu lực
     NgayKT DATETIME2 (0) NOT NULL,              -- Thời điểm mã hết hạn
-    TrangThai BIT DEFAULT 0 NOT NULL,          -- Trạng thái mã: 1 (Đang bật), 0 (Đã tắt)
+    TrangThai BIT DEFAULT 1 NOT NULL,          -- Trạng thái mã: 1 (Đang bật), 0 (Đã tắt)
     NgayTao DATETIME2(0) DEFAULT GETDATE() NOT NULL,
 
     CONSTRAINT CHK_MaGiamGia_Ngay CHECK (NgayKT >= NgayBD) -- Đảm bảo ngày kết thúc luôn bằng hoặc lâu hơn ngày bắt đầu
