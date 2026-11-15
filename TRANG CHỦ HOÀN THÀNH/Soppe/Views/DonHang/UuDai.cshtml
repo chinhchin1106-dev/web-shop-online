@@ -1,0 +1,76 @@
+﻿@model System.Collections.Generic.List<Soppe.Models.MaGiamGiaDemo>
+
+@{
+    ViewBag.Title = "Khám phá ưu đãi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="sp-orders">
+    <nav>
+        <a href="@Url.Action("Index", "TrangChu")">Trang chủ</a>
+        / Ưu đãi
+    </nav>
+
+    <h1>Khám phá ưu đãi</h1>
+    <p>Chọn mã phù hợp và nhập mã tại trang thanh toán.</p>
+
+    @foreach (var ma in Model)
+    {
+        decimal giaThamKhao = ma.DonToiThieu;
+        decimal tienGiam = ma.SoTien;
+
+        if (ma.PhanTram > 0)
+        {
+            tienGiam = decimal.Round(
+                giaThamKhao * ma.PhanTram / 100m,
+                0, System.MidpointRounding.AwayFromZero);
+
+            if (ma.GiamToiDa > 0)
+            {
+                tienGiam = System.Math.Min(tienGiam, ma.GiamToiDa);
+            }
+        }
+
+        tienGiam = System.Math.Min(tienGiam, giaThamKhao);
+
+        <article class="sp-order-panel">
+            <h2>@ma.MoTa</h2>
+
+            <p>Mã giảm giá: <strong>@ma.Ma</strong></p>
+
+            <p>
+                Áp dụng cho đơn từ
+                <strong>@ma.DonToiThieu.ToString("N0")đ</strong>.
+            </p>
+
+            <p>
+                Tham khảo: đơn @giaThamKhao.ToString("N0")đ
+                được giảm @tienGiam.ToString("N0")đ,
+                còn <strong>@((giaThamKhao - tienGiam).ToString("N0"))đ</strong>
+                trước phí vận chuyển.
+            </p>
+
+            <a class="sp-order-button"
+               href="@Url.Action("Index", "SanPham")">
+                Mua sắm ngay
+            </a>
+        </article>
+    }
+
+    <div class="sp-order-panel">
+        <h2>Cách sử dụng</h2>
+        <ol>
+            <li>Thêm sản phẩm vào giỏ hàng.</li>
+            <li>Chọn sản phẩm và nhấn Đặt hàng ngay.</li>
+            <li>Nhập mã ở trang thanh toán rồi nhấn Áp dụng mã.</li>
+            <li>Kiểm tra tổng tiền và xác nhận đặt hàng.</li>
+        </ol>
+
+        <p>Mỗi đơn áp dụng một mã. Các ưu đãi trên là dữ liệu demo.</p>
+
+        <a class="sp-order-button"
+           href="@Url.Action("Giohang", "TrangChu")">
+            Mở giỏ hàng
+        </a>
+    </div>
+</section>

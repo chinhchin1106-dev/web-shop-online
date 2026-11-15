@@ -1,0 +1,18 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "Thông báo đơn hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="sp-orders">
+    <div class="sp-order-panel">
+        <h1>Chưa thể tiếp tục</h1>
+        <p role="alert">@Model</p>
+
+        <a class="sp-order-button"
+           href="@Url.Action("Giohang", "TrangChu")">
+            Quay lại giỏ hàng
+        </a>
+    </div>
+</section>

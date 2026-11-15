@@ -1,0 +1,224 @@
+﻿@{
+    ViewBag.Title = "Ưu đãi & Mã giảm giá";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    // Thay đường dẫn trong mảng này khi muốn dùng ảnh khác.
+    var banners = new[]
+    {
+        "~/Content/images/cn.png",
+        "~/Content/images/tt.png",
+        "~/Content/images/lam dep.png",
+        "~/Content/images/gia dung.png"
+    };
+
+    var bannerTitles = new[]
+    {
+        "Ưu đãi đặc biệt",
+        "Giảm 20% đơn hàng",
+        "Giảm ngay 50.000đ",
+        "Khám phá ưu đãi"
+    };
+}
+
+<link href="@Url.Content("~/Content/UuDai.css")?v=1"
+      rel="stylesheet" />
+
+<section class="sp-deals"
+         id="spDeals"
+         data-cart-url="@Url.Action("Giohang", "TrangChu")">
+    <nav class="sp-deals-breadcrumb" aria-label="Đường dẫn">
+        <a href="@Url.Action("Index", "TrangChu")">Trang chủ</a>
+        <span>/</span>
+        <span aria-current="page">Ưu đãi</span>
+    </nav>
+
+    <div class="sp-deals-heading">
+        <span class="sp-deals-mark" aria-hidden="true">%</span>
+        <div>
+            <h1>Ưu đãi &amp; Mã giảm giá</h1>
+            <p>Sưu tầm mã - Mua sắm tiết kiệm hơn tại Sộp Pe</p>
+        </div>
+    </div>
+
+    <div class="sp-deals-banner" aria-label="Quảng cáo ưu đãi">
+        @for (int i = 0; i < banners.Length; i++)
+        {
+            <div class="sp-deals-slide"
+                 data-deal-slide
+                 hidden="@(i == 0 ? null : "hidden")">
+                <div class="sp-deals-placeholder">
+                    <strong>@bannerTitles[i]</strong>
+                    <span>Thêm ảnh quảng cáo của bạn tại đây</span>
+                </div>
+
+                <img src="@Url.Content(banners[i])"
+                     alt="@bannerTitles[i]"
+                     data-deal-image />
+            </div>
+        }
+
+        <button type="button"
+                class="sp-deals-prev"
+                data-deal-prev
+                aria-label="Ảnh trước">
+            ‹
+        </button>
+
+        <button type="button"
+                class="sp-deals-next"
+                data-deal-next
+                aria-label="Ảnh tiếp theo">
+            ›
+        </button>
+    </div>
+
+    <div class="sp-deals-dots" aria-label="Chọn ảnh quảng cáo">
+        @for (int i = 0; i < banners.Length; i++)
+        {
+            <button type="button"
+                    data-deal-dot="@i"
+                    aria-label="Ảnh quảng cáo @(i + 1)"
+                    aria-pressed="@(i == 0 ? "true" : "false")">
+            </button>
+        }
+    </div>
+
+    <div class="sp-deals-filters"
+         role="group"
+         aria-label="Lọc loại ưu đãi">
+        <button type="button"
+                data-deal-filter="all"
+                aria-pressed="true">
+            ◇ Tất cả
+        </button>
+
+        <button type="button"
+                data-deal-filter="percent"
+                aria-pressed="false">
+            % Mã giảm giá
+        </button>
+
+        <button type="button"
+                data-deal-filter="order"
+                aria-pressed="false">
+            🛒 Ưu đãi đơn hàng
+        </button>
+
+        <button type="button"
+                data-deal-filter="shipping"
+                aria-pressed="false">
+            🚚 Freeship
+        </button>
+
+        <button type="button"
+                data-deal-filter="other"
+                aria-pressed="false">
+            🎁 Ưu đãi khác
+        </button>
+    </div>
+
+    <div class="sp-deals-title">
+        <h2>⚡ Mã giảm giá nổi bật</h2>
+        <button type="button" data-deal-all>Xem tất cả ›</button>
+    </div>
+
+    <p id="spDealMessage" role="status" aria-live="polite"></p>
+
+    <div class="sp-deals-grid">
+        <article class="sp-voucher sp-voucher-orange"
+                 data-deal-category="percent">
+            <div class="sp-voucher-icon" aria-hidden="true">%</div>
+
+            <div class="sp-voucher-content">
+                <h3>Giảm 20% giá trị đơn hàng</h3>
+                <p>Tối đa 100.000đ | Đơn tối thiểu 200.000đ</p>
+
+                <button type="button"
+                        class="sp-voucher-code"
+                        data-copy-code="SOPPE20"
+                        aria-label="Sao chép mã SOPPE20">
+                    Mã: SOPPE20 ▣
+                </button>
+            </div>
+
+            <button type="button"
+                    class="sp-voucher-save"
+                    data-save-code="SOPPE20">
+                ↓ Lưu mã
+            </button>
+        </article>
+
+        <article class="sp-voucher sp-voucher-blue"
+                 data-deal-category="order">
+            <div class="sp-voucher-icon" aria-hidden="true">%</div>
+
+            <div class="sp-voucher-content">
+                <h3>Giảm trực tiếp 50.000đ</h3>
+                <p>Đơn tối thiểu 500.000đ</p>
+
+                <button type="button"
+                        class="sp-voucher-code"
+                        data-copy-code="GIAM50K"
+                        aria-label="Sao chép mã GIAM50K">
+                    Mã: GIAM50K ▣
+                </button>
+            </div>
+
+            <button type="button"
+                    class="sp-voucher-save"
+                    data-save-code="GIAM50K">
+                ↓ Lưu mã
+            </button>
+        </article>
+
+        <article class="sp-voucher sp-voucher-green"
+                 data-deal-category="shipping">
+            <div class="sp-voucher-icon" aria-hidden="true">🚚</div>
+
+            <div class="sp-voucher-content">
+                <h3>Giảm phí vận chuyển đến 30.000đ</h3>
+                <p>Đơn tối thiểu 300.000đ</p>
+                <strong class="sp-voucher-code">Mã: FREESHIP30</strong>
+                <small>Chờ kích hoạt thanh toán</small>
+            </div>
+
+            <button type="button"
+                    class="sp-voucher-save"
+                    disabled>
+                Chưa mở
+            </button>
+        </article>
+
+        <article class="sp-voucher sp-voucher-purple"
+                 data-deal-category="percent other">
+            <div class="sp-voucher-icon" aria-hidden="true">🎁</div>
+
+            <div class="sp-voucher-content">
+                <h3>Giảm 10% toàn bộ sản phẩm</h3>
+                <p>Tối đa 50.000đ | Đơn tối thiểu 100.000đ</p>
+                <strong class="sp-voucher-code">Mã: GIAM10</strong>
+                <small>Chương trình bổ sung, chờ kích hoạt</small>
+            </div>
+
+            <button type="button"
+                    class="sp-voucher-save"
+                    disabled>
+                Chưa mở
+            </button>
+        </article>
+    </div>
+
+    <div class="sp-deals-conditions">
+        <h2>ⓘ Điều kiện áp dụng</h2>
+        <ul>
+            <li>Mỗi đơn hàng áp dụng một mã giảm giá.</li>
+            <li>Đơn hàng phải đạt giá trị tối thiểu của mã.</li>
+            <li>Lưu mã trên trình duyệt không giữ chỗ ưu đãi.</li>
+            <li>Nhập mã tại trang thanh toán để kiểm tra và áp dụng.</li>
+        </ul>
+    </div>
+</section>
+
+@section scripts {
+    <script src="@Url.Content("~/Scripts/UuDai.js")?v=2"></script>
+}

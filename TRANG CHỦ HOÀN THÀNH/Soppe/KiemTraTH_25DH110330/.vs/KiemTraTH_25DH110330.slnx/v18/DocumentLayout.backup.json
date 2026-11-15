@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C74EBC7E-8BD0-67FE-E899-7370A63D6182}|KiemTraTH_25DH110330\\KiemTraTH_25DH110330.csproj|d:\\kiemtrath_25dh110330\\kiemtrath_25dh110330\\kiemtrath_25dh110330\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74EBC7E-8BD0-67FE-E899-7370A63D6182}|KiemTraTH_25DH110330\\KiemTraTH_25DH110330.csproj|solutionrelative:kiemtrath_25dh110330\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74EBC7E-8BD0-67FE-E899-7370A63D6182}|KiemTraTH_25DH110330\\KiemTraTH_25DH110330.csproj|d:\\kiemtrath_25dh110330\\kiemtrath_25dh110330\\kiemtrath_25dh110330\\intarray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74EBC7E-8BD0-67FE-E899-7370A63D6182}|KiemTraTH_25DH110330\\KiemTraTH_25DH110330.csproj|solutionrelative:kiemtrath_25dh110330\\intarray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74EBC7E-8BD0-67FE-E899-7370A63D6182}|KiemTraTH_25DH110330\\KiemTraTH_25DH110330.csproj|d:\\kiemtrath_25dh110330\\kiemtrath_25dh110330\\kiemtrath_25dh110330\\mylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74EBC7E-8BD0-67FE-E899-7370A63D6182}|KiemTraTH_25DH110330\\KiemTraTH_25DH110330.csproj|solutionrelative:kiemtrath_25dh110330\\mylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74EBC7E-8BD0-67FE-E899-7370A63D6182}|KiemTraTH_25DH110330\\KiemTraTH_25DH110330.csproj|d:\\kiemtrath_25dh110330\\kiemtrath_25dh110330\\kiemtrath_25dh110330\\intnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74EBC7E-8BD0-67FE-E899-7370A63D6182}|KiemTraTH_25DH110330\\KiemTraTH_25DH110330.csproj|solutionrelative:kiemtrath_25dh110330\\intnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\Program.cs",
+              "RelativeDocumentMoniker": "KiemTraTH_25DH110330\\Program.cs",
+              "ToolTip": "D:\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\Program.cs",
+              "RelativeToolTip": "KiemTraTH_25DH110330\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-24T08:39:22.812Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d455e273-1acb-491f-b5c9-760a99044cf9}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IntNode.cs",
+              "DocumentMoniker": "D:\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\IntNode.cs",
+              "RelativeDocumentMoniker": "KiemTraTH_25DH110330\\IntNode.cs",
+              "ToolTip": "D:\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\IntNode.cs",
+              "RelativeToolTip": "KiemTraTH_25DH110330\\IntNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-24T08:45:17.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MyList.cs",
+              "DocumentMoniker": "D:\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\MyList.cs",
+              "RelativeDocumentMoniker": "KiemTraTH_25DH110330\\MyList.cs",
+              "ToolTip": "D:\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\MyList.cs",
+              "RelativeToolTip": "KiemTraTH_25DH110330\\MyList.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-24T08:45:35.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IntArray.cs",
+              "DocumentMoniker": "D:\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\IntArray.cs",
+              "RelativeDocumentMoniker": "KiemTraTH_25DH110330\\IntArray.cs",
+              "ToolTip": "D:\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\KiemTraTH_25DH110330\\IntArray.cs",
+              "RelativeToolTip": "KiemTraTH_25DH110330\\IntArray.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAowM0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-24T08:44:15.005Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

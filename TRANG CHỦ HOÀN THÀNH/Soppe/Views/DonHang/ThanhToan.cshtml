@@ -1,0 +1,141 @@
+﻿@model Soppe.Models.ThanhToanDemoVM
+
+@{
+    ViewBag.Title = "Thanh toán";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="sp-orders">
+    <nav>
+        <a href="@Url.Action("Giohang", "TrangChu")">Giỏ hàng</a>
+        / Thanh toán
+    </nav>
+
+    <h1>Xác nhận đặt hàng</h1>
+
+    @using (Html.BeginForm("ThanhToan", "DonHang", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.Token)
+
+        @Html.ValidationSummary(false, "", new { @class = "sp-order-error" })
+
+        if (ViewBag.ThongBao != null)
+        {
+            <p role="status">@ViewBag.ThongBao</p>
+        }
+
+        <div class="sp-order-grid">
+            <div class="sp-order-panel">
+                <h2>Thông tin nhận hàng</h2>
+
+                @Html.LabelFor(m => m.HoTen, "Họ tên")
+                @Html.TextBoxFor(m => m.HoTen,
+                         new { maxlength = "100", autocomplete = "name" })
+
+                @Html.LabelFor(m => m.DienThoai, "Số điện thoại")
+                @Html.TextBoxFor(m => m.DienThoai,
+                         new
+                         {
+                             maxlength = "10",
+                             type = "tel",
+                             autocomplete = "tel"
+                         })
+
+                @Html.LabelFor(m => m.DiaChi, "Địa chỉ")
+                @Html.TextAreaFor(m => m.DiaChi,
+                         new
+                         {
+                             maxlength = "300",
+                             rows = "3",
+                             autocomplete = "street-address"
+                         })
+
+                <h2 style="margin-top:24px">Sản phẩm đặt mua</h2>
+
+                <div class="sp-order-scroll">
+                    <table class="sp-order-table">
+                        <thead>
+                            <tr>
+                                <th>Sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var d in Model.BaoGia.Dong)
+                            {
+                                <tr>
+                                    <td>@d.Ten</td>
+                                    <td>@d.Gia.ToString("N0")đ</td>
+                                    <td>@d.SoLuong</td>
+                                    <td>@d.ThanhTien.ToString("N0")đ</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <aside class="sp-order-panel">
+                <h2>Tổng tiền</h2>
+
+                @Html.LabelFor(m => m.MaGiamGia, "Mã giảm giá")
+                @Html.TextBoxFor(m => m.MaGiamGia,
+                         new { maxlength = "30", autocomplete = "off" })
+
+                <p>
+                    <button type="submit" name="thaoTac"
+                            value="apDung" formnovalidate>
+                        Áp dụng mã
+                    </button>
+                </p>
+
+                <p>
+                    Xóa nội dung ô mã rồi nhấn Áp dụng để bỏ mã.
+                </p>
+
+                <a href="@Url.Action("UuDai", "DonHang")"
+                   target="_blank" rel="noopener">
+                    Xem mã giảm giá
+                </a>
+
+                <p>
+                    Mã đang áp dụng:
+                    <strong>
+                        @(string.IsNullOrEmpty(Model.BaoGia.MaGiamGia)
+                            ? "Không có" : Model.BaoGia.MaGiamGia)
+                    </strong>
+                </p>
+
+                <dl class="sp-order-totals">
+                    <div>
+                        <dt>Tạm tính</dt>
+                        <dd>@Model.BaoGia.TamTinh.ToString("N0")đ</dd>
+                    </div>
+                    <div>
+                        <dt>Giảm giá</dt>
+                        <dd>@Model.BaoGia.GiamGia.ToString("N0")đ</dd>
+                    </div>
+                    <div>
+                        <dt>Phí vận chuyển</dt>
+                        <dd>@Model.BaoGia.PhiVanChuyen.ToString("N0")đ</dd>
+                    </div>
+                    <div class="sp-order-grand">
+                        <dt>Tổng thanh toán</dt>
+                        <dd>@Model.BaoGia.TongTien.ToString("N0")đ</dd>
+                    </div>
+                </dl>
+
+                <p>Phương thức: Thanh toán khi nhận hàng.</p>
+                <p>Phí vận chuyển đang được đặt bằng 0 trong bản demo.</p>
+
+                <button type="submit" name="thaoTac" value="datHang"
+                        class="sp-order-primary">
+                    Xác nhận đặt hàng
+                </button>
+            </aside>
+        </div>
+    }
+</section>

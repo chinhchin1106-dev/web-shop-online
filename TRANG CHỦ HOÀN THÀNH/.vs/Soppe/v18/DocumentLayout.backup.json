@@ -1,0 +1,889 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|d:\\ltw\\web\\web-shop-online\\updated giaodien\\soppe\\views\\trangchu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\trangchu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\donhang\\thanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\donhang\\thanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\trangchu\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\trangchu\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\security\\phanquyenauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\security\\phanquyenauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\trangchu\\giohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\trangchu\\giohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\trangchu\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\trangchu\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\controllers\\trangchucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\controllers\\trangchucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\models\\authviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\models\\authviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\security\\authhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\security\\authhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\security\\securityauditlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\security\\securityauditlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\security\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\security\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\controllers\\trangchucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\controllers\\trangchucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\trangchu\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\views\\trangchu\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\content\\giohang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\content\\giohang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\scripts\\giohangvoucher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\scripts\\giohangvoucher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\scripts\\uudai.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\scripts\\uudai.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\uudai\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\uudai\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\scripts\\giohang.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\scripts\\giohang.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\uudai\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\views\\uudai\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\donhang\\thanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\views\\donhang\\thanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\donhang\\uudai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\donhang\\uudai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\trangchu\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\views\\trangchu\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\donhang\\hoadon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\donhang\\hoadon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\donhang\\hoadon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\views\\donhang\\hoadon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\donhang\\loi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\donhang\\loi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\donhang\\loi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\views\\donhang\\loi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\trangchu\\giohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\views\\trangchu\\giohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\content\\uudai.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\content\\uudai.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\content\\uudai.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\content\\uudai.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\controllers\\uudaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\controllers\\uudaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\controllers\\uudaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\controllers\\uudaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\donhang\\uudai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\views\\donhang\\uudai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\services\\donhangdemoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\services\\donhangdemoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\models\\donhangdemo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\models\\donhangdemo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\content\\sporders.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\content\\sporders.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\scripts\\sporders.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\scripts\\sporders.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\trangchu\\thongbao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\views\\trangchu\\thongbao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\scripts\\scripts.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\scripts\\scripts.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\models\\thongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\models\\thongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\models\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\models\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\models\\khodulieucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\models\\khodulieucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\models\\giohangsqlitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\models\\giohangsqlitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\models\\giohangdongcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\models\\giohangdongcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\data\\sqlconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\data\\sqlconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 27,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d455e273-1acb-491f-b5c9-760a99044cf9}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthViewModels.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\AuthViewModels.cs",
+              "RelativeDocumentMoniker": "Soppe\\Models\\AuthViewModels.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\AuthViewModels.cs",
+              "RelativeToolTip": "Soppe\\Models\\AuthViewModels.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T04:41:05.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Global.asax.cs",
+              "RelativeDocumentMoniker": "Soppe\\Global.asax.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Global.asax.cs",
+              "RelativeToolTip": "Soppe\\Global.asax.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T04:35:21.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PhanQuyenAuthorizeAttribute.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Security\\PhanQuyenAuthorizeAttribute.cs",
+              "RelativeDocumentMoniker": "Soppe\\Security\\PhanQuyenAuthorizeAttribute.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Security\\PhanQuyenAuthorizeAttribute.cs",
+              "RelativeToolTip": "Soppe\\Security\\PhanQuyenAuthorizeAttribute.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwDgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T04:34:38.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AuthHelper.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Security\\AuthHelper.cs",
+              "RelativeDocumentMoniker": "Soppe\\Security\\AuthHelper.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Security\\AuthHelper.cs",
+              "RelativeToolTip": "Soppe\\Security\\AuthHelper.cs",
+              "ViewState": "AgIAAPYAAAAAAAAAAAAkwBcBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T04:33:44.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SecurityAuditLogger.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Security\\SecurityAuditLogger.cs",
+              "RelativeDocumentMoniker": "Soppe\\Security\\SecurityAuditLogger.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Security\\SecurityAuditLogger.cs",
+              "RelativeToolTip": "Soppe\\Security\\SecurityAuditLogger.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T04:33:20.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Security\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "Soppe\\Security\\PasswordHasher.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Security\\PasswordHasher.cs",
+              "RelativeToolTip": "Soppe\\Security\\PasswordHasher.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAkwI0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T04:32:49.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TrangChuController.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\TrangChuController.cs",
+              "RelativeDocumentMoniker": "Soppe\\Controllers\\TrangChuController.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\TrangChuController.cs",
+              "RelativeToolTip": "Soppe\\Controllers\\TrangChuController.cs",
+              "ViewState": "AgIAACwCAAAAAAAAAAAYwEoCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T04:18:21.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dangnhap.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Dangnhap.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\TrangChu\\Dangnhap.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Dangnhap.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\TrangChu\\Dangnhap.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAqwDgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-15T04:11:52.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Giohang.css",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\Giohang.css",
+              "RelativeDocumentMoniker": "Soppe\\Content\\Giohang.css",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\Giohang.css",
+              "RelativeToolTip": "Soppe\\Content\\Giohang.css",
+              "ViewState": "AgIAAJICAAAAAAAAAAAAAJICAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-15T03:12:39.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GiohangVoucher.js",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\GiohangVoucher.js",
+              "RelativeDocumentMoniker": "Soppe\\Scripts\\GiohangVoucher.js",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\GiohangVoucher.js",
+              "RelativeToolTip": "Soppe\\Scripts\\GiohangVoucher.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8BAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-15T03:11:53.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\DonHangController.cs",
+              "RelativeDocumentMoniker": "Soppe\\Controllers\\DonHangController.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "Soppe\\Controllers\\DonHangController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T02:54:03.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dangky.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Dangky.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\TrangChu\\Dangky.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Dangky.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\TrangChu\\Dangky.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-15T02:22:55.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "HoaDon.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\HoaDon.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\HoaDon.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\HoaDon.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\HoaDon.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-15T02:22:21.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Loi.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\Loi.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\Loi.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\Loi.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\Loi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-15T02:22:19.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Giohang.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Giohang.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\TrangChu\\Giohang.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Giohang.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\TrangChu\\Giohang.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAALQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-15T02:16:50.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\Index.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\Index.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T09:41:03.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\Index.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\Index.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-14T14:23:28.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ThanhToan.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\ThanhToan.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\ThanhToan.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\ThanhToan.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\ThanhToan.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-15T00:44:39.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Index.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\TrangChu\\Index.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Index.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\TrangChu\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:58:07.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-14T14:09:49.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UuDai.js",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\UuDai.js",
+              "RelativeDocumentMoniker": "Soppe\\Scripts\\UuDai.js",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\UuDai.js",
+              "RelativeToolTip": "Soppe\\Scripts\\UuDai.js",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAqwJ8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-14T14:07:38.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UuDai.css",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\UuDai.css",
+              "RelativeDocumentMoniker": "Soppe\\Content\\UuDai.css",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\UuDai.css",
+              "RelativeToolTip": "Soppe\\Content\\UuDai.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-14T14:06:39.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UuDaiController.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\UuDaiController.cs",
+              "RelativeDocumentMoniker": "Soppe\\Controllers\\UuDaiController.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\UuDaiController.cs",
+              "RelativeToolTip": "Soppe\\Controllers\\UuDaiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T14:05:11.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UuDai.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-14T13:38:40.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\UuDai\\Index.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\UuDai\\Index.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\UuDai\\Index.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\UuDai\\Index.cshtml",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAAAN8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-14T13:38:21.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UuDai.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T10:18:27.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DonHangDemoService.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Services\\DonHangDemoService.cs",
+              "RelativeDocumentMoniker": "Soppe\\Services\\DonHangDemoService.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Services\\DonHangDemoService.cs",
+              "RelativeToolTip": "Soppe\\Services\\DonHangDemoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T10:12:13.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\DonHangController.cs",
+              "RelativeDocumentMoniker": "Soppe\\Controllers\\DonHangController.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "Soppe\\Controllers\\DonHangController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T09:43:55.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "SpOrders.css",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\SpOrders.css",
+              "RelativeDocumentMoniker": "Soppe\\Content\\SpOrders.css",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\SpOrders.css",
+              "RelativeToolTip": "Soppe\\Content\\SpOrders.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-11T09:42:45.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "SpOrders.js",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\SpOrders.js",
+              "RelativeDocumentMoniker": "Soppe\\Scripts\\SpOrders.js",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\SpOrders.js",
+              "RelativeToolTip": "Soppe\\Scripts\\SpOrders.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-11T09:42:19.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Giohang.js",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\Giohang.js",
+              "RelativeDocumentMoniker": "Soppe\\Scripts\\Giohang.js",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\Giohang.js",
+              "RelativeToolTip": "Soppe\\Scripts\\Giohang.js",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAIwNcBAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-11T09:41:42.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Loi.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\Loi.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\Loi.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\Loi.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\Loi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T09:41:12.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "HoaDon.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\HoaDon.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\HoaDon.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\HoaDon.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\HoaDon.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T09:40:48.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ThanhToan.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\ThanhToan.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\ThanhToan.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\ThanhToan.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\ThanhToan.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T09:40:35.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "DonHangDemo.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\DonHangDemo.cs",
+              "RelativeDocumentMoniker": "Soppe\\Models\\DonHangDemo.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\DonHangDemo.cs",
+              "RelativeToolTip": "Soppe\\Models\\DonHangDemo.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAADwv2oAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T09:37:27.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UuDai.css",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\UuDai.css",
+              "RelativeDocumentMoniker": "Soppe\\Content\\UuDai.css",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\UuDai.css",
+              "RelativeToolTip": "Soppe\\Content\\UuDai.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-11T09:34:54.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\UuDai\\Index.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\UuDai\\Index.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\UuDai\\Index.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\UuDai\\Index.cshtml",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAG4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T09:32:53.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UuDaiController.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\UuDaiController.cs",
+              "RelativeDocumentMoniker": "Soppe\\Controllers\\UuDaiController.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\UuDaiController.cs",
+              "RelativeToolTip": "Soppe\\Controllers\\UuDaiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T09:29:12.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ThongBao.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\ThongBao.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\TrangChu\\ThongBao.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\ThongBao.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\TrangChu\\ThongBao.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:58:08.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Giohang.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Giohang.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\TrangChu\\Giohang.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Giohang.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\TrangChu\\Giohang.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAADwv3AAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:58:05.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Dangnhap.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Dangnhap.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\TrangChu\\Dangnhap.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Dangnhap.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\TrangChu\\Dangnhap.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:58:04.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Dangky.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Dangky.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\TrangChu\\Dangky.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\TrangChu\\Dangky.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\TrangChu\\Dangky.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:58:02.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAGsBAAAAAAAAAAAAAI4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:57:45.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Scripts.js",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\Scripts.js",
+              "RelativeDocumentMoniker": "Soppe\\Scripts\\Scripts.js",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\Scripts.js",
+              "RelativeToolTip": "Soppe\\Scripts\\Scripts.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-11T08:57:16.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ThongBao.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\ThongBao.cs",
+              "RelativeDocumentMoniker": "Soppe\\Models\\ThongBao.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\ThongBao.cs",
+              "RelativeToolTip": "Soppe\\Models\\ThongBao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T08:57:12.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "SanPhamController.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\SanPhamController.cs",
+              "RelativeDocumentMoniker": "Soppe\\Models\\SanPhamController.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\SanPhamController.cs",
+              "RelativeToolTip": "Soppe\\Models\\SanPhamController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T08:57:10.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "KhoDuLieuController.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\KhoDuLieuController.cs",
+              "RelativeDocumentMoniker": "Soppe\\Models\\KhoDuLieuController.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\KhoDuLieuController.cs",
+              "RelativeToolTip": "Soppe\\Models\\KhoDuLieuController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T08:57:09.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "GioHangSqlItem.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\GioHangSqlItem.cs",
+              "RelativeDocumentMoniker": "Soppe\\Models\\GioHangSqlItem.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\GioHangSqlItem.cs",
+              "RelativeToolTip": "Soppe\\Models\\GioHangSqlItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T08:57:07.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "GioHangDongController.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\GioHangDongController.cs",
+              "RelativeDocumentMoniker": "Soppe\\Models\\GioHangDongController.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\GioHangDongController.cs",
+              "RelativeToolTip": "Soppe\\Models\\GioHangDongController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T08:57:06.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "SqlConnectionFactory.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Data\\SqlConnectionFactory.cs",
+              "RelativeDocumentMoniker": "Soppe\\Data\\SqlConnectionFactory.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Data\\SqlConnectionFactory.cs",
+              "RelativeToolTip": "Soppe\\Data\\SqlConnectionFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T08:57:04.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TrangChuController.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\TrangChuController.cs",
+              "RelativeDocumentMoniker": "Soppe\\Controllers\\TrangChuController.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\TrangChuController.cs",
+              "RelativeToolTip": "Soppe\\Controllers\\TrangChuController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T08:56:58.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Soppe\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Soppe\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T08:56:56.07Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

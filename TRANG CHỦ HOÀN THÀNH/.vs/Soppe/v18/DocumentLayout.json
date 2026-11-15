@@ -1,0 +1,275 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|d:\\ltw\\web\\web-shop-online\\updated giaodien\\soppe\\views\\donhang\\thanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\donhang\\thanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\scripts\\uudai.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\scripts\\uudai.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\uudai\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\uudai\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\donhang\\uudai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\views\\donhang\\uudai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\content\\uudai.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\content\\uudai.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\content\\uudai.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\content\\uudai.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\controllers\\uudaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe\\Soppe.csproj|solutionrelative:soppe\\controllers\\uudaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\views\\donhang\\uudai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\views\\donhang\\uudai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\services\\donhangdemoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\services\\donhangdemoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\content\\sporders.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\content\\sporders.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\scripts\\sporders.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\scripts\\sporders.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\soppe\\models\\thongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18151CD8-5171-4488-B233-0A96E0196284}|Soppe.csproj|solutionrelative:soppe\\models\\thongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ThongBao.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\ThongBao.cs",
+              "RelativeDocumentMoniker": "Soppe\\Models\\ThongBao.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Models\\ThongBao.cs",
+              "RelativeToolTip": "Soppe\\Models\\ThongBao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T08:57:12.435Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d455e273-1acb-491f-b5c9-760a99044cf9}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ThanhToan.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\ThanhToan.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\ThanhToan.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\ThanhToan.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\ThanhToan.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-15T00:44:39.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0CAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-14T14:09:49.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UuDai.js",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\UuDai.js",
+              "RelativeDocumentMoniker": "Soppe\\Scripts\\UuDai.js",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\UuDai.js",
+              "RelativeToolTip": "Soppe\\Scripts\\UuDai.js",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAqwJ8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-14T14:07:38.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UuDai.css",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\UuDai.css",
+              "RelativeDocumentMoniker": "Soppe\\Content\\UuDai.css",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\UuDai.css",
+              "RelativeToolTip": "Soppe\\Content\\UuDai.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-14T14:06:39.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UuDaiController.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\UuDaiController.cs",
+              "RelativeDocumentMoniker": "Soppe\\Controllers\\UuDaiController.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\UuDaiController.cs",
+              "RelativeToolTip": "Soppe\\Controllers\\UuDaiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T14:05:11.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UuDai.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-14T13:38:40.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\UuDai\\Index.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\UuDai\\Index.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\UuDai\\Index.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\UuDai\\Index.cshtml",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAAAN8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-14T13:38:21.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UuDai.cshtml",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "RelativeDocumentMoniker": "Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "RelativeToolTip": "Soppe\\Views\\DonHang\\UuDai.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T10:18:27.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DonHangDemoService.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Services\\DonHangDemoService.cs",
+              "RelativeDocumentMoniker": "Soppe\\Services\\DonHangDemoService.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Services\\DonHangDemoService.cs",
+              "RelativeToolTip": "Soppe\\Services\\DonHangDemoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T10:12:13.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\DonHangController.cs",
+              "RelativeDocumentMoniker": "Soppe\\Controllers\\DonHangController.cs",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "Soppe\\Controllers\\DonHangController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T09:43:55.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SpOrders.css",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\SpOrders.css",
+              "RelativeDocumentMoniker": "Soppe\\Content\\SpOrders.css",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\SpOrders.css",
+              "RelativeToolTip": "Soppe\\Content\\SpOrders.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-11T09:42:45.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SpOrders.js",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\SpOrders.js",
+              "RelativeDocumentMoniker": "Soppe\\Scripts\\SpOrders.js",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Scripts\\SpOrders.js",
+              "RelativeToolTip": "Soppe\\Scripts\\SpOrders.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-11T09:42:19.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UuDai.css",
+              "DocumentMoniker": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\UuDai.css",
+              "RelativeDocumentMoniker": "Soppe\\Content\\UuDai.css",
+              "ToolTip": "D:\\ltw\\Web\\web-shop-online\\Updated Giaodien\\Soppe\\Content\\UuDai.css",
+              "RelativeToolTip": "Soppe\\Content\\UuDai.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-11T09:34:54.224Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
