@@ -1,0 +1,70 @@
+﻿@model Soppe.Models.DangNhapViewModel
+@{
+    ViewBag.Title = "Đăng nhập";
+}
+
+<style>
+    .login-card .remember-me {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 12px 0 16px;
+        font-weight: 500;
+        cursor: pointer;
+        user-select: none;
+    }
+
+        .login-card .remember-me input[type="checkbox"] {
+            width: 16px !important;
+            height: 16px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            display: inline-block !important;
+            flex-shrink: 0;
+            accent-color: #1d4ed8;
+            cursor: pointer;
+        }
+</style>
+
+<section class="page-section">
+    <div class="page-card login-card">
+        <h2>Đăng nhập Sộp Pe</h2>
+        <p>Chào mừng bạn đến với Sộp Pe.</p>
+
+        @if (TempData["ThongBao"] != null)
+        {
+            <p class="success-alert" role="status">@TempData["ThongBao"]</p>
+        }
+
+        @if (ViewBag.Error != null)
+        {
+            <p class="error-alert" role="alert">@ViewBag.Error</p>
+        }
+
+        @using (Html.BeginForm("Dangnhap", "TrangChu", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.ReturnUrl)
+
+            <label for="Email">Email</label>
+            @Html.TextBoxFor(m => m.Email, new { type = "email", placeholder = "Nhập email", autocomplete = "email", required = "required" })
+
+            <label for="Password">Mật khẩu</label>
+            @Html.PasswordFor(m => m.Password, new { placeholder = "Nhập mật khẩu", autocomplete = "current-password", required = "required" })
+
+            <label class="remember-me" for="GhiNho">
+                @Html.CheckBoxFor(m => m.GhiNho)
+                <span>Ghi nhớ đăng nhập </span>
+            </label>
+
+            <button class="button full" type="submit">Đăng nhập</button>
+        }
+
+        <div class="register-link">
+            <p>Chưa có tài khoản?</p>
+            <a class="register-button" href="@Url.Action("Dangky", "TrangChu")">Đăng ký tài khoản</a>
+        </div>
+
+        <p class="login-note">Đăng nhập để trải nghiệm mua sắm tại Sộp Pe nhé</p>
+    </div>
+</section>

@@ -1,0 +1,55 @@
+﻿@model System.Collections.Generic.List<Soppe.Models.DonHangDemo>
+
+@{
+    ViewBag.Title = "Lịch sử mua hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="sp-orders">
+    <nav>
+        <a href="@Url.Action("Index", "TrangChu")">Trang chủ</a>
+        / Lịch sử mua hàng
+    </nav>
+
+    <h1>Lịch sử mua hàng</h1>
+    <p>Dữ liệu demo được lưu trong phiên sử dụng hiện tại.</p>
+
+    @if (Model.Count == 0)
+    {
+        <div class="sp-order-panel">
+            <p>Bạn chưa có đơn hàng.</p>
+            <a class="sp-order-button"
+               href="@Url.Action("Index", "SanPham")">
+                Khám phá sản phẩm
+            </a>
+        </div>
+    }
+    else
+    {
+        foreach (var don in Model)
+        {
+            <article class="sp-order-panel sp-order-card">
+                <h2>Đơn @don.Id.ToString("N").ToUpperInvariant()</h2>
+
+                <p>
+                    Ngày đặt:
+                    @don.NgayDatUtc.AddHours(7).ToString("dd/MM/yyyy HH:mm")
+                </p>
+
+                <p>Người nhận: @don.HoTen</p>
+
+                <span class="sp-order-badge">@don.TrangThai</span>
+
+                <p>
+                    Tổng tiền:
+                    <strong>@don.BaoGia.TongTien.ToString("N0")đ</strong>
+                </p>
+
+                <a class="sp-order-button"
+                   href="@Url.Action("HoaDon", "DonHang", new { id = don.Id })">
+                    Xem chi tiết / hóa đơn
+                </a>
+            </article>
+        }
+    }
+</section>

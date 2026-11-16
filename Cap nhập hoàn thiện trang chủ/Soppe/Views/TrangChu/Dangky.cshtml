@@ -1,0 +1,59 @@
+﻿@model Soppe.Models.DangKyViewModel
+@{
+    ViewBag.Title = "Đăng ký";
+}
+
+<style>
+    .password-hint {
+        display: none;
+        color: #dc2626;
+        font-size: 12px;
+        margin-top: 4px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+
+    #Password:focus + .password-hint {
+        display: block;
+    }
+</style>
+
+<section class="form-page">
+    <div class="form-card">
+        <h1>Đăng ký Sộp Pe</h1>
+
+        @if (ViewBag.Error != null)
+        {
+            <p class="error" role="alert">@ViewBag.Error</p>
+        }
+
+        @using (Html.BeginForm("Dangky", "TrangChu", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "error" })
+
+            <label for="HoTen">Họ tên</label>
+            @Html.TextBoxFor(m => m.HoTen, new { maxlength = "30", required = "required", autocomplete = "name" })
+            @Html.ValidationMessageFor(m => m.HoTen, "", new { @class = "error" })
+
+            <label for="Email">Email</label>
+            @Html.TextBoxFor(m => m.Email, new { type = "email", maxlength = "100", required = "required", autocomplete = "email" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "error" })
+
+            <label for="Password">Mật khẩu</label>
+            @Html.PasswordFor(m => m.Password, new { minlength = "8", maxlength = "128", required = "required", autocomplete = "new-password", aria_describedby = "passwordHint" })
+            <small id="passwordHint" class="password-hint">Ít nhất 8 ký tự, gồm chữ hoa, chữ thường và số</small>
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "error" })
+
+            <label for="ConfirmPassword">Xác nhận mật khẩu</label>
+            @Html.PasswordFor(m => m.ConfirmPassword, new { minlength = "8", maxlength = "128", required = "required", autocomplete = "new-password" })
+            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "error" })
+
+            <button type="submit" class="button full">Đăng ký</button>
+        }
+
+        <p class="muted">
+            Đã có tài khoản? <a href="@Url.Action("Dangnhap", "TrangChu")">Đăng nhập</a>
+        </p>
+    </div>
+</section>

@@ -1,0 +1,367 @@
+﻿.sp-deals {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 22px 18px 45px;
+    color: #142b4c;
+}
+
+    .sp-deals,
+    .sp-deals * {
+        box-sizing: border-box;
+    }
+
+        .sp-deals [hidden] {
+            display: none !important;
+        }
+
+        .sp-deals button {
+            font: inherit;
+            cursor: pointer;
+        }
+
+            .sp-deals button:focus-visible,
+            .sp-deals a:focus-visible {
+                outline: 3px solid #086bdb;
+                outline-offset: 3px;
+            }
+
+.sp-deals-breadcrumb {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+    .sp-deals-breadcrumb a {
+        color: #0876e7;
+        text-decoration: none;
+    }
+
+.sp-deals-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.sp-deals-mark {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    background: #087bfa;
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.sp-deals-heading h1 {
+    margin: 0 0 5px;
+    font-size: 28px;
+}
+
+.sp-deals-heading p {
+    margin: 0;
+    color: #526581;
+}
+
+.sp-deals-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #0579ea;
+}
+
+.sp-deals-slide {
+    position: relative;
+    aspect-ratio: 3 / 1;
+}
+
+    .sp-deals-slide img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: #0879ea;
+    }
+
+.sp-deals-placeholder {
+    height: 100%;
+    padding: 25px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    color: white;
+    background: linear-gradient(110deg, #0754cc, #15b5ed);
+}
+
+    .sp-deals-placeholder strong {
+        font-size: clamp(20px, 3vw, 38px);
+    }
+
+.sp-deals-prev,
+.sp-deals-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    background: #ffffffdf;
+    color: #0754cc;
+    font-size: 25px !important;
+}
+
+.sp-deals-prev {
+    left: 10px;
+}
+
+.sp-deals-next {
+    right: 10px;
+}
+
+.sp-deals-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+}
+
+    .sp-deals-dots button {
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: #cdd8e8;
+    }
+
+        .sp-deals-dots button[aria-pressed="true"] {
+            background: #087bfa;
+        }
+
+.sp-deals-filters {
+    display: flex;
+    overflow-x: auto;
+    border: 1px solid #e2ebf6;
+    border-radius: 10px;
+    background: white;
+    margin-bottom: 20px;
+}
+
+    .sp-deals-filters button {
+        flex: 1;
+        min-width: 150px;
+        padding: 13px 10px;
+        border: 0;
+        border-right: 1px solid #e2ebf6;
+        background: transparent;
+        color: #243b5b;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+        .sp-deals-filters button[aria-pressed="true"] {
+            background: #dceeff;
+            color: #086acb;
+        }
+
+.sp-deals-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+    .sp-deals-title h2 {
+        margin: 0;
+        font-size: 22px;
+    }
+
+    .sp-deals-title button {
+        border: 0;
+        color: #0876e7;
+        background: transparent;
+    }
+
+#spDealMessage {
+    margin: 8px 0;
+    color: #126343;
+}
+
+    #spDealMessage:empty {
+        margin: 0 0 14px;
+    }
+
+.sp-deals-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 22px;
+}
+
+.sp-voucher {
+    --voucher-color: #087bfa;
+    --voucher-light: #f1f8ff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+    padding-right: 16px;
+    border: 1px solid #d9e5f3;
+    border-radius: 14px;
+    background: var(--voucher-light);
+    overflow: hidden;
+}
+
+.sp-voucher-orange {
+    --voucher-color: #ed4d09;
+    --voucher-light: #fff6f0;
+}
+
+.sp-voucher-green {
+    --voucher-color: #009c91;
+    --voucher-light: #effcf9;
+}
+
+.sp-voucher-purple {
+    --voucher-color: #8738df;
+    --voucher-light: #f8f2ff;
+}
+
+.sp-voucher-icon {
+    align-self: stretch;
+    display: grid;
+    place-items: center;
+    flex: 0 0 86px;
+    min-height: 125px;
+    border-right: 3px dashed white;
+    background: var(--voucher-color);
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.sp-voucher-content {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 0;
+}
+
+    .sp-voucher-content h3 {
+        margin: 0 0 6px;
+        font-size: 17px;
+    }
+
+    .sp-voucher-content p {
+        margin: 0 0 8px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+.sp-voucher-code {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid var(--voucher-color);
+    border-radius: 7px;
+    color: var(--voucher-color);
+    background: white;
+    font-size: 13px !important;
+    font-weight: bold;
+}
+
+.sp-voucher-content small {
+    display: block;
+    margin-top: 6px;
+    color: #65738a;
+    font-size: 11px;
+}
+
+.sp-voucher-save {
+    flex-shrink: 0;
+    padding: 9px 11px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--voucher-color);
+    color: white;
+    font-size: 13px !important;
+}
+
+    .sp-voucher-save:disabled {
+        opacity: .65;
+        cursor: default;
+    }
+
+.sp-deals-conditions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    background: #eff5ff;
+}
+
+    .sp-deals-conditions h2 {
+        margin: 0;
+        font-size: 19px;
+        white-space: nowrap;
+    }
+
+    .sp-deals-conditions ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 30px;
+        margin: 0;
+        padding-left: 20px;
+        font-size: 13px;
+    }
+
+@media (max-width: 950px) {
+    .sp-deals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sp-deals-conditions {
+        display: block;
+    }
+
+        .sp-deals-conditions ul {
+            margin-top: 14px;
+        }
+}
+
+@media (max-width: 520px) {
+    .sp-deals-heading h1 {
+        font-size: 22px;
+    }
+
+    .sp-voucher {
+        gap: 10px;
+        padding-right: 10px;
+        flex-wrap: wrap;
+    }
+
+    .sp-voucher-icon {
+        flex-basis: 55px;
+    }
+
+    .sp-voucher-save {
+        margin: 0 0 12px 65px;
+    }
+
+    .sp-deals-conditions ul {
+        grid-template-columns: 1fr;
+    }
+
+    .sp-deals-title h2 {
+        font-size: 18px;
+    }
+
+    .sp-deals-placeholder span {
+        display: none;
+    }
+}

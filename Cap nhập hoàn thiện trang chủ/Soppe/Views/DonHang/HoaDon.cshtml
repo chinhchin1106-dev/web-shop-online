@@ -1,0 +1,99 @@
+﻿@model Soppe.Models.DonHangDemo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hóa đơn - Sộp Pe</title>
+    <link href="@Url.Content("~/Content/SpOrders.css")"
+          rel="stylesheet" />
+</head>
+<body class="sp-invoice-body">
+    <main class="sp-orders sp-invoice">
+        <div class="sp-no-print">
+            <a href="@Url.Action("Index", "DonHang")">
+                Lịch sử mua hàng
+            </a>
+
+            <button type="button" onclick="window.print()">
+                In / lưu PDF
+            </button>
+        </div>
+
+        <h1>SỘP PE</h1>
+        <h2>PHIẾU XÁC NHẬN ĐƠN HÀNG</h2>
+
+        <p>
+            Mã đơn:
+            <strong>@Model.Id.ToString("N").ToUpperInvariant()</strong>
+        </p>
+
+        <p>
+            Ngày đặt:
+            @Model.NgayDatUtc.AddHours(7).ToString("dd/MM/yyyy HH:mm")
+        </p>
+
+        <p>Người nhận: @Model.HoTen</p>
+        <p>Số điện thoại: @Model.DienThoai</p>
+        <p>Địa chỉ: @Model.DiaChi</p>
+        <p>Trạng thái: @Model.TrangThai</p>
+        <p>Thanh toán khi nhận hàng — Chưa thanh toán.</p>
+
+        <div class="sp-order-scroll">
+            <table class="sp-order-table">
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var d in Model.BaoGia.Dong)
+                    {
+                        <tr>
+                            <td>@d.Ten</td>
+                            <td>@d.Gia.ToString("N0")đ</td>
+                            <td>@d.SoLuong</td>
+                            <td>@d.ThanhTien.ToString("N0")đ</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            Mã giảm giá:
+            @(string.IsNullOrEmpty(Model.BaoGia.MaGiamGia)
+                ? "Không có" : Model.BaoGia.MaGiamGia)
+        </p>
+
+        <dl class="sp-order-totals">
+            <div>
+                <dt>Tạm tính</dt>
+                <dd>@Model.BaoGia.TamTinh.ToString("N0")đ</dd>
+            </div>
+            <div>
+                <dt>Giảm giá</dt>
+                <dd>@Model.BaoGia.GiamGia.ToString("N0")đ</dd>
+            </div>
+            <div>
+                <dt>Phí vận chuyển</dt>
+                <dd>@Model.BaoGia.PhiVanChuyen.ToString("N0")đ</dd>
+            </div>
+            <div class="sp-order-grand">
+                <dt>Tổng thanh toán</dt>
+                <dd>@Model.BaoGia.TongTien.ToString("N0")đ</dd>
+            </div>
+        </dl>
+
+        <p>Phiếu xác nhận của dự án học tập, chưa phải hóa đơn điện tử.</p>
+    </main>
+</body>
+</html>
