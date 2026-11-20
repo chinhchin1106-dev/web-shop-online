@@ -2,6 +2,24 @@
 
 USE WebBanHangOnline_N6;
 GO
+
+
+        
+-- TẠO THÊM BẢNG SPYeuThich (Chỉ quét tạo khi csdl trên máy cá nhân chưa có)
+        -- Không muốn dùng code tạo bảng này thì để trong dấu /*  */ . Khi đó bấm execute chỉ chạy code truy vấn test bên dưới.
+CREATE TABLE SPYeuThich (
+    MaKH INT NOT NULL,                          -- Khóa ngoại trỏ về khách hàng
+    MaSP INT NOT NULL,                          -- Khóa ngoại trỏ về sản phẩm
+    NgayThem DATETIME2(0) DEFAULT GETDATE(),    -- Thời điểm khách bấm nút thích (lưu vết)
+
+    -- Khóa chính kết hợp gồm MaKH và MaSP để đảm bảo 1 khách không thể thích trùng 1 sản phẩm 2 lần
+    CONSTRAINT PK_SanPhamYeuThich PRIMARY KEY (MaKH, MaSP),
+
+    -- Ràng buộc khóa ngoại kết nối với bảng Khách hàng và Sản phẩm
+    CONSTRAINT FK_YeuThich_MaKH FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH) ON DELETE CASCADE,   -- Nếu Khách xoá tài khoản thì xoá dữ liệu của khách trong bảng này
+    CONSTRAINT FK_YeuThich_MaSP FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP) ON DELETE CASCADE      -- Nếu sản phẩm bị xoá khỏi hệ thống bán hàng thì xoá dữ liệu của sp khỏi bảng này
+);
+GO
 --=====================================================
 -- TRUY VẤN CHO SẢN PHẨM NỔI BẬT
 --===================================================
