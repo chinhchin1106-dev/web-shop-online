@@ -1719,6 +1719,154 @@ UPDATE TinNhan
 SET DaDoc = 1 
 WHERE MaNGui = @IDGui AND MaNNhan =  @IDNhan  AND DaDoc = 0;
 GO
+
+
+--==============================================================
+
+
+--======================================================
+-- XEM LỊCH SỬ MUA HÀNG CỦA KHÁCH
+--==================================
+
+-- THÊM ĐƠN HÀNG ĐỂ TEST 
+INSERT INTO DonHang (
+    MaKH, TrangThai, NgayDat,
+    HoTenKH, SDT, DiaChiGiao, GhiChu,
+    PhuongThucTT, TongTienDH, SoTienGiam, TongTienTT
+)
+VALUES
+-- Đơn 1: Hoàn thành, có dùng mã giảm giá (MaGG = 1), thông tin người nhận trùng khách hàng
+(1, N'Hoàn thành', '2026-10-15 10:30:00',
+ N'Nguyễn Văn An', '0901234567', N'12 Nguyễn Huệ, Q.1, TP.HCM', N'Giao giờ hành chính',
+ N'Thanh toán khi nhận hàng', 250000.00, 25000.00, 240000.00), -- 250k - 25k + 15k ship = 240k
+
+-- Đơn 2: Đang xử lý, không dùng mã giảm giá, giao cho người khác
+(1, N'Đang xử lý', '2026-11-05 14:15:00',
+ N'Trần Thị Bình', '0987654321', N'45 Lê Lợi, Q.1, TP.HCM', N'Gọi trước khi giao 15 phút',
+ N'Thanh toán khi nhận hàng', 180000.00, 0.00, 200000.00), -- 180k - 0 + 20k ship = 200k
+
+-- Đơn 3: Chờ xác nhận, đơn mới nhất
+(1, N'Chờ xác nhận', '2026-11-20 09:00:00',
+ N'Nguyễn Văn An', '0901234567', N'12 Nguyễn Huệ, Q.1, TP.HCM', NULL,
+ N'Thanh toán khi nhận hàng', 120000.00, 0.00, 120000.00); -- 120k - 0 + 0 ship = 120k
+GO
+
+-- Kiểm tra xem đơn đã có dữ liệu chưa ?
+SELECT * FROM DonHang
+GO
+-- Khai báo biến mã khách hàng cần xem lịch sử
+DECLARE @MaKH INT = 1;
+
+SELECT 
+    dh.MaDH,
+    dh.NgayDat,
+    dh.TrangThai,
+    dh.HoTenKH AS NguoiNhan,
+    dh.SDT AS SDTNguoiNhan,
+    dh.DiaChiGiao,
+    dh.GhiChu,
+    dh.PhuongThucTT,
+    dh.TongTienDH AS TamTinh,
+    dh.PhiVanChuyen,
+    dh.SoTienGiam,
+    dh.TongTienTT AS TongThanhToan,
+    COUNT(ct.MaSP) AS SoLoaiSanPham
+FROM DonHang dh
+LEFT JOIN ChiTietDonHang ct ON dh.MaDH = ct.MaDH
+WHERE dh.MaKH = @MaKH
+GROUP BY 
+    dh.MaDH,
+    dh.NgayDat,
+    dh.TrangThai,
+    dh.HoTenKH,
+    dh.SDT,
+    dh.DiaChiGiao,
+    dh.GhiChu,
+    dh.PhuongThucTT,
+    dh.TongTienDH,
+    dh.PhiVanChuyen,
+    dh.SoTienGiam,
+    dh.TongTienTT
+ORDER BY dh.NgayDat DESC, dh.MaDH DESC;
+
+
+
+--=============================
+-- XEM CHI TIẾT 1 HOÁ ĐƠN/ ĐƠN HÀNG
+--====================================
+
+-- THÊM CHI TIẾT CÁC SẢN PHẨM TRONG ĐƠN HÀNG ĐỂ TEST
+INSERT INTO ChiTietDonHang (MaDH, MaSP, SoLuong, DonGia)
+VALUES
+-- Đơn hàng 1 (TongTienDH = 250000.00)
+(1, 1, 2, 100000.00), -- 2 x 100.000 = 200.000
+(1, 2, 1, 50000.00),  -- 1 x 50.000  = 50.000
+
+-- Đơn hàng 2 (TongTienDH = 180000.00)
+(2, 1, 1, 100000.00), -- 1 x 100.000 = 100.000
+(2, 2, 1, 80000.00),  -- 1 x 80.000  = 80.000 (Giá tại thời điểm mua)
+
+-- Đơn hàng 3 (TongTienDH = 120000.00)
+(3, 2, 2, 60000.00);  -- 2 x 60.000  = 120.000
+GO
+-- Kiểm tra dữ liệu đã có trong Chi tiết đơn hàng
+SELECT * FROM ChiTietDonHang
+GO
+-- Khai báo biến Mã đơn hàng cần xem chi tiết và Mã khách hàng (để bảo mật)
+DECLARE @MaDHXem INT = 1; -- Mã đơn hàng khách bấm xem
+DECLARE @MaKH INT = 1;
+
+-- [A] Lấy thông tin tổng quan (chung) của 1 hóa đơn/ đơn hàng cụ thể
+SELECT 
+    d.MaDH,
+    d.NgayDat,
+    d.TrangThai,
+    d.HoTenKH,
+    d.SDT,
+    d.DiaChiGiao,
+    d.GhiChu,
+    d.PhuongThucTT,
+    d.TongTienDH,
+    d.PhiVanChuyen,
+    d.SoTienGiam,
+    d.TongTienTT,
+    m.MaCode AS MaGiamGiaDaDung,
+    m.MoTa AS MoTaGiamGia
+FROM DonHang d
+LEFT JOIN MaGiamGia m ON d.MaGG = m.IDMaGG
+WHERE d.MaDH = @MaDHXem AND d.MaKH = @MaKH;
+-- [B]  Lấy danh sách sản phẩm có trong hóa đơn đó
+-- Khai báo biến Mã đơn hàng (nếu chạy code liên tục thì ko cần khai báo lại cứ lấy MaDH ở trên là đc)
+DECLARE @MaDHXem INT = 1;
+
+-- Lấy danh sách sản phẩm kèm theo giá tại thời điểm mua
+SELECT 
+    sp.TenSP,  -- (Tên cột tùy thuộc vào bảng SanPham của nhóm bạn, VD: TenSP hoặc TenSanPham)
+    sp.HinhAnh,     -- (Hình ảnh sản phẩm)
+    ct.SoLuong,
+    ct.DonGia,
+    (ct.SoLuong * ct.DonGia) AS ThanhTienSanPham
+FROM ChiTietDonHang ct
+JOIN SanPham sp ON ct.MaSP = sp.MaSP  -- (Tên khóa chính bảng sản phẩm của nhóm bạn, VD: MaSP)
+WHERE ct.MaDH = @MaDHXem;
+
+--========================================================
+--- XOÁ CÁC DỮ LIỆU MẪU  SAU KHI TEST LỊCH SỬ ĐƠN HÀNG
+
+--- XOÁ KHÁCH HÀNG ĐÃ THÊM Ở TRÊN
+--    DELETE KhachHang WHERE MaKH IN (SELECT MaKH FROM KhachHang)
+--- RESET LẠI IDENTITY CỦA KHÁCH SAU KHI XOÁ KHÁCH MẪU
+--     DBCC CHECKIDENT ('KhachHang', RESEED, 0);
+
+-- XOÁ CHI TIẾT ĐƠN HÀNG ĐÃ THÊM Ở TRÊN
+--   DELETE ChiTietDonHang WHERE MaDH IN (SELECT MaDH FROM DonHang)
+
+--- XOÁ ĐƠN HÀNG ĐÃ THÊM Ở TRÊN
+ --   DELETE DonHang WHERE MaKH IN (SELECT MaKH FROM KhachHang)
+--- RESET LẠI IDENTITY CỦA ĐƠN HÀNG SAU KHI XOÁ ĐƠN HÀNG MẪU
+--     DBCC CHECKIDENT ('DonHang', RESEED, 0);
+
+--============================================================================
 --==========================PHÍA DƯỚI LÀ PHẦN XOÁ DỮ LIỆU MẪU (BỎ DẤU /* */ để code hiện bình thường hoặc tự bôi đen rồi execute)=================================
 --========================================================
 -- XOÁ HẾT KHÁCH HÀNG ĐÃ TẠO & RESET IDENTITY
